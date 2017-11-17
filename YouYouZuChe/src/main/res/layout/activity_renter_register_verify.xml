@@ -1,0 +1,171 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context="com.youyou.uucar.UI.Main.MyStrokeFragment.RenterRegisterVerify">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/step_1"
+            android:layout_width="23dp"
+            android:layout_marginLeft="38dp"
+            android:layout_height="23dp"
+            android:gravity="center"
+            android:text="@string/renter_register_step_1"
+            android:textColor="@color/renter_register_step_num_color"
+            android:background="@drawable/renter_register_step_bg"
+            android:textSize="@dimen/f3" />
+
+        <TextView
+            android:id="@+id/step_1_text"
+            android:text="上传身份证"
+            android:textColor="@color/renter_register_step_text_color"
+            android:layout_marginTop="5dp"
+            android:textSize="@dimen/f3"
+            android:layout_marginLeft="12dp"
+            android:layout_below="@id/step_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/step_1_line"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_toRightOf="@id/step_1"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/step_2"
+            android:background="@drawable/renter_register_step_line_color" />
+
+        <TextView
+            android:id="@+id/step_2"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="@string/renter_register_step_2"
+            android:textColor="@color/renter_register_step_num_color"
+            android:background="@drawable/renter_register_step_bg"
+            android:textSize="@dimen/f3" />
+
+        <TextView
+            android:id="@+id/step_2_text"
+            android:text="上传驾驶证"
+            android:textColor="@color/renter_register_step_text_color"
+            android:layout_marginTop="5dp"
+            android:textSize="@dimen/f3"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/step_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/step_2_line"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="4dp"
+            android:layout_toRightOf="@id/step_2"
+            android:layout_toLeftOf="@+id/step_3"
+            android:background="@drawable/renter_register_step_line_color" />
+
+        <TextView
+            android:id="@+id/step_3"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:gravity="center"
+            android:layout_marginRight="33dp"
+            android:layout_alignParentRight="true"
+            android:text="@string/renter_register_step_3"
+            android:textColor="@color/renter_register_step_num_color"
+            android:background="@drawable/renter_register_step_bg"
+            android:textSize="@dimen/f3" />
+
+        <TextView
+            android:id="@+id/step_3_text"
+            android:text="等待审核"
+            android:textColor="@color/renter_register_step_text_color"
+            android:layout_marginTop="5dp"
+            android:textSize="@dimen/f3"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_below="@id/step_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="42dp"
+            android:lineSpacingExtra="9dp"
+            android:textSize="@dimen/f3"
+            android:textColor="@color/c8"
+            android:layout_marginRight="42dp"
+            android:text="客服正在加紧审核中,工作时间内,可一小时完成!" />
+
+        <TextView
+            android:id="@+id/service_work_time_title"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tip"
+            android:layout_marginTop="40dp"
+            android:textSize="@dimen/f3"
+            android:textColor="@color/c8"
+            android:layout_height="wrap_content"
+            android:text="客服工作时间：8:00-22:00" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/c11">
+
+        <TextView
+            android:id="@+id/contact_service"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:textSize="@dimen/f2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/contact_service"
+            android:textColor="@color/white_button_text_color"
+            android:background="@drawable/bottom_left_bottom_bg" />
+
+        <TextView
+            android:id="@+id/guest"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/guest"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="14dp"
+            android:textColor="@color/red_button_text_color"
+            android:textSize="@dimen/f2"
+            android:background="@drawable/red_button_bg" />
+    </LinearLayout>
+</RelativeLayout>

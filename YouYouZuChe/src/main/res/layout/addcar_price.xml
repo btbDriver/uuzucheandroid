@@ -1,0 +1,188 @@
+<com.youyou.uucar.Utils.View.UUProgressFramelayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/all_framelayout">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/main_bg">
+
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="@string/addcar_price_tips"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f2" />
+
+            <TextView
+                android:id="@+id/price_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="0元/天"
+                android:textColor="@color/c1"
+                android:textSize="@dimen/f2" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="@string/car_price"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f2" />
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="113dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/input_bg_focus"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="4"
+                android:singleLine="true"
+                android:textColor="@color/c1"
+                android:textSize="@dimen/f2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/price"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/price"
+                android:text="@string/price_unit_1"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/hour_price_title"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f5" />
+
+            <TextView
+                android:id="@+id/hour_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0元/时"
+                android:textColor="@color/c1"
+                android:textSize="@dimen/f5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/hour_price_title_1"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/week_price_title"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f5" />
+
+            <TextView
+                android:id="@+id/week_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0元/周"
+                android:textColor="@color/c1"
+                android:textSize="@dimen/f5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/week_price_title_1"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34dp"
+            android:layout_marginRight="34dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/c3"
+                android:textSize="@dimen/f5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="17dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_select_2"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingBottom="14dp"
+                android:paddingTop="14dp"
+                android:text="保存"
+                android:textColor="@color/red_button_text_color"
+                android:textSize="@dimen/f1" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>

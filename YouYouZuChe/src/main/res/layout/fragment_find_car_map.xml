@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.youyou.uucar.Utils.View.UUProgressFramelayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/all_framelayout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.amap.api.maps2d.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/title_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/address_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c9"
+
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/s1"
+                    android:layout_marginRight="@dimen/s1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/s2"
+                    android:layout_marginBottom="@dimen/s2"
+                    android:background="@drawable/white_input_bg"
+                    android:layout_height="37dp">
+
+                    <ImageView
+                        android:id="@+id/address_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/s1"
+                        android:layout_marginRight="@dimen/s1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/find_car_map_address_icon" />
+
+                    <TextView
+                        android:id="@+id/address_text"
+                        android:layout_width="match_parent"
+                        android:layout_toRightOf="@id/address_icon"
+                        android:layout_height="37dp"
+                        android:layout_centerVertical="true"
+                        android:singleLine="true"
+                        android:ellipsize="start"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/c7"
+                        android:textSize="@dimen/f3" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+            android:id="@+id/location_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="99dp"
+            android:background="@drawable/location_selected" />
+        <!--信息窗口-->
+        <LinearLayout
+            android:id="@+id/windows_root"
+            android:layout_width="299dp"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:layout_above="@+id/cent"
+            android:layout_marginBottom="40dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/find_car_map_marker_bg">
+
+            <LinearLayout
+                android:id="@+id/car_info_root"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="111dp">
+
+                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                    android:id="@+id/car_img"
+                    android:layout_width="139dp"
+                    android:layout_margin="@dimen/s1"
+                    android:layout_height="100dp"
+                    android:src="@drawable/list_car_img_def" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/s1"
+                        android:layout_toRightOf="@id/car_img"
+                        android:text="车名车名"
+                        android:textColor="@color/c6"
+                        android:textSize="@dimen/f3" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_toRightOf="@id/car_img"
+                        android:layout_marginTop="15dp"
+                        android:layout_height="wrap_content">
+
+                        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                            android:id="@+id/gearbox_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/find_car_list_gearbox_a_icon" />
+
+                        <TextView
+                            android:id="@+id/gearbox_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="手动挡"
+                            android:layout_toRightOf="@id/gearbox_icon"
+                            android:layout_marginLeft="7dp"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                            android:layout_width="wrap_content"
+                            android:background="@drawable/find_car_right_arrow"
+                            android:layout_marginLeft="56dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/s1"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/price_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/s1"
+                        android:layout_toRightOf="@id/car_img"
+                        android:layout_marginTop="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:text="500元/天 "
+                        android:textColor="@color/c3"
+                        android:textSize="@dimen/f3" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/more_info_root"
+                android:layout_width="match_parent"
+                android:layout_below="@id/car_info_root"
+                android:orientation="vertical"
+                android:layout_height="42dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/c13" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="查看更多"
+                    android:gravity="center"
+                    android:textSize="@dimen/f3"
+                    android:textColor="@color/select_city_white_button_text_color"
+                    android:layout_height="42dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+            android:id="@+id/current_dis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/cent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/find_car_map_current_dis" />
+
+        <View
+            android:id="@+id/cent"
+            android:layout_width="1px"
+            android:layout_height="1px"
+            android:layout_centerInParent="true" />
+
+
+        <TextView
+            android:id="@+id/rent"
+            android:layout_width="232dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="54dp"
+            android:background="@drawable/find_car_map_rent_button_bg"
+            android:gravity="center"
+            android:text="@string/find_car_map_rent"
+            android:textColor="@color/c11"
+            android:textSize="@dimen/f1" />
+
+    </RelativeLayout>
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>

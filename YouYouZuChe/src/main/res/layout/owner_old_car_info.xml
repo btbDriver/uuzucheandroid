@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_root"
+        android:background="@drawable/main_bg"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.ab.view.sliding.AbSlidingPlayView
+                android:id="@+id/mAbSlidingPlayView"
+                android:layout_width="fill_parent"
+                android:layout_height="220dp"></com.ab.view.sliding.AbSlidingPlayView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/new_car_info_item_bg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/price_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/price_range_text_color"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:id="@+id/collect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/red_oval_button"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="收藏"
+                        android:textColor="@color/red_button_text_color"
+                        android:textSize="@dimen/f2"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/price_hour_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/price_hour"
+                        android:layout_alignBottom="@+id/price_hour"
+                        android:layout_toRightOf="@+id/price_hour"
+                        android:text="元/小时"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3" />
+
+                    <TextView
+                        android:id="@+id/price_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/price_hour_text"
+                        android:layout_alignBottom="@+id/price_hour_text"
+                        android:layout_marginLeft="22dp"
+                        android:layout_toRightOf="@+id/price_hour_text"
+                        android:textColor="@color/price_range_text_color"
+                        android:textSize="@dimen/f3" />
+
+                    <TextView
+                        android:id="@+id/price_day_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/price_day"
+                        android:layout_alignBottom="@+id/price_day"
+                        android:layout_toRightOf="@+id/price_day"
+                        android:text="元/天"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/new_car_info_item_bg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                        android:id="@+id/address_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/new_car_info_address_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_toRightOf="@id/address_icon"
+                        android:text="位置"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="20dp"
+                    android:background="#B4B4B4" />
+
+                <RelativeLayout
+                    android:id="@+id/address_1_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/address_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_toLeftOf="@+id/arrow"
+                        android:singleLine="true"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3" />
+
+                    <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                        android:id="@+id/arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/new_car_info_arrow_right"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/new_car_info_item_bg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                        android:id="@+id/time_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/new_car_info_time_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_toRightOf="@id/time_icon"
+                        android:text="不可租时间"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="20dp"
+                    android:background="#B4B4B4" />
+
+                <LinearLayout
+                    android:id="@+id/time_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/day1_root"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/week1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/day1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:textColor="@color/c8"
+                                android:textSize="@dimen/f3" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/day2_root"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/week2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/day2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:textColor="@color/c8"
+                                android:textSize="@dimen/f3" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/day3_root"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/week3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/day3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:textColor="@color/c8"
+                                android:textSize="@dimen/f3" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/day4_root"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/week4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/day4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:textColor="@color/c8"
+                                android:textSize="@dimen/f3" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/day5_root"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/week5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/day5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:textColor="@color/c8"
+                                android:textSize="@dimen/f3" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/day6_root"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/week6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/day6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:textColor="@color/c8"
+                                android:textSize="@dimen/f3" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/day7_root"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/week7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/day7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:textColor="@color/c8"
+                                android:textSize="@dimen/f3" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/new_car_info_item_bg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                        android:id="@+id/pro_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/new_car_info_pro_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_toRightOf="@id/pro_icon"
+                        android:text="车辆属性"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="20dp"
+                    android:background="#B4B4B4" />
+
+                <LinearLayout
+                    android:id="@+id/property"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical"></LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/desc_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/new_car_info_item_bg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                        android:id="@+id/icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/new_car_info_desc_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_toRightOf="@id/icon"
+                        android:text="车辆描述"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="20dp"
+                    android:background="#B4B4B4" />
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/new_car_info_desc_bg"
+                    android:padding="20dp"
+                    android:textColor="@color/c8"
+                    android:textSize="@dimen/f3" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="10dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/owner_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/new_car_info_item_bg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.youyou.uucar.Utils.ImageView.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        app:border_color="#999999"
+                        app:border_width="1dp"
+                        android:id="@+id/user_head"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/user_info_small_head_def" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/user_head"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3" />
+
+                    <RatingBar
+                        android:id="@+id/rating"
+                        style="@style/Rating_small_car_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_below="@id/name"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@id/user_head"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="3.0"
+                        android:stepSize="0.5" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/review_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="10dp"
+                        android:background="#B4B4B4" />
+
+                    <TextView
+                        android:id="@+id/all"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="20dp"
+                        android:text="更多评论"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/noreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="暂无评论"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:divider="?android:dividerVertical"
+        android:dividerPadding="8dp"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/releasecar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/red_button_bg"
+            android:gravity="center"
+            android:paddingBottom="15.5dp"
+            android:paddingTop="15.5dp"
+            android:text="@string/releasecar"
+            android:textColor="@color/red_button_text_color"
+            android:textSize="@dimen/f2" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,2979 @@
+{
+    "status": "1",
+    "code": "brand",
+    "msg": "车辆品牌",
+    "content": [
+        {
+            "index": "A",
+            "name": "奥迪",
+            "content": [
+                {
+                    "xinghao": "S1",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "A3",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "S5",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "A6L",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "A8L",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "Q5-混动",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "RS7",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "A1",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "A3-进口",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "A4L",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "S8",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "Q3-进口",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "TTS",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "A4-进口",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "Q5-进口",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "RS4",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "A5",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "RS Q3",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "RS5",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "SQ5",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "TT",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "Q7",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "R8",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "Q5",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "Q3",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "B",
+            "name": "宝骏",
+            "content": [
+                {
+                    "xinghao": "乐驰",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "610",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "730",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "630",
+                    "car_type": 1
+                }
+            ]
+        },
+        {
+            "index": "B",
+            "name": "宝马",
+            "content": [
+                {
+                    "xinghao": "1系",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "3系",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "5系",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "7系",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "X6M",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "1系M",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "3系GT",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "5系GT",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "X1-进口",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "2系",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "3系-进口",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "5系-进口",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "X5M",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "Z4",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "4系",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "6系",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "X1",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "M4",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "X3",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "M5",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "X4",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "M6",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "X5",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "M3",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "X6",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "B",
+            "name": "比亚迪",
+            "content": [
+                {
+                    "xinghao": "F0",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "G3",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "F6",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "M6",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "G5",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "思锐",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "S6",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "L3",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "G6",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "F3",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "速锐",
+                    "car_type": 1
+                }
+            ]
+        },
+        {
+            "index": "B",
+            "name": "标致",
+            "content": [
+                {
+                    "xinghao": "207",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "301",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "508",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "3008",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "RCZ",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "208",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "307",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "2008",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "207-进口",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "308",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "4008",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "308-进口",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "408",
+                    "car_type": 4
+                }
+            ]
+        },
+        {
+            "index": "B",
+            "name": "本田",
+            "content": [
+                {
+                    "xinghao": "飞度",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "杰德",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "歌诗图",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "奥德赛",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "CR-V",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "凌派",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "思铂睿",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "艾力绅",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "锋范",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "雅阁",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "思域",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "思铭",
+                    "car_type": 4
+                }
+            ]
+        },
+        {
+            "index": "B",
+            "name": "奔驰",
+            "content": [
+                {
+                    "xinghao": "CLA",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "C级",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "E级-进口",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "S级",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "R级",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "M级",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "CLK",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "A级",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "C级-进口",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "CLS",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "GLK",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "CL级",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "B级",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "E级",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "GL",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "SL",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "GLA",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "SLK",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "G级",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "B",
+            "name": "别克",
+            "content": [
+                {
+                    "xinghao": "英朗",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "君越",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "林荫大道",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "GL8",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "昂科雷",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "凯越",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "君威",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "昂科拉",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "陆霸",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "B",
+            "name": "奔腾",
+            "content": [
+                {
+                    "xinghao": "B50",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "B90",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "X80",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "B70",
+                    "car_type": 4
+                }
+            ]
+        },
+        {
+            "index": "C",
+            "name": "长安汽车",
+            "content": [
+                {
+                    "xinghao": "奔奔",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "CX20",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "逸动",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "睿骋",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "CS35",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "奔奔mini",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "悦翔V3",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "CS75",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "悦翔V5",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "CS95",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "悦翔",
+                    "car_type": 1
+                }
+            ]
+        },
+        {
+            "index": "C",
+            "name": "长城",
+            "content": [
+                {
+                    "xinghao": "炫丽CROSS",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "C30",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "V80",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "M1",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "C20R",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "C50",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "M2",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "M4",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "C",
+            "name": "昌河汽车",
+            "content": [
+                {
+                    "xinghao": "爱迪尔A+",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "C",
+            "name": "长安商用车",
+            "content": [
+                {
+                    "xinghao": "",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "欧力威",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "欧诺",
+                    "car_type": 1
+                }
+            ]
+        },
+        {
+            "index": "D",
+            "name": "大众",
+            "content": [
+                {
+                    "xinghao": "Polo",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "朗境",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "CC",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "辉腾",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "凯路威",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "途观",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "朗逸",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "CC-进口",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "迈特威",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "途锐-混动",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "尚酷",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "朗行",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "帕萨特",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "夏朗",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "Tiguan",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "桑塔纳",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "迈腾-进口",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "途安",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "途锐",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "新宝来",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "迈腾",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "甲壳虫",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "捷达",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "高尔夫-进口",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "高尔夫",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "速腾",
+                    "car_type": 3
+                }
+            ]
+        },
+        {
+            "index": "D",
+            "name": "东风风行",
+            "content": [
+                {
+                    "xinghao": "景逸S50",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "菱智",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "景逸X5",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "景逸",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "景逸SUV",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "景逸X3",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "D",
+            "name": "东风小康",
+            "content": [
+                {
+                    "xinghao": "小康风光",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "D",
+            "name": "东南",
+            "content": [
+                {
+                    "xinghao": "V5菱致",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "V3菱悦",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "V6菱仕",
+                    "car_type": 4
+                }
+            ]
+        },
+        {
+            "index": "D",
+            "name": "道奇",
+            "content": [
+                {
+                    "xinghao": "酷威",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "D",
+            "name": "东风风神",
+            "content": [
+                {
+                    "xinghao": "风神S30",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "风神AX7",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "风神A60",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "风神H30 CROSS",
+                    "car_type": 4
+                }
+            ]
+        },
+        {
+            "index": "F",
+            "name": "丰田",
+            "content": [
+                {
+                    "xinghao": "YARiS L 致炫",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "新皇冠",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "逸致",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "红杉",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "雅力士",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "凯美瑞-进口",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "汉兰达-进口",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "威驰",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "花冠",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "凯美瑞",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "普瑞维亚",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "威飒Venza",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "卡罗拉",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "锐志",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "RAV4-EV",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "汉兰达",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "RAV4-海外",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "兰德酷路泽",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "普拉多",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "普拉多-进口",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "RAV4",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "FJ酷路泽",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "F",
+            "name": "福特",
+            "content": [
+                {
+                    "xinghao": "嘉年华",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "福克斯",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "蒙迪欧",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "翼搏",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "嘉年华-进口",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "福克斯-进口",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "致胜",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "麦柯斯",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "Everest",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "锐界",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "Expedition",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "翼虎",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "探险者",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "F",
+            "name": "菲亚特",
+            "content": [
+                {
+                    "xinghao": "派朗",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "Panda",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "菲跃",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "500",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "周末风",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "博悦",
+                    "car_type": 3
+                }
+            ]
+        },
+        {
+            "index": "G",
+            "name": "广汽乘用车",
+            "content": [
+                {
+                    "xinghao": "传祺GA3",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "传祺GA6",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "星朗",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "传祺GS5",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "传祺GA5",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "G",
+            "name": "广汽本田",
+            "content": [
+                {
+                    "xinghao": "理念",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "理念S1",
+                    "car_type": 4
+                }
+            ]
+        },
+        {
+            "index": "H",
+            "name": "红旗",
+            "content": [
+                {
+                    "xinghao": "H7",
+                    "car_type": 5
+                }
+            ]
+        },
+        {
+            "index": "H",
+            "name": "海马汽车",
+            "content": [
+                {
+                    "xinghao": "海马爱尚",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "丘比特",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "福美来",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "海马M8",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "骑士",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "海马王子",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "海马M3",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "海马S7",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "欢动",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "海马S5",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "海福星",
+                    "car_type": 4
+                }
+            ]
+        },
+        {
+            "index": "H",
+            "name": "华晨金杯",
+            "content": [
+                {
+                    "xinghao": "阁瑞斯",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "金杯S50",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "智尚S30",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "H",
+            "name": "华泰汽车",
+            "content": [
+                {
+                    "xinghao": "路盛E70",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "华泰B11",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "圣达菲",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "宝利格",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "特拉卡",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "H",
+            "name": "华晨中华",
+            "content": [
+                {
+                    "xinghao": "中华H230",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "骏捷FSV",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "尊驰",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "中华V5",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "骏捷CROSS",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "骏捷",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "骏捷FRV",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "中华H330",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "中华H320",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "中华H220",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "中华H530",
+                    "car_type": 4
+                }
+            ]
+        },
+        {
+            "index": "H",
+            "name": "哈弗",
+            "content": [
+                {
+                    "xinghao": "H7",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "H9",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "H5",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "H2",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "H3",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "H6",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "H8",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "H",
+            "name": "哈飞汽车",
+            "content": [
+                {
+                    "xinghao": "路宝",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "赛马",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "赛豹",
+                    "car_type": 4
+                }
+            ]
+        },
+        {
+            "index": "J",
+            "name": "吉利",
+            "content": [
+                {
+                    "xinghao": "熊猫CROSS",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "SC3",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "GC7",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "EC8",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "GX7",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "熊猫",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "金刚",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "帝豪EC7",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "SX7",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "自由舰",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "远景",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "英伦TX4",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "海景-甲醇",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "海景",
+                    "car_type": 4
+                }
+            ]
+        },
+        {
+            "index": "J",
+            "name": "江淮汽车",
+            "content": [
+                {
+                    "xinghao": "悦悦",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "和悦A30",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "和悦",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "宾悦",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "祥和",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "瑞风S5",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "和悦A13",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "和悦RS",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "瑞风SC-9",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "瑞风M6",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "瑞鹰",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "瑞风M5",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "瑞风",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "J",
+            "name": "Jeep",
+            "content": [
+                {
+                    "xinghao": "自由侠",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "指南者",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "自由光",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "大切诺基",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "自由客",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "牧马人",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "J",
+            "name": "江铃汽车",
+            "content": [
+                {
+                    "xinghao": "驭胜",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "K",
+            "name": "克莱斯勒",
+            "content": [
+                {
+                    "xinghao": "PT漫步者",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "300C",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "大捷龙-进口",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "大捷龙",
+                    "car_type": 5
+                }
+            ]
+        },
+        {
+            "index": "K",
+            "name": "凯迪拉克",
+            "content": [
+                {
+                    "xinghao": "ATS",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "SLS赛威",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "Escalade-混动",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "CTS",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "凯雷德",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "XTS",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "SRX",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "L",
+            "name": "陆风汽车",
+            "content": [
+                {
+                    "xinghao": "陆风风华",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "陆风风尚",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "陆风X5",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "陆风X9",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "陆风X6",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "陆风X8",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "L",
+            "name": "铃木",
+            "content": [
+                {
+                    "xinghao": "北斗星",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "北斗星X5",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "天语尚悦",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "锋驭",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "奥拓",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "利亚纳",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "天语SX4",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "超级维特拉",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "速翼特 运动",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "iV-4",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "派喜",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "吉姆尼",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "雨燕",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "羚羊",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "利亚纳A6",
+                    "car_type": 1
+                }
+            ]
+        },
+        {
+            "index": "L",
+            "name": "猎豹汽车",
+            "content": [
+                {
+                    "xinghao": "猎豹黑金刚",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "猎豹飞腾",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "猎豹Q6",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "猎豹CS6",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "猎豹飞腾C5",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "猎豹6481",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "L",
+            "name": "雷克萨斯",
+            "content": [
+                {
+                    "xinghao": "IS",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "GS",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "LS",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "GX",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "ES",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "RX",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "LX",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "领航员",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "L",
+            "name": "力帆汽车",
+            "content": [
+                {
+                    "xinghao": "力帆320",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "力帆630",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "力帆X60",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "力帆330",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "力帆620",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "力帆530",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "力帆520",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "力帆720",
+                    "car_type": 4
+                }
+            ]
+        },
+        {
+            "index": "L",
+            "name": "莲花汽车",
+            "content": [
+                {
+                    "xinghao": "莲花L5",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "莲花L6",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "莲花T5",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "莲花L3",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "竞速",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "竞悦",
+                    "car_type": 4
+                }
+            ]
+        },
+        {
+            "index": "L",
+            "name": "路虎",
+            "content": [
+                {
+                    "xinghao": "发现",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "揽胜",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "揽胜运动版",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "神行者",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "卫士",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "揽胜极光",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "L",
+            "name": "雷诺",
+            "content": [
+                {
+                    "xinghao": "风朗",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "纬度",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "风景",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "科雷傲",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "梅甘娜",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "拉古那",
+                    "car_type": 5
+                }
+            ]
+        },
+        {
+            "index": "M",
+            "name": "马自达",
+            "content": [
+                {
+                    "xinghao": "2-进口",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "3-进口",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "ATENZA",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "8",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "CX-5",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "RX-8",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "2",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "3经典款",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "6阿特兹",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "5",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "CX-7(进口)",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "mx-5",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "3昂克赛拉",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "6",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "CX-9",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "3星骋",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "6睿翼",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "CX-7",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "CX-5-进口",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "M",
+            "name": "MINI",
+            "content": [
+                {
+                    "xinghao": "",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": " COUNTRYMAN",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": " ROADSTER",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": " CLUBMAN",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": " PACEMAN",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": " COUPE",
+                    "car_type": 5
+                }
+            ]
+        },
+        {
+            "index": "M",
+            "name": "MG",
+            "content": [
+                {
+                    "xinghao": "3",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "5",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "7",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": " TF",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "6",
+                    "car_type": 4
+                }
+            ]
+        },
+        {
+            "index": "N",
+            "name": "东风裕隆纳智捷",
+            "content": [
+                {
+                    "xinghao": "MASTER CEO",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "大7 SUV",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "纳智捷 5 Sedan",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "大7 MPV",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "纳智捷 优6 SUV",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "O",
+            "name": "讴歌",
+            "content": [
+                {
+                    "xinghao": "ILX",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "TL",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "RL",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "ZDX",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "TSX",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "RLX",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "MDX",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "SUV-X概念车",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "RDX",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "O",
+            "name": "欧宝",
+            "content": [
+                {
+                    "xinghao": "雅特",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "英速亚",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "赛飞利",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "Mokka",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "威达",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "麦瑞纳",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "安德拉",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "Cascada",
+                    "car_type": 5
+                }
+            ]
+        },
+        {
+            "index": "Q",
+            "name": "奇瑞",
+            "content": [
+                {
+                    "xinghao": "旗云2",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "E5",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "旗云5",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "瑞虎5",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "QQ6",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "风云2",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "旗云3",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "东方之子",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "X1",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "QQ",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "A1",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "A3",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "瑞虎3",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "QQme",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "E3",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "艾瑞泽3",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "TX",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "旗云1",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "艾瑞泽7",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "A5",
+                    "car_type": 4
+                }
+            ]
+        },
+        {
+            "index": "Q",
+            "name": "起亚",
+            "content": [
+                {
+                    "xinghao": "千里马",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "赛拉图",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "远舰",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "K9",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "嘉华",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "狮跑",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "锐欧",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "福瑞迪",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "K5",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "佳乐",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "霸锐",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "秀尔",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "K3",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "凯尊",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "VQ",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "索兰托",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "K2",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "K3S",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "欧菲莱斯",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "智跑",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "Q",
+            "name": "启辰",
+            "content": [
+                {
+                    "xinghao": "R30",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "R50X",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "D50",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "R50",
+                    "car_type": 4
+                }
+            ]
+        },
+        {
+            "index": "R",
+            "name": "日产",
+            "content": [
+                {
+                    "xinghao": "March",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "蓝鸟",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "天籁",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "骏逸",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "楼兰",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "玛驰",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "阳光",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "NV200",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "帕拉丁",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "骊威",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "颐达",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "贵士",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "帕拉骐",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "轩逸",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "途乐",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "骐达",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "逍客",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "奇骏",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "R",
+            "name": "荣威",
+            "content": [
+                {
+                    "xinghao": "550",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "750",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "W5",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "350",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "950",
+                    "car_type": 3
+                }
+            ]
+        },
+        {
+            "index": "S",
+            "name": "三菱",
+            "content": [
+                {
+                    "xinghao": "蓝瑟",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "戈蓝",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "君阁",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "帕杰罗",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "翼神",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "格蓝迪",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "帕杰罗-进口",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "风迪思",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "菱绅",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "ASX劲炫-进口",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "帕杰罗劲畅(进口)",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "帕杰罗·劲畅",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "新劲炫ASX",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "欧蓝德",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "S",
+            "name": "斯巴鲁",
+            "content": [
+                {
+                    "xinghao": "翼豹",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "力狮",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "XV",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "驰鹏",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "傲虎",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "森林人",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "S",
+            "name": "上海华普",
+            "content": [
+                {
+                    "xinghao": "海域",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "海迅",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "海尚",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "海锋",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "海悦",
+                    "car_type": 4
+                }
+            ]
+        },
+        {
+            "index": "S",
+            "name": "斯柯达",
+            "content": [
+                {
+                    "xinghao": "晶锐",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "明锐",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "速尊",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "野帝",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "昕锐",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "速派",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "Yeti",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "昕动",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "昊锐-进口",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "昊锐",
+                    "car_type": 3
+                }
+            ]
+        },
+        {
+            "index": "S",
+            "name": "双龙",
+            "content": [
+                {
+                    "xinghao": "主席",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "路帝",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "爱腾",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "柯兰多",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "雷斯特W",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "享御",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "S",
+            "name": "双环汽车",
+            "content": [
+                {
+                    "xinghao": "小贵族",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "双环S-RV",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "SCEO",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "T",
+            "name": "天津一汽",
+            "content": [
+                {
+                    "xinghao": "威志",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "威乐",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "威志V2",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "威姿",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "威志V5",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "夏利A+",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "夏利N3",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "夏利N7",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "夏利N5",
+                    "car_type": 1
+                }
+            ]
+        },
+        {
+            "index": "W",
+            "name": "沃尔沃",
+            "content": [
+                {
+                    "xinghao": "S40",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "S60L",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "S80",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "XC90",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "C70",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "V40",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "S60",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "S80L",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "XC60",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "C30",
+                    "car_type": 5
+                }
+            ]
+        },
+        {
+            "index": "W",
+            "name": "五菱",
+            "content": [
+                {
+                    "xinghao": "宏光",
+                    "car_type": 1
+                }
+            ]
+        },
+        {
+            "index": "X",
+            "name": "雪铁龙",
+            "content": [
+                {
+                    "xinghao": "C1",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "C4轿跑车",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "C5",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "大C4毕加索",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "C4 Aircross",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "C2",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "经典爱丽舍",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "C4 L",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "全新爱丽舍",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "世嘉",
+                    "car_type": 4
+                }
+            ]
+        },
+        {
+            "index": "X",
+            "name": "现代",
+            "content": [
+                {
+                    "xinghao": "雅绅特",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "朗动",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "索纳塔八-混动",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "劳恩斯",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "雅科仕",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "辉翼",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "全新胜达",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "飞思",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "瑞奕",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "伊兰特",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "索纳塔八",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "ix25",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "劳恩斯-酷派",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "瑞纳",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "悦动",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "名驭",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "ix35",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "i30",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "名图",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "维拉克斯",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "雅尊",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "格锐",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "途胜",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "新胜达-进口",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "X",
+            "name": "雪佛兰",
+            "content": [
+                {
+                    "xinghao": "赛欧",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "科鲁兹",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "迈锐宝",
+                    "car_type": 3
+                },
+                {
+                    "xinghao": "TRAX创酷",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "科尔维特Stingray",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "爱唯欧",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "景程",
+                    "car_type": 4
+                },
+                {
+                    "xinghao": "科帕奇-进口",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "科迈罗",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "科帕奇",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "Y",
+            "name": "英菲尼迪",
+            "content": [
+                {
+                    "xinghao": "Q30",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "Q50",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "Q70L",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "QX70",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "Q60",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "M",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "FX",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "Emerg-E",
+                    "car_type": 5
+                },
+                {
+                    "xinghao": "EX",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "QX",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "QX80",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "QX60",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "QX50",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "JX35",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "Y",
+            "name": "野马汽车",
+            "content": [
+                {
+                    "xinghao": "野马F10",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "野马F12",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "野马F99",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "Z",
+            "name": "众泰",
+            "content": [
+                {
+                    "xinghao": "Z100",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "Z200HB",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "M300",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "5008",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "知豆E20",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "Z200",
+                    "car_type": 1
+                },
+                {
+                    "xinghao": "T200",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "江南TT",
+                    "car_type": 2
+                },
+                {
+                    "xinghao": "T600",
+                    "car_type": 2
+                }
+            ]
+        },
+        {
+            "index": "Z",
+            "name": "中兴汽车",
+            "content": [
+                {
+                    "xinghao": "中兴C3",
+                    "car_type": 2
+                }
+            ]
+        }
+    ]
+}

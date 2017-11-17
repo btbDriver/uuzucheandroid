@@ -1,0 +1,16 @@
+import "uu_common.proto";
+package com.uu.client.bean.system;
+
+// 查询ip列表
+message QueryIpListRequest {
+	optional string latestMd5Flag = 1; // 上次下发的md5
+}
+
+message QueryIpListResponse {
+	required int32 ret = 1; // 0：成功；-1：失败；1：接口访问成功但是没数据返回
+	optional string md5Flag = 2; // md5标签
+	repeated string httpIps = 3; // http短连接ip列表，格式 192.168.0.1
+	repeated string longConnectionIps = 4; // tcp长连接ip列表，格式 192.168.0.1
+	repeated string uploadFileIps = 5; // 上传文件ip列表，格式 192.168.0.1
+	repeated string httpsIps = 6; // https短连接ip列表，格式 192.168.0.1
+}

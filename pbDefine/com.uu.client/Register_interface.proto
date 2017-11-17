@@ -1,0 +1,22 @@
+import "uu_common.proto";
+package com.uu.client.bean.login;
+
+// 账户注册
+message AccountRegSSL {
+	message Request {
+		required string accountId = 1; // 用户自己填的账户名称，全局唯一，用户使用账户名密码登陆时，填入该 accountId 和密码
+		required string password = 2;
+		required int32 gender = 3[default = 1]; // 1：男性；2：女性
+		optional string phone = 4;
+	}
+
+	message Response {
+		required int32 ret = 1; // 0:注册成功；-1：失败；-2：账户名密码已存在
+		required int32 userId = 2; // 用户唯一标示
+		optional com.uu.client.bean.common.UserSecurityTicket userSecurityTicket = 3; // 用户票据
+	}
+
+}
+
+
+

@@ -1,0 +1,198 @@
+import "uu_common.proto";
+import "Car_common.proto";
+import "User_common.proto";
+package com.uu.client.bean.order.common;
+
+// 意向单状态
+enum PreOrderFormStatus {
+	RENTER_START = 1; // 租客发起意向单请求（快速约车）
+	RENTER_CONFIRMED = 2; // 租客侧已确认意向单（一对一、一对多约车）
+	CAR_OWNER_CONFIRMED = 3; // 车主侧已确认意向单
+	CAR_OWNER_REFUSEED = 4; // 车主拒绝
+	RENTER_REFUSEED = 5; // 租客拒绝
+	FINISHED = 6; // 结束
+	PRE_ORDER_TIMEOUT = 7; // 意向单已超时
+}
+
+// 订单状态
+enum OrderFormStatus {
+	WAIT_RENTER_PAY = 1; // 等待租客支付
+	RENTER_PAY_TIMEOUT = 2; // 租客付款超时
+	RENTER_CANCEL_BEFORE_PAY = 3; // 租客付款前取消订单
+	RENTER_CONFIRM_ORDER_WAIT_PAY = 4; // 租客确认订单，但是还没付款
+	WAIT_RENTER_TAKE_CAR = 5; // 租客待取车
+	RENTER_CANCEL_AFTER_PAY = 6; // 租客付款后取消订单，将会产生扣费项目
+	RENTER_ON_TRIP = 7; // 租客正在用车
+	RENTER_USE_CAR_TIMEOUT = 8; // 租客用车已超时
+	RENTER_END_TRIP = 9; // 租客结束行程（表示租客已还车）
+	CAR_OWNER_NOT_GET_BACK_CAR = 10; // 车主确认未收到车
+	COMPANY_DEAL_WITH = 11; // 客服已介入	
+	CAR_OWNER_GET_CAR_AND_FINISHED = 12; // 车主确认已收到车订单已结束（行程已完成）
+}
+
+// 租客充值的方式
+enum UserChargeType {
+	ALIPAY = 0; // 支付宝
+	UPAY = 1; // U付
+	WECHAT = 2; // 微信支付
+}
+
+// 订单评价
+message OrderComment {
+	required string carId = 1; // 车辆id
+	required int32 fromUserId = 2; // 谁评论的
+	required int32 toUserId = 3; // 谁被评论
+	required float stars = 4;
+	required int32 occurTime = 5; // 评论发生的时间
+	optional string content = 6; // 评价内容
+}
+
+// 意向单、订单基本属性
+message OrderFormPropertys {
+	required string carId = 1; // 车辆id
+	required int32 carOwnerUsrId = 2; // 车主用户id
+	required int32 renterUsrId = 3; // 租客用户id
+	required int32 planToStartTime = 4; // 订单计划开始时间戳，单位秒
+	required int32 planToEndTime = 5; // 订单计划结束时间戳，单位秒
+	optional string orderDuration = 6; // 订单时长，根据订单计划开始、结束计算得到的
+	optional int32 orderFormCreateTime = 7; // 订单建立时间戳，单位秒，如果是一对一、一对多约车，则是车主同意意向单的时间；如果是快速约车，则是租客选定车的时间；如果是意向单，则表示意向单建立的时间
+	optional int32 timesToEnd = 8; // 距离订单结束的时间，单位秒，该值等于 planToEndTime - 当前时间，也就是说，如果订单还没超时，则该值是正数，如果已超时，则是负数
+	optional int32 renterEndTripTime = 9; // 租客还车（结束行程）时间戳，单位秒
+	optional string actualOrderDuration = 10; // 实际租时
+	optional string renterOvertime = 11; // 超时时间
+}
+
+// 意向单详情
+message PreOrderFormInfo {
+	required string preOrderId = 1; // 意向单id
+	required OrderFormPropertys orderFormPropertys = 2; // 订单相关属性
+	required com.uu.client.bean.car.common.CarBriefInfo carBriefInfo = 3; // 车辆信息
+	required com.uu.client.bean.user.common.UserBriefInfo renter = 4; // 租客信息
+	required PreOrderFormStatus status = 5; // 意向单状态
+	required int32 renterStartPreOrderTime = 6; // 租客发起预约单时间戳，单位秒
+	required int32 carOwnerTimeLimitToConfirm = 7; // 车主需要在多长时间内确认意向单，单位分钟
+	optional int32 carOwnerConfirmTime = 8; // 车主确认意向单的时间戳，单位秒
+	optional int32 renterOwnerConfirmTime = 9; // 租客确认意向单的时间戳，单位秒
+	optional float carOwnerRentIncome = 11; // 车主的租金收入（根据订单开始结束时间计算的租金收入，车主实际的收入需等订单结束后，根据实际开始结束时间再计算）
+	optional com.uu.client.bean.common.LatlngPosition position = 12; // 租客设置的取车位置坐标
+        optional string positionDesc  = 13; // 租客设置的取车位置描述
+	optional int32 isNewMember = 14; // 是否为新会员     0：是   1：否
+	optional int32 drivingAge =15;   //驾龄 单位：月
+}
+
+// 租客订单详情
+message RenterOrderFormInfo {
+	required string orderId = 1;
+	required OrderFormPropertys orderFormPropertys = 2; // 订单相关属性
+	required com.uu.client.bean.car.common.CarBriefInfo carBriefInfo = 3; // 车辆信息
+	required OrderFormStatus status = 4; // 订单状态
+	required bool isNonDeductible = 5; // true:选中不计免赔；false：未选中
+	required int32 renterTimeLimitToPay = 6; // 租客需要在多少时间内完成支付，单位分钟
+	repeated string couponIds = 10; // 优惠券id列表
+	required float couponAmount = 11; // 优惠券金额数
+	required float nonDeductiblePerDay = 12; // 不计免赔每天费用
+	required float accountBalance = 13; // 租客账户余额
+	required float depositCost = 15; // 押金费用
+	optional RenterCostItems preCostNonDeductibleChecked = 16; // 不计免赔选中时租客需付款项
+	optional RenterCostItems preCostNonDeductibleNotChecked = 17; // 不计免赔未选中时租客需付款项
+	optional RenterCostItems finallyCost = 18; // 租客最终消费
+	optional OrderComment renterComment = 19; // 租客评价，客户端根据该字段是否有值，来判断租房是否已经评价
+	optional string customerServiceNote = 20; // 客服补充
+	optional string carOwnerPhone = 21; // 车主手机联系号码
+	optional string attentionNotes = 22; // 注意事项
+	optional string sessionKey = 23; // 订单处在 WAIT_RENTER_PAY、RENTER_CONFIRM_ORDER_WAIT_PAY 这两种状态时，租客进入到订单详情该字段有值，客户端把该字段填到确认支付的命令字里即可
+	optional UserChargeType userChargeType = 24; // 租客充值的方式
+	optional int32 canSelectCoupon = 25; // 是否可选择优惠券 0：不可选择，1：可选择
+	optional int32 ifHasTicket=26; // 表示当前订单能使用的优惠卷 >0：有可使用优惠卷
+	optional string resultTicketMsg=27; // 优惠卷的返回提示信息
+	optional com.uu.client.bean.common.LatlngPosition position = 28; // 租客设置的取车位置坐标
+    optional string positionDesc  = 29; // 租客设置的取车位置描述
+
+}
+
+// 订单钱款条目
+message RenterCostItems {
+	optional float carRentAmount = 1; // 汽车租金
+	optional float InsuranceCost = 2; // 保险费用
+	optional float nonDeductibleCost = 3; // 不计免赔费用
+	optional float renterUserCarOvertimeCost = 4; // 租客用车超时产生的费用
+	optional float renterTrafficViolationCost = 5; // 租客交通违章产生的费用
+	optional float renterBreakContractCost = 6; // 租客违约产生的费用（订单支付后，租客取消订单产生的违约费用）
+	optional float actualCost = 7; // 租客实际支出
+	optional float totalAdvancePayment = 8; // 总需预付款数
+	optional float rechargeAmount = 9; // 租客需充值数
+}
+
+// 车主订单详情
+message CarOwnerOrderFormInfo {
+	required string orderId = 1;
+	required OrderFormPropertys orderFormPropertys = 2; // 订单相关属性
+	required com.uu.client.bean.car.common.CarBriefInfo carBriefInfo = 3; // 车辆信息
+	required OrderFormStatus status = 4; // 订单状态
+	optional float carRentIncome = 6; // 汽车租金
+	optional float renterUserCarOvertimeIncome = 7; // 租客用车超时的租金收入
+	optional float totalIncome = 8; // 车主在这张订单的总收入
+	optional float renterBreakContractIncome = 14; // 租客违约的支出
+	optional OrderComment renterComment = 9; // 租客评价
+	optional OrderComment carOwnerComment = 10; // 车主评价，客户端根据是否有该字段，来确定车主是否已经评价
+	optional com.uu.client.bean.user.common.UserBriefInfo renter = 11; // 租客信息 
+	optional string renterPhone = 12; // 租客手机联系号码
+	optional string attentionNotes = 13; // 注意事项
+	optional int32 hoursToContactCompany = 15; // 车主收到车后若有异议，在多久内联系客服
+	optional com.uu.client.bean.common.LatlngPosition position = 16; // 租客设置的取车位置坐标
+    optional string positionDesc  = 17; // 租客设置的取车位置描述
+    optional int32 isNewMember = 18; // 是否为新会员     0：是   1：否
+	optional int32 drivingAge =19;   //驾龄 单位：月
+}
+
+// 行程页订单卡片
+message TripOrderCard {
+	required string orderId = 1; // 行程列表页包括意向单和订单，两种订单的id统一用该字段表示
+	required int32 orderType = 2; // 0：意向单：1：订单
+	optional PreOrderFormStatus preOrderStatus = 3; // 意向单状态
+	optional OrderFormStatus orderStatus = 4; // 订单状态
+	required OrderFormPropertys orderFormPropertys = 5; // 订单相关属性
+	required com.uu.client.bean.car.common.CarBriefInfo carBriefInfo = 6; // 车辆信息
+	optional float renterCost = 7; // 租客支出
+	optional float carOwnerIncome = 8; // 车主收入
+	optional com.uu.client.bean.user.common.UserBriefInfo renter = 9; // 租客信息
+	optional bool isRenterCommnet = 10; // 租客是否已经评论
+	optional bool isCarOwnerCommnet = 11; // 车主是否已经评论
+	optional int32 renterEndTripTime = 12; // 租客还车（结束行程）时间戳，单位秒
+	required int32 renterTimeLimitToPay = 13; // 租客需要在多少时间内完成支付，单位分钟
+	required int32 carOwnerTimeLimitToConfirm = 14; // 车主需要在多长时间内确认意向单，单位分钟
+}
+
+// 快速约车车主响应页面card
+message QuickRentCarAgreeCard {
+	required string preOrderId = 1;
+	optional PreOrderFormStatus preOrderStatus = 2; // 意向单状态
+	required OrderFormPropertys orderFormPropertys = 3; // 意向单相关属性
+	required com.uu.client.bean.car.common.CarBriefInfo carBriefInfo = 4; // 车辆信息
+	optional string carOwnerPhone = 5; // 车主联系电话
+}
+
+// 行程列表页查询类型
+enum TripListQueryType {
+	UNDERWAY = 1; // 进行中
+	COMPLETED = 2; // 已完成
+	CANCELED = 3; // 已取消
+}
+
+// 意向单结束时的状态
+enum PreOrderEndStatus {
+	RENT_SUC = 1; // 预约成功
+	CAR_OWNER_NOT_ACCEPT = 2; // 车主未接受
+	RENTER_NOT_SELECT = 3; // 租客未选择
+	RENTER_CANCEL = 4; // 租客取消
+}
+
+message PreOrderHistoCard {
+	optional string carSn = 1; // 车辆sn
+	optional int32 occurTime = 2; // 发生的时间戳，单位秒
+	optional string rentInfo = 3; // 预约信息
+	optional int32 userType = 4; // 1：车主；2：租客
+	optional int32 planStartTime = 5; // 计划用车时间戳，单位秒
+	optional int32 planEndTime = 6; // 计划还车时间戳，单位秒
+	optional PreOrderEndStatus preOrderEndStatus = 7; // 意向单最终的状态
+}

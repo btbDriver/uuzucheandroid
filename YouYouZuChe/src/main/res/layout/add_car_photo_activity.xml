@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/main_bg"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="3dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+            <FrameLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:visibility="visible">
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/fengmian_imageview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/add_car_fengmian" />
+
+                    <RelativeLayout
+
+                        android:id="@+id/fengmian_root"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/photo_front_transport_bg"
+                        android:clickable="true" />
+
+                    <View
+                        android:id="@+id/center_view_1"
+                        android:layout_width="1px"
+                        android:layout_height="1px"
+                        android:layout_centerInParent="true" />
+
+                    <ImageView
+                        android:id="@+id/fengmian_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/center_view_1"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/camere_button" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/center_view_1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/add_car_addphoto"
+                        android:textColor="@color/button_text_color"
+                        android:textSize="@dimen/f3" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/title_bg_color"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="36dp"
+                            android:text="@string/please_update_text"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/f3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_car_zuoqian"
+                            android:textColor="@color/red_error"
+                            android:textSize="@dimen/f3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_car_photo"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/f3" />
+
+                    </LinearLayout>
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/linear_1"
+                        android:background="@drawable/add_car_divide_1" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/covel_tiltle_bg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="封面"
+                        android:textSize="@dimen/f3"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        android:textColor="@color/button_text_color" />
+
+                </RelativeLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_main"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="134dp"
+                        android:layout_weight="1">
+
+                        <com.android.volley.toolbox.NetworkImageView
+                            android:id="@+id/zhengqian_imageview"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"
+                            android:layout_height="134dp"
+                            android:background="@drawable/add_car_zhengqian" />
+
+                        <RelativeLayout
+                            android:id="@+id/zhengqian_root"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/photo_front_transport_bg"
+                            android:clickable="true" />
+
+                        <View
+                            android:id="@+id/center_view_2"
+                            android:layout_width="1px"
+                            android:layout_height="1px"
+                            android:layout_centerInParent="true" />
+
+                        <ImageView
+                            android:id="@+id/zhengqian_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/center_view_2"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/camere_button" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/center_view_2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/add_car_addphoto"
+                            android:textColor="@color/button_text_color"
+                            android:textSize="@dimen/f3" />
+
+                        <LinearLayout
+                            android:id="@+id/linear_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/title_bg_color"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="17dp"
+                                android:text="@string/please_update_text"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_car_zhengqian"
+                                android:textColor="@color/red_error"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_car_photo"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                        </LinearLayout>
+
+                        <com.android.volley.toolbox.NetworkImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/linear_2"
+                            android:background="@drawable/add_car_divide_1" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="3dp"
+                        android:layout_height="wrap_content" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="134dp"
+
+                        android:layout_weight="1">
+
+                        <com.android.volley.toolbox.NetworkImageView
+                            android:id="@+id/youhou_imageview"
+                            android:scaleType="centerCrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="134dp"
+                            android:background="@drawable/add_car_youhou" />
+
+                        <RelativeLayout
+                            android:id="@+id/youhou_root"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/photo_front_transport_bg"
+                            android:clickable="true" />
+
+                        <View
+                            android:id="@+id/center_view_3"
+                            android:layout_width="1px"
+                            android:layout_height="1px"
+                            android:layout_centerInParent="true" />
+
+                        <ImageView
+                            android:id="@+id/youhou_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/center_view_3"
+                            android:layout_centerHorizontal="true"
+                             android:background="@drawable/camere_button" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/center_view_3"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/add_car_addphoto"
+                            android:textColor="@color/button_text_color"
+                            android:textSize="@dimen/f3" />
+
+                        <LinearLayout
+                            android:id="@+id/linear_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/title_bg_color"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="17dp"
+                                android:text="@string/please_update_text"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_car_youhou"
+                                android:textColor="@color/red_error"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_car_photo"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                        </LinearLayout>
+
+                        <com.android.volley.toolbox.NetworkImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/linear_3"
+                            android:background="@drawable/add_car_divide_1" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="134dp"
+                        android:layout_weight="1">
+
+                        <com.android.volley.toolbox.NetworkImageView
+                            android:id="@+id/zhenghou_imageview"
+                            android:scaleType="centerCrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="134dp"
+                            android:background="@drawable/add_car_zhenghou" />
+
+                        <RelativeLayout
+                            android:id="@+id/zhenghou_root"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/photo_front_transport_bg"
+                            android:clickable="true" />
+
+                        <View
+                            android:id="@+id/center_view_4"
+                            android:layout_width="1px"
+                            android:layout_height="1px"
+                            android:layout_centerInParent="true" />
+
+                        <ImageView
+                            android:id="@+id/zhenghou_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/center_view_4"
+                            android:layout_centerHorizontal="true"
+                             android:background="@drawable/camere_button" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/center_view_4"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/add_car_addphoto"
+                            android:textColor="@color/button_text_color"
+                            android:textSize="@dimen/f3" />
+
+                        <LinearLayout
+                            android:id="@+id/linear_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/title_bg_color"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="17dp"
+                                android:text="@string/please_update_text"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_car_zhenghou"
+                                android:textColor="@color/red_error"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_car_photo"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                        </LinearLayout>
+
+                        <com.android.volley.toolbox.NetworkImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/linear_4"
+                            android:background="@drawable/add_car_divide_1" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="3dp"
+                        android:layout_height="wrap_content" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="134dp"
+
+                        android:layout_weight="1">
+
+                        <com.android.volley.toolbox.NetworkImageView
+                            android:id="@+id/zuocemian_imageview"
+                            android:scaleType="centerCrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="134dp"
+                            android:background="@drawable/add_car_zuocemian" />
+
+                        <RelativeLayout
+                            android:id="@+id/zuocemian_root"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/photo_front_transport_bg"
+                            android:clickable="true" />
+
+                        <View
+                            android:id="@+id/center_view_5"
+                            android:layout_width="1px"
+                            android:layout_height="1px"
+                            android:layout_centerInParent="true" />
+
+                        <ImageView
+                            android:id="@+id/zuocemian_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/center_view_5"
+                            android:layout_centerHorizontal="true"
+                             android:background="@drawable/camere_button" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/center_view_5"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/add_car_addphoto"
+                            android:textColor="@color/button_text_color"
+                            android:textSize="@dimen/f3" />
+
+                        <LinearLayout
+                            android:id="@+id/linear_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/title_bg_color"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="17dp"
+                                android:text="@string/please_update"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_car_zuocemian"
+                                android:textColor="@color/red_error"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_car_photo"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                        </LinearLayout>
+
+                        <com.android.volley.toolbox.NetworkImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/linear_5"
+                            android:background="@drawable/add_car_divide_1" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="134dp"
+
+                        android:layout_weight="1">
+
+                        <com.android.volley.toolbox.NetworkImageView
+                            android:id="@+id/zhongkongtai_imageview"
+                            android:scaleType="centerCrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="134dp"
+                            android:background="@drawable/add_car_zhongkongtai" />
+
+                        <RelativeLayout
+                            android:id="@+id/zhongkongtai_root"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/photo_front_transport_bg"
+                            android:clickable="true" />
+
+                        <View
+                            android:id="@+id/center_view_6"
+                            android:layout_width="1px"
+                            android:layout_height="1px"
+                            android:layout_centerInParent="true" />
+
+                        <ImageView
+                            android:id="@+id/zhongkongtai_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/center_view_6"
+                            android:layout_centerHorizontal="true"
+                             android:background="@drawable/camere_button" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/center_view_6"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/add_car_addphoto"
+                            android:textColor="@color/button_text_color"
+                            android:textSize="@dimen/f3" />
+
+                        <LinearLayout
+                            android:id="@+id/linear_6"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/title_bg_color"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="17dp"
+                                android:text="@string/please_update"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_car_zhongkongtai"
+                                android:textColor="@color/red_error"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_car_photo"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                        </LinearLayout>
+
+                        <com.android.volley.toolbox.NetworkImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/linear_6"
+                            android:background="@drawable/add_car_divide_1" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="3dp"
+                        android:layout_height="wrap_content" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="134dp"
+
+                        android:layout_weight="1">
+
+                        <com.android.volley.toolbox.NetworkImageView
+                            android:id="@+id/cheneiqianpai_imageview"
+                            android:scaleType="centerCrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="134dp"
+                            android:background="@drawable/add_car_cheneiqianpai" />
+
+                        <RelativeLayout
+                            android:id="@+id/cheneiqianpai_root"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/photo_front_transport_bg"
+                            android:clickable="true" />
+
+                        <View
+                            android:id="@+id/center_view_7"
+                            android:layout_width="1px"
+                            android:layout_height="1px"
+                            android:layout_centerInParent="true" />
+
+                        <ImageView
+                            android:id="@+id/cheneiqianpai_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/center_view_7"
+                            android:layout_centerHorizontal="true"
+                             android:background="@drawable/camere_button" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/center_view_7"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/add_car_addphoto"
+                            android:textColor="@color/button_text_color"
+                            android:textSize="@dimen/f3" />
+
+                        <LinearLayout
+                            android:id="@+id/linear_7"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/title_bg_color"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="17dp"
+                                android:text="@string/please_update"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_car_cheneiqianpao"
+                                android:textColor="@color/red_error"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_car_photo"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                        </LinearLayout>
+
+                        <com.android.volley.toolbox.NetworkImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/linear_7"
+                            android:background="@drawable/add_car_divide_1" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="134dp"
+
+                        android:layout_weight="1">
+
+                        <com.android.volley.toolbox.NetworkImageView
+                            android:id="@+id/cheneihoupai_imageview"
+                            android:scaleType="centerCrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="134dp"
+                            android:background="@drawable/add_car_cheneihoupai" />
+
+                        <RelativeLayout
+                            android:id="@+id/cheneihoupai_root"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/photo_front_transport_bg"
+                            android:clickable="true" />
+
+                        <View
+                            android:id="@+id/center_view_8"
+                            android:layout_width="1px"
+                            android:layout_height="1px"
+                            android:layout_centerInParent="true" />
+
+                        <ImageView
+                            android:id="@+id/cheneihoupai_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/center_view_8"
+                            android:layout_centerHorizontal="true"
+                             android:background="@drawable/camere_button" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/center_view_8"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/add_car_addphoto"
+                            android:textColor="@color/button_text_color"
+                            android:textSize="@dimen/f3" />
+
+                        <LinearLayout
+                            android:id="@+id/linear_8"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/title_bg_color"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="17dp"
+                                android:text="@string/please_update"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_car_cheneihoupai"
+                                android:textColor="@color/red_error"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_car_photo"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/action_bar_menu_text_size" />
+
+                        </LinearLayout>
+
+                        <com.android.volley.toolbox.NetworkImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/linear_8"
+                            android:background="@drawable/add_car_divide_1" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="3dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="19dp"
+                    android:text="@string/add_car_tishi"
+                    android:textColor="@color/c8"
+                    android:textSize="@dimen/f3" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_root"
+        android:layout_width="match_parent"
+        android:background="@color/c11"
+        android:layout_alignParentBottom="true"
+        android:layout_height="59dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c8" />
+
+        <TextView
+            android:id="@+id/sure"
+
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="14dp"
+            android:layout_marginLeft="14dp"
+            android:background="@drawable/red_button_bg"
+            android:gravity="center"
+            android:text="@string/sure_button_text"
+            android:textColor="@color/red_button_text_color"
+            android:textSize="@dimen/f2" />
+    </RelativeLayout>
+</LinearLayout>

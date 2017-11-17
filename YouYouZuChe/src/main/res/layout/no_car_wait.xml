@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical">
+
+
+    <com.ab.view.progress.AbCircleProgressBar
+        android:id="@+id/circleProgressBar"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/c8"
+        android:textSize="@dimen/price_range_text_size" />
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="@dimen/f1"
+        android:textColor="@color/c8"
+        android:text="您的用车请求已经发送给您选择的车主\n请耐心等待回复"
+        android:layout_below="@id/circleProgressBar" />
+</RelativeLayout>

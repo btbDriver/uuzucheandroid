@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/location_linear"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/f3"
+        android:background="@color/c13" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/content_item_size"
+        android:layout_marginLeft="@dimen/content_item_left"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+            android:layout_width="@dimen/image_content_size"
+            android:layout_height="@dimen/image_content_size"
+            android:background="@drawable/find_car_location" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/five_dimen"
+            android:text="@string/car_get_location"
+            android:textColor="@color/subtitle_color"
+            android:textSize="@dimen/f3" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/content_item_left"
+        android:background="@color/c13" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/content_item_size"
+        android:layout_marginLeft="@dimen/content_item_left"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/car_location"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/textview_left_image_size"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="北京市海淀区人民大学"
+            android:textColor="@color/subtitle_color"
+            android:textSize="@dimen/f3" />
+
+        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/nine_dimen"
+            android:layout_marginRight="@dimen/one_centimeter_size"
+            android:background="@drawable/right_arrow" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/c13" />
+
+
+</LinearLayout>

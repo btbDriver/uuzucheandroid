@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/file"
+        android:showAsAction="ifRoom"
+        android:title="add">
+
+        <!-- "file" submenu -->
+        <menu>
+            <item
+                android:id="@+id/create_new"
+                android:showAsAction="ifRoom"
+                android:title="del"/>
+            <item
+                android:id="@+id/open"
+                android:showAsAction="ifRoom"
+                android:title="save"/>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    android:background="@drawable/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/rating_title"
+        android:layout_width="match_parent"
+        android:text="@string/renter_order_rating_title"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/c8"
+        android:textSize="@dimen/f2"
+        android:layout_height="wrap_content"/>
+
+    <RatingBar
+        android:id="@+id/star"
+        style="@style/StarMoreBigRatingBar"
+        android:stepSize="1"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rating_title"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:numStars="5"/>
+
+    <EditText
+        android:id="@+id/to_owner_review"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:layout_below="@id/star"
+        android:layout_marginTop="@dimen/content_item_left"
+        android:hint="车主人很好，本次用车很愉快。"
+        android:background="@drawable/white_input_bg"
+        android:paddingTop="17dp"
+        android:paddingBottom="17dp"
+        android:paddingLeft="12dp"
+        android:maxLength="200"
+        android:gravity="left|top"
+        android:paddingRight="12dp"
+        android:textColor="@color/c7"
+        android:textSize="@dimen/f3"
+        android:textColorHint="@color/c9"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"/>
+
+
+    <TextView
+        android:id="@+id/tip"
+        android:textColor="@color/c8"
+        android:textSize="@dimen/f3"
+        android:layout_margin="18dp"
+        android:text="请您对该行程做出客观评价，字数不少于15个汉字，就可以获得50元租车券"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/to_owner_review"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/sure"
+        android:layout_below="@id/tip"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@drawable/red_button_bg"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_marginRight="@dimen/s1"
+        android:text="提交评价"
+        android:textColor="@color/red_button_text_color"
+        android:textSize="@dimen/f1"/>
+</RelativeLayout>
+

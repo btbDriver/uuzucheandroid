@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/c11"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/date_textview"
+        android:textSize="@dimen/f1"
+        android:layout_marginLeft="3dp"
+        android:textColor="@color/c6"
+        android:text="2014年12月30日 19:00(周二)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/hour"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1" />
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/mins"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tips"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_marginTop="7dp"
+        android:textSize="@dimen/f5"
+        android:textColor="@color/c3"
+        android:layout_marginBottom="@dimen/s1"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:background="@color/c11">
+
+        <TextView
+            android:id="@+id/cancle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:textSize="@dimen/f2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white_button_text_color"
+            android:background="@drawable/bottom_left_bottom_bg" />
+
+        <TextView
+            android:id="@+id/sure"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:layout_marginLeft="8dp"
+            android:text="确定"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="14dp"
+            android:textColor="@color/red_button_text_color"
+            android:textSize="@dimen/f2"
+            android:background="@drawable/red_button_bg" />
+    </LinearLayout>
+
+</LinearLayout>

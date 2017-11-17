@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13" />
+
+        <RelativeLayout
+            android:id="@+id/gearbox_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/addcar_image_overlay">
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/icon"
+                android:layout_marginLeft="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/car_info_gearbox_success_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.5dp"
+                android:layout_toRightOf="@id/icon"
+                android:text="@string/gearbox"
+                android:textColor="@color/c7"
+                android:textSize="@dimen/f3" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/arrow"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/add_car_check_no" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="24dp"
+            android:background="@color/c13" />
+
+        <RelativeLayout
+            android:id="@+id/cc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/addcar_image_overlay">
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/icon"
+                android:layout_marginLeft="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/car_info_cc_success_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.5dp"
+                android:layout_toRightOf="@id/icon"
+                android:text="@string/cc"
+                android:textColor="@color/c7"
+                android:textSize="@dimen/f3" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/arrow"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/add_car_check_no" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="24dp"
+            android:background="@color/c13" />
+
+        <RelativeLayout
+            android:id="@+id/year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/addcar_image_overlay">
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/icon"
+                android:layout_marginLeft="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/car_info_year_success_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.5dp"
+                android:layout_toRightOf="@id/icon"
+                android:text="@string/year"
+                android:textColor="@color/c7"
+                android:textSize="@dimen/f3" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/arrow"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/add_car_check_no" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="24dp"
+            android:background="@color/c13" />
+
+        <RelativeLayout
+            android:id="@+id/seat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/addcar_image_overlay">
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/icon"
+                android:layout_marginLeft="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/car_info_seat_success_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.5dp"
+                android:layout_toRightOf="@id/icon"
+                android:text="@string/seat"
+                android:textColor="@color/c7"
+                android:textSize="@dimen/f3" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/arrow"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/add_car_check_no" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="24dp"
+            android:background="@color/c13" />
+
+        <RelativeLayout
+            android:id="@+id/mileage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/addcar_image_overlay">
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/icon"
+                android:layout_marginLeft="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/car_info_mileage_success_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.5dp"
+                android:layout_toRightOf="@id/icon"
+                android:text="@string/mileage"
+                android:textColor="@color/c7"
+                android:textSize="@dimen/f3" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/arrow"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/add_car_check_no" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="24dp"
+            android:background="@color/c13" />
+
+        <RelativeLayout
+            android:id="@+id/oil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/addcar_image_overlay">
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/icon"
+                android:layout_marginLeft="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/car_info_oil_success_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.5dp"
+                android:layout_toRightOf="@id/icon"
+                android:text="@string/oil"
+                android:textColor="@color/c7"
+                android:textSize="@dimen/f3" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/arrow"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/add_car_check_no" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="24dp"
+            android:background="@color/c13" />
+
+        <RelativeLayout
+            android:id="@+id/set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/addcar_image_overlay">
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/icon"
+                android:layout_marginLeft="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/car_info_set_success_icon" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.5dp"
+                android:layout_toRightOf="@id/icon"
+                android:text="@string/car_set"
+                android:textColor="@color/c7"
+                android:textSize="@dimen/f3" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/arrow"
+                android:layout_toRightOf="@id/text1"
+                android:ellipsize="middle"
+                android:gravity="right"
+                android:singleLine="true"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/add_car_check_no" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_root"
+        android:layout_width="match_parent"
+        android:background="@color/c11"
+        android:layout_alignParentBottom="true"
+        android:layout_height="59dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c8" />
+
+        <TextView
+            android:id="@+id/sure"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="14dp"
+            android:layout_marginLeft="14dp"
+            android:background="@drawable/red_button_bg"
+            android:gravity="center"
+            android:text="@string/sure"
+            android:textColor="@color/red_button_text_color"
+            android:textSize="@dimen/f2" />
+    </RelativeLayout>
+
+</RelativeLayout>

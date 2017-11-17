@@ -1,0 +1,115 @@
+<com.youyou.uucar.Utils.View.UUProgressFramelayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/all_framelayout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        tools:context="com.youyou.uucar.UI.Main.FindCarFragment.SelectAddressActivity">
+
+        <RelativeLayout
+            android:id="@+id/title_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/address_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c9"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:id="@+id/address_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:background="@drawable/white_input_bg"
+                    android:ellipsize="end"
+                    android:layout_marginLeft="@dimen/s1"
+                    android:layout_marginRight="@dimen/s1"
+                    android:layout_marginTop="@dimen/s2"
+                    android:layout_marginBottom="@dimen/s2"
+                    android:paddingLeft="@dimen/s1"
+                    android:paddingRight="@dimen/s1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/find_car_map_search_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:gravity="center"
+                            android:text="搜索地点"
+                            android:textColor="@color/c7"
+                            android:layout_marginLeft="@dimen/s1"
+                            android:textSize="@dimen/f3"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/map_root"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.amap.api.maps2d.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/center"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/location_arrows" />
+
+            <View
+                android:id="@+id/center"
+                android:layout_width="1px"
+                android:layout_height="1px"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c8" />
+
+        <ListView
+            android:id="@+id/poi_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/c13"
+            android:dividerHeight="1px"
+            android:drawSelectorOnTop="false"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none"></ListView>
+    </LinearLayout>
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>

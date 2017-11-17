@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_pressed">#ff0099cc</color>
+    <color name="blue_normal">#ff33b5e5</color>
+    <color name="red_normal">#ff55acef</color>
+    <color name="red_pressed">#ff76b9e6</color>
+    <color name="green_complete">#ff55acef</color>
+    <color name="purple_progress">#ff55acef</color>
+    <color name="red_error">#ff55acef</color>
+</resources>

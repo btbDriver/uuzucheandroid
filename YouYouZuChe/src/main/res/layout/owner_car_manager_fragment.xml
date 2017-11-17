@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/main_bg"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/list_root"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:id="@+id/swiperefreshlayout"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/nocolor"
+                android:layout_margin="@dimen/s1"
+                android:layout_weight="1"
+                android:drawSelectorOnTop="true"
+                android:footerDividersEnabled="true"
+                android:listSelector="@drawable/photo_front_transport_bg"
+                android:dividerHeight="@dimen/s1"
+                android:id="@+id/listview" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ad_root"
+        android:layout_width="match_parent"
+        android:background="@drawable/main_bg"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/owner_ad_img"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="46dp"
+                    android:background="@drawable/owner_ad_title"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/button_root"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/img"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginRight="29dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/calculate"
+                        android:layout_width="141dp"
+                        android:layout_height="45dp"
+                        android:textSize="@dimen/f3"
+                        android:text="计算爱车出租价"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/bottom_left_bottom_bg"
+                        android:textColor="@color/white_button_text_color"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/addcar"
+                        android:layout_width="141dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/c11"
+                        android:textSize="@dimen/f3"
+                        android:text="出租我的爱车"
+                        android:gravity="center"
+                        android:background="@drawable/red_button_bg"
+                        android:layout_centerHorizontal="true" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/get_friend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/f5"
+                    android:textColor="@color/c4"
+                    android:text="@string/owner_ad_get_friend"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/button_root"
+                    android:layout_marginTop="20dp" />
+
+
+                <TextView
+                    android:id="@+id/more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/f5"
+                    android:textColor="@color/c8"
+                    android:text="@string/owner_ad_more"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/get_friend"
+                    android:layout_marginTop="26dp" />
+
+                <View
+                    android:layout_below="@id/more"
+                    android:layout_width="1px"
+                    android:layout_height="23dp" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

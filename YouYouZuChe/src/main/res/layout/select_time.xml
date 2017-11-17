@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_bg">
+
+
+    <TextView
+        android:id="@+id/car_info_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/f3"
+        android:text="car"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/c8"/>
+
+    <RelativeLayout
+        android:id="@+id/address_root"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_marginRight="@dimen/s1"
+        android:layout_below="@id/car_info_content"
+        android:layout_width="match_parent"
+        android:background="@drawable/car_info_bg"
+        android:layout_height="45dp">
+
+        <TextView
+            android:id="@+id/address_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="送车地址"
+            android:textSize="@dimen/f3"
+            android:textColor="@color/c8"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_centerVertical="true"/>
+
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/c4"
+            android:gravity="right"
+            android:textSize="@dimen/f3"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/address_text"
+            android:singleLine="true"
+            android:ellipsize="start"
+            android:layout_marginRight="@dimen/s1"
+            android:layout_toLeftOf="@+id/address_arrow"/>
+
+        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+            android:id="@+id/address_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/s1"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/find_car_right_arrow"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/c13"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_marginRight="@dimen/s1"
+        android:layout_below="@id/address_root"
+        android:visibility="gone"
+        android:id="@+id/line2"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:id="@+id/car_beizhu"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_marginRight="@dimen/s1"
+        android:layout_below="@id/line2"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:background="@color/c11"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_car_beizhu"
+            android:textSize="@dimen/f3"
+            android:textColor="@color/c4"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/car_beizhu_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/f3"
+            android:textColor="@color/c4"
+            android:layout_marginLeft="200dp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/c13"
+        android:layout_below="@id/car_beizhu"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_marginRight="@dimen/s1"
+        android:id="@+id/line3"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:id="@+id/start_time_root"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_marginRight="@dimen/s1"
+        android:layout_below="@id/line3"
+        android:layout_width="match_parent"
+        android:background="@drawable/car_info_bg"
+        android:layout_height="45dp">
+
+        <TextView
+            android:id="@+id/start_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_start_time_title"
+            android:textSize="@dimen/f3"
+            android:textColor="@color/c8"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_centerVertical="true"/>
+
+        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+            android:id="@+id/start_time_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/s1"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/find_car_right_arrow"/>
+
+        <TextView
+            android:id="@+id/start_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/c9"
+            android:textColor="@color/c4"
+            android:gravity="right"
+            android:layout_toRightOf="@id/start_text"
+            android:textSize="@dimen/f3"
+            android:hint="@string/start_time_hint"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/s1"
+            android:layout_toLeftOf="@id/start_time_arrow"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/c13"
+        android:layout_below="@id/start_time_root"
+        android:id="@+id/line4"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_marginRight="@dimen/s1"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:id="@+id/end_time_root"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_marginRight="@dimen/s1"
+        android:layout_below="@id/line4"
+        android:layout_width="match_parent"
+        android:background="@drawable/car_info_bg"
+        android:layout_height="45dp">
+
+        <TextView
+            android:id="@+id/end_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_end_time_title"
+            android:textSize="@dimen/f3"
+            android:textColor="@color/c8"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_centerVertical="true"/>
+
+        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+            android:id="@+id/end_time_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/s1"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/find_car_right_arrow"/>
+
+        <TextView
+            android:id="@+id/end_time"
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/end_text"
+            android:textColorHint="@color/c9"
+            android:textColor="@color/c4"
+            android:textSize="@dimen/f3"
+            android:hint="@string/end_time_hint"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/s1"
+            android:layout_toLeftOf="@id/end_time_arrow"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/car_more_info"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_marginRight="@dimen/s1"
+        android:layout_marginTop="@dimen/s1"
+        android:layout_below="@id/end_time_root"
+        android:layout_width="match_parent"
+        android:background="@color/c11"
+        android:visibility="gone"
+        android:layout_height="183dp">
+
+        <RelativeLayout
+            android:id="@+id/car_zuqi"
+            android:layout_width="match_parent"
+            android:background="@color/c11"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="租期"
+                android:textSize="@dimen/f3"
+                android:textColor="@color/c4"
+                android:layout_marginLeft="@dimen/s1"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/tv_zuqi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/f3"
+                android:textColor="@color/c4"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="9dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/c13"
+            android:layout_below="@id/car_zuqi"
+            android:id="@+id/line01"
+            android:layout_height="1px"/>
+
+        <RelativeLayout
+            android:id="@+id/car_zujin"
+            android:layout_width="match_parent"
+            android:background="@color/c11"
+            android:layout_below="@id/line01"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="租金"
+                android:textSize="@dimen/f3"
+                android:textColor="@color/c4"
+                android:layout_marginLeft="@dimen/s1"
+                android:layout_centerVertical="true"/>
+
+            <!--<ImageView-->
+            <!--android:id="@+id/car_zujin_wenhao"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/order_info_wenhao_icon"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="45dp" />-->
+
+            <TextView
+                android:id="@+id/tv_zujin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/f3"
+                android:textColor="@color/c4"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="9dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/c13"
+            android:layout_below="@id/car_zujin"
+            android:id="@+id/line02"
+            android:layout_height="1px"/>
+
+        <RelativeLayout
+            android:id="@+id/car_baoxian"
+            android:layout_width="match_parent"
+            android:background="@color/c11"
+            android:layout_below="@id/line02"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="保险"
+                android:textSize="@dimen/f3"
+                android:textColor="@color/c4"
+                android:layout_marginLeft="@dimen/s1"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/car_baoxian_wenhao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/order_info_wenhao_icon"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="45dp"/>
+
+            <TextView
+                android:id="@+id/tv_baoxian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/f3"
+                android:textColor="@color/c4"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="9dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/c13"
+            android:layout_below="@id/car_baoxian"
+            android:id="@+id/line03"
+            android:layout_height="1px"/>
+
+        <RelativeLayout
+            android:id="@+id/car_yajin"
+            android:layout_width="match_parent"
+            android:background="@color/c11"
+            android:layout_below="@id/line03"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="押金"
+                android:textSize="@dimen/f3"
+                android:textColor="@color/c4"
+                android:layout_marginLeft="@dimen/s1"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/car_yajin_wenhao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/order_info_wenhao_icon"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="45dp"/>
+
+            <TextView
+                android:id="@+id/tv_yajin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/f3"
+                android:textColor="@color/c4"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="9dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:textColor="@color/c4"
+        android:layout_below="@id/car_more_info"
+        android:textSize="@dimen/f5"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="*租金计算：满30分钟按1小时计，满8小时按1天计\n优惠券和不计免赔服务，可以在预约成功后选择"/>
+
+
+    <RelativeLayout
+        android:id="@+id/bottom_root"
+        android:layout_width="match_parent"
+        android:background="@color/c11"
+        android:layout_alignParentBottom="true"
+        android:layout_height="59dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c8"/>
+
+        <TextView
+            android:id="@+id/sure"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="14dp"
+            android:enabled="false"
+            android:layout_marginLeft="14dp"
+            android:background="@drawable/red_button_bg"
+            android:gravity="center"
+            android:text="开始预约"
+            android:textColor="@color/red_button_text_color"
+            android:textSize="@dimen/f2"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

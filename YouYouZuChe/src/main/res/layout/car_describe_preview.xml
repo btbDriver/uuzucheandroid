@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/car_desc_linear"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/f3"
+        android:background="@color/c13" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/content_item_size"
+        android:layout_marginLeft="@dimen/content_item_left"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+            android:layout_width="@dimen/image_content_size"
+            android:layout_height="@dimen/image_content_size"
+            android:background="@drawable/car_describe" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/five_dimen"
+            android:text="@string/car_desc"
+            android:textColor="@color/subtitle_color"
+            android:textSize="@dimen/f3" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/content_item_left"
+        android:background="@color/c13" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/content_item_size"
+        android:layout_marginLeft="@dimen/content_item_left"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/car_desicripe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/five_dimen"
+            android:layout_weight="1"
+            android:text="租客在使用您的车辆时，还需要注意和准备。"
+            android:textColor="@color/subtitle_color"
+            android:textSize="@dimen/f3" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/c13" />
+
+</LinearLayout>

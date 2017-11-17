@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="金额(元)"
+            android:textColor="@color/c7"
+            android:textSize="@dimen/f3" />
+
+        <EditText
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@id/tip1"
+            android:background="@drawable/input_bg_focus"
+            android:hint="请输入转出金额"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:textColor="@color/subtitle_color"
+            android:textSize="@dimen/f3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="密      码"
+            android:textColor="@color/subtitle_color"
+            android:textSize="@dimen/f3" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@id/tip2"
+            android:background="@drawable/input_bg_focus"
+            android:hint="请输入提现密码"
+            android:inputType="textPassword"
+            android:maxLength="6"
+            android:singleLine="true"
+            android:textColor="@color/c7"
+            android:textSize="@dimen/f3" />
+    </RelativeLayout>
+
+</LinearLayout>

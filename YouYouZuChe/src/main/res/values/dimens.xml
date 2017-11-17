@@ -1,0 +1,48 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="drawer_header_text_size">24dp</dimen>
+    <dimen name="drawer_item_text_size">18dp</dimen>
+    <dimen name="map_car_location_height">230dp</dimen>
+    <dimen name="price_range_text_size">36dp</dimen>
+    <dimen name="four_dip">4dp</dimen>
+    <dimen name="pagerSliding_pading_leftright">10dp</dimen>
+    <dimen name="action_bar_subtitle_text_size">12dp</dimen>
+    <dimen name="content_item_size">63dp</dimen>
+    <dimen name="content_item_left">24dp</dimen>
+    <dimen name="image_content_size">27dp</dimen>
+    <dimen name="five_dimen">5dp</dimen>
+    <dimen name="textview_left_image_size">32dp</dimen>
+    <dimen name="eight_dimen">8dp</dimen>
+    <dimen name="nine_dimen">9dp</dimen>
+    <dimen name="ower_header_size">64dp</dimen>
+    <dimen name="ower_comments_header_size">99dp</dimen>
+    <dimen name="one_centimeter_size">48dp</dimen>
+    <dimen name="comments_item_size">103dp</dimen>
+    <dimen name="header_small_size">30dp</dimen>
+    <dimen name="header_small_top_linear_size">21dp</dimen>
+    <dimen name="thirteen_size">13dp</dimen>
+    <dimen name="small_text_size">10dp</dimen>
+    <dimen name="comments_item_location_size">110dp</dimen>
+    <dimen name="header_image_size">58dp</dimen>
+    <dimen name="renter_list_item">72dp</dimen>
+    <dimen name="action_bar_menu_text_size">15dp</dimen>
+    <dimen name="f1">20dp</dimen>
+    <dimen name="f2">17dp</dimen>`
+    <dimen name="f3">16dp</dimen>
+    <dimen name="f4">9dp</dimen>
+    <dimen name="f5">14dp</dimen>
+    <dimen name="f6">27dp</dimen>
+    <dimen name="bf1">11dp</dimen>
+    <dimen name="bf2">12dp</dimen>
+    <dimen name="x1">45dp</dimen>
+
+    <!--安全间距：27px-->
+    <dimen name="s1">9dp</dimen>
+    <!--最小的距离：21px（文字和-的间距）-->
+    <dimen name="s2">7dp</dimen>
+    <!--一条内容的高：153px-->
+    <dimen name="s3">51dp</dimen>
+</resources>

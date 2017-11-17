@@ -1,0 +1,124 @@
+import "uu_common.proto";
+package com.uu.client.bean.car.common;
+
+// 变速器类型
+enum CarTransmissionType {
+	AUTO = 1; // 自动档
+	HAND = 2; // 手动档
+} /**
+ * 车辆类型
+ */ enum CarType {
+	COMPACT = 0; // 紧凑型
+	SUV = 1; // SUV
+	COMFORTABLE = 2; // 舒适型
+	ECONOMICAL = 3; // 经济型
+	LUXURIOUS = 4; // 豪华型
+	BUSINESS = 5; // 商务型
+} /**
+ * 车辆配置
+ */ enum CarConfig {
+	GPS = 0; // GPS导航
+	USE = 1; // USB
+	VOICE_INPUT = 2; // 语音输入
+	BLUE_TOOTH = 3; // 蓝牙
+	SEAT_HEATING = 4; // 座椅加热
+	TACHOGRAPH = 5; // 行车记录仪
+	RADAR = 6; // 倒车雷达
+	AIR_CONDITION = 7; // 冷气空调
+} /**
+ * 车辆状态
+ */ enum CarStatus {
+	CUSTOMER_SERVICE_PUBLISHING = 1; // 客服正在发布
+	SUSPEND_RENT = 2; // 暂不出租
+	CAN_RENT = 3; // 可出租
+	WAIT_COMPLETE_EDIT = 4; // 待编辑完成
+	CHECK_NOT_PASSED = 5; // 审核不通过
+	WAIT_PUBLISHING = 6; // 等待发布
+}
+
+message CarBriefInfo {
+	required string carId = 1; // 车辆唯一标示id
+	required int32 userId = 12; // 车主用户id
+	required CarStatus carStatus = 11; // 车辆状态
+	required string licensePlate = 2; // 汽车牌照
+	required string brand = 3; // 汽车品牌
+	required string carModel = 4; // 汽车型号
+	required CarTransmissionType transmissionType = 5; // 变速箱类型
+	optional int32 pricePerDay = 6; // 汽车价格，按天算
+	optional string thumbImg = 7; // 车辆缩略图
+	optional string address = 8; // 取车地址
+	optional float distanceFromRenter = 9; // 车辆离租客有多少公里，单位为公里
+	optional com.uu.client.bean.common.LatlngPosition position = 10; // 车辆地理位置坐标
+}
+
+message CarProperties {
+	required string descStr = 1; // 属性描述
+	required string imgName = 2; // 图片名称
+}
+
+message CarDetailInfo {
+	required string carId = 1; // 车辆id
+	required int32 userId = 22; // 车主用户id
+	required string licensePlate = 17; // 汽车牌照
+	required string brand = 18; // 汽车品牌
+	required string carModel = 19; // 汽车型号
+	required CarTransmissionType transmissionType = 20; // 变速箱类型
+	required CarStatus carStatus = 21; // 车辆状态
+	required bool ifCollected = 23 [default = false]; // 当前用户是否收藏过该车辆
+	repeated CarImg carImgs = 2; // 车辆图片列表
+	required float priceByDay = 3; // 价格按天算
+	required float priceByHour = 4; // 价格按小时算
+	required float priceByWeek = 5; // 价格按周算
+	required string address = 6; // 取车地址
+	optional com.uu.client.bean.common.LatlngPosition position = 7; // 车辆地理位置坐标
+	repeated CarUnavailableTime unavailableTimes = 8; // 不可用时间
+	optional string carOwnerName = 9; // 车主
+	optional int32 acceptOrderPercent = 10; // 订单接收率
+	optional int32 averageResponseTimes = 11; // 平均响应时间，单位秒
+	optional string carDesc = 12; // 车辆描述
+	optional string carImgUrlPrefix = 13; // 客户端拿该字段 + imgName 得到车辆的图片地址
+	repeated CarProperties carProperties = 14; // 车辆属性列表
+	optional float carOwnerStars = 15; // 车主评星
+	repeated RenterAppraisal appraisalList = 16; // 评价列表
+	optional string shareWord = 24; // 分享文案
+	
+<<<<<<< .mine
+	
+	
+	
+	
+=======
+	optional string carFixDesc = 25; // 车里的固定六个描述，"111111"表示全选，"000000"表示全未选
+	optional int32 displacementType = 26;// 排量 1:1.6L以下; 2:1.6L ~ 1.9L；3：2.0L ~ 2.3L
+	
+>>>>>>> .r4998
+	message RenterAppraisal {
+		required string name = 1; // 租客名称
+		optional string avatar = 2; // 头像
+		required string appraisalContent = 3; // 评价内容
+		required int32 occurTime = 4; // 评价发生的时间戳，单位秒
+	}
+
+}
+
+// 车辆不可用时间定义
+message CarUnavailableTime {
+	required int32 unavailableTime = 1;// 不可用时间戳，单位秒
+	required CarUnavailableTimeType type = 2; // 类型
+}
+
+enum CarUnavailableTimeType {
+	AM = 1; // 上午
+	PM = 2; // 下午
+	ALL_DAY = 3; // 全天
+}
+
+message CarImg {
+	required string imgId = 1;
+	optional string carId = 2;
+	optional string imgSource = 3;
+	optional string imgThumb = 4;
+	optional com.uu.client.bean.common.LatlngPosition position = 5;
+	optional int32 uploadTime = 6; // 时间戳，单位秒
+}
+

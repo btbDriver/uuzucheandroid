@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawer_item_bg"
+        android:paddingTop="21dp"
+        android:paddingBottom="21dp"
+        android:paddingLeft="24dp"
+        android:gravity="left"
+        android:text="我的行程"
+        android:textColor="@color/drawer_menu_item_text_color"
+        android:textSize="@dimen/drawer_item_text_size"/>
+
+    <!-- 租客栏最后一个item留的空位 -->
+
+    <View
+        android:id="@+id/bottomview"
+        android:layout_width="1dp"
+        android:layout_height="147dp"
+        android:visibility="gone"/>
+
+    <!-- 车主栏-不是车主时最后一个item留的空位 -->
+
+    <View
+        android:id="@+id/bottomview2"
+        android:layout_width="1dp"
+        android:layout_height="243.5dp"
+        android:visibility="gone"/>
+
+    <!-- 车主栏-是车主时最后一个item留的空位 -->
+
+    <View
+        android:id="@+id/bottomview3"
+        android:layout_width="1dp"
+        android:layout_height="237.5dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

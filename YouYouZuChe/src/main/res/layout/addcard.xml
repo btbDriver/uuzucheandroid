@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="@dimen/action_bar_subtitle_text_size"
+              android:background="@drawable/main_bg">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/f2"
+        android:textColor="@color/c8"
+        android:text="绑定储蓄卡\n绑定的储蓄卡用于您在友友平台提现使用\n请绑定名为您本人的银行卡"
+        android:layout_marginLeft="@dimen/action_bar_subtitle_text_size"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/action_bar_subtitle_text_size"
+        android:layout_marginBottom="@dimen/action_bar_subtitle_text_size"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:visibility="gone"
+            android:background="@color/c13"/>
+
+        <RelativeLayout
+            android:id="@+id/car_plate"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:visibility="gone"
+            android:background="@drawable/addcar_image_overlay"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/s1"
+                android:text="车牌信息"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f2"/>
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/s1"
+                android:background="@drawable/add_car_check_no"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13"/>
+
+        <RelativeLayout
+            android:id="@+id/car_info"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/addcar_image_overlay"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/action_bar_subtitle_text_size"
+                android:text="账户名"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f2"/>
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="123dp"
+                android:text="王怨言"
+                android:textColor="@color/c6"
+                android:textSize="@dimen/f2"/>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13"/>
+
+        <RelativeLayout
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/addcar_image_overlay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/action_bar_subtitle_text_size"
+                android:text="卡号"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f2"/>
+
+            <EditText
+                android:id="@+id/card_num"
+                android:inputType="number"
+                android:hint="请输入银行卡号"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="left|center_vertical"
+                android:textColorHint="@color/c9"
+                android:singleLine="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="123dp"
+                android:textColor="@color/c6"
+                android:textSize="@dimen/f2"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13"/>
+
+        <RelativeLayout
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/addcar_image_overlay">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/action_bar_subtitle_text_size"
+                android:text="选择银行"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f2"/>
+
+            <TextView
+                android:id="@+id/bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:hint="工商银行"
+                android:textColorHint="@color/c9"
+                android:layout_marginLeft="123dp"
+                android:textColor="@color/c6"
+                android:textSize="@dimen/f2"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13"/>
+
+        <RelativeLayout
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/addcar_image_overlay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/action_bar_subtitle_text_size"
+                android:text="开户城市"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f2"/>
+
+            <EditText
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="left|center_vertical"
+                android:textColorHint="@color/c9"
+                android:singleLine="true"
+                android:hint="省份-城市"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="123dp"
+                android:textColor="@color/c6"
+                android:textSize="@dimen/f2"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/f2"
+        android:textColor="@color/c8"
+        android:text="设置友友提现密码"
+        android:layout_marginLeft="@dimen/action_bar_subtitle_text_size"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="@dimen/bf1"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/jiaoyi"
+            android:layout_marginLeft="@dimen/action_bar_subtitle_text_size"
+            android:orientation="horizontal"
+            android:layout_height="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="提现密码"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/f2"
+                android:textColor="@color/c4"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="left|center_vertical"
+                android:hint="请设置您的提现密码"
+                android:inputType="number|numberPassword"
+
+                android:layout_marginLeft="114dp"
+                android:maxLength="6"
+                android:textColorHint="@color/c9"
+                android:textColor="@color/c6"
+                android:textSize="@dimen/f2"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/jiaoyi_1"
+            android:layout_marginLeft="@dimen/action_bar_subtitle_text_size"
+            android:orientation="horizontal"
+            android:layout_height="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="重复密码"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/f2"
+                android:textColor="@color/c4"/>
+
+            <EditText
+                android:id="@+id/password_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="left|center_vertical"
+                android:hint="请再次输入提现密码"
+                android:inputType="number|numberPassword"
+                android:layout_marginLeft="114dp"
+                android:maxLength="6"
+                android:textColorHint="@color/c9"
+                android:textColor="@color/c6"
+                android:textSize="@dimen/f2"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

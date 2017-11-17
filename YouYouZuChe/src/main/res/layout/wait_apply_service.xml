@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/wait_apply_service"
+        android:textColor="@color/c8"
+        android:textSize="@dimen/f3" />
+
+    <TextView
+        android:id="@+id/guest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/red_button_bg"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="@string/guest"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/f2" />
+
+</RelativeLayout>

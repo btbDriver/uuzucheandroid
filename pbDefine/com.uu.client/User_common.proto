@@ -1,0 +1,61 @@
+import "uu_common.proto";
+package com.uu.client.bean.user.common;
+
+// 用户定义，存 kv 预计 120 字节
+message UserBriefInfo {
+	required int32 userId = 1;
+	optional string accountId = 2; // 账户id，客户端需要展示用户id时，展示该字段
+	optional string phone = 3;
+	required string firstnName = 4; // 用户名
+	required string lastName = 5; // 用户姓
+	required int32 gender = 6 [default = 1]; // 1：男性；2：女性
+	optional int32 regTime = 7;
+	optional float stars = 8; // 评星数
+	optional int32 rentCount = 9; // 租车次数
+	optional string avatar = 10; // 用户图片
+}
+
+// 优惠券使用状态
+enum CouponUseState { 
+	NOT_USED  = 0; //未使用，当前日期达到使用时间的起始时间，且未过使用时间的结束时间 
+	USED      = 1; //已使用，用户在订单使用过优惠券 
+	INVALID   = 2; //已失效，（需要客户端支持）优惠券在使用期限内，已不满足用户使用限制 
+	NOT_START = 3; //未开始，当前日期未达到使用时间的起始时间
+	EXPIRED   = 4; //已过期，当前日期超过使用时间的结束时间 
+}
+
+message Coupon {
+	required string couponId = 1; // id
+	required string couponName = 2; // 优惠券名称
+	optional string description = 3;
+	required bool isMulti = 4; // 是否可叠加
+	required float amount = 5; // 数额
+	required int32 validStart = 6; // 有效开始时间戳，单位秒
+	required int32 validEnd = 7; // 有效结束时间戳，单位秒
+	required int32 state = 8; // 0:待使用；1：已使用；2：已过期
+	optional int32 consumeTime = 9; // 使用优惠券时间戳，单位秒
+	optional int32 couponType = 10; // 优惠券类型。1：首租类型；2：一般优惠券
+	optional CouponUseState couponUseState = 11; //优惠券使用状态 
+}
+
+// 租客图片类型
+enum RenterImgType {
+	ID_FRONT = 1; // 身份证正面
+	ID_BACK = 2; // 身份证反面
+	DL_FRONT = 3; // 驾照正面
+	DL_BACK = 4; // 驾照反面
+}
+
+message UserStatus {
+	optional com.uu.client.bean.common.TipsMsg trip = 2; // 行程列表button提示消息
+	optional com.uu.client.bean.common.TipsMsg quickRent = 3; // 快速约车button提示消息
+	optional com.uu.client.bean.common.TipsMsg carOwner = 4; // 车主button提示消息
+	optional com.uu.client.bean.common.TipsMsg my = 5; // 我的button提示消息
+	required int32 userStatus = 6; // 1.新用户、2.身份证传完, 驾照都传完、3.租客身份审核完成、4.申请被驳回
+	required int32 carStatus = 7; // 1.没车、2.行驶证上传完成、3.车主身份审核完成、4.申请被驳回
+	optional int32 couponCount = 8; // 用户优惠券数量
+	required bool hasPreOrdering = 9; // 用户是否有正在进行中的意向单
+	required int32 preOrderType = 10; // 进行中的意向单的类型，1：快速约车(没有车主响应)；2：一对一、一对多约车;3:快速约车（已有车主响应）
+	repeated string waitPayOrderId = 11; // 是否有等待支付的订单id列表
+}
+

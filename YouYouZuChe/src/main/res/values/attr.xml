@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundAngleImageView">
+        <attr name="roundWidth" format="dimension" />
+        <attr name="roundHeight" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="SeekBarPressure">
+        <attr name="minValue" format="float" />
+        <attr name="maxValue" format="float" />
+        <attr name="duration" format="float" />
+
+        <attr name="swidth" format="dimension">
+            <enum name="fill_parent" value="-1" />
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+
+        <attr name="sheight" format="dimension">
+            <enum name="fill_parent" value="-1" />
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="tabTouchColor" format="color" />
+        <attr name="tabColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+    </declare-styleable>
+    <attr name="bg_listitem_shot" format="reference" />
+    <attr name="ic_view" format="reference" />
+    <attr name="ic_comment" format="reference" />
+    <attr name="ic_like" format="reference" />
+    <declare-styleable name="ForegroundImageView">
+        <attr name="android:foreground" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="UUProgressFramelayout">
+        <attr name="progress" format="reference" />
+        <attr name="no_data" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="PullToRefreshView">
+
+        <!-- The class to use as a View's View Delegate. Can be relative path from app's package name -->
+        <attr name="ptrViewDelegateClass" format="reference|string" />
+
+    </declare-styleable>
+
+    <!-- The attribute to set in your Application/Activity theme to reference your custom theme -->
+    <attr name="ptrHeaderStyle" format="reference" />
+
+    <declare-styleable name="PullToRefreshHeader">
+        <!-- A drawable to use as the background of the Header View -->
+        <attr name="ptrHeaderBackground" format="reference|color" />
+        <!-- The height of the Header View -->
+        <attr name="ptrHeaderHeight" format="reference|dimension" />
+        <!-- The Text Appearance of the Header View's Title text -->
+        <attr name="ptrHeaderTitleTextAppearance" format="reference" />
+        <!-- The color that the Progress Bar should be tinted with -->
+        <attr name="ptrProgressBarColor" format="reference|color" />
+        <!-- The style of the Progress Bar -->
+        <attr name="ptrProgressBarStyle">
+            <flag name="inside" value="0x0" />
+            <flag name="outside" value="0x1" />
+        </attr>
+        <!-- The height of the Progress Bar -->
+        <attr name="ptrProgressBarHeight" format="reference|dimension" />
+        <!-- Text to show to prompt the user is pull (or keep pulling) -->
+        <attr name="ptrPullText" format="reference|string" />
+        <!-- Text to show to tell the user that a refresh is currently in progress -->
+        <attr name="ptrRefreshingText" format="reference|string" />
+        <!-- Text to show to tell the user has scrolled enough to refresh -->
+        <attr name="ptrReleaseText" format="reference|string" />
+        <!--indeterminate progressbar style-->
+        <attr name="ptrSmoothProgressBarStyle" format="reference" />
+
+    </declare-styleable>
+
+
+</resources>

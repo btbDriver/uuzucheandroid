@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title_root"
+        android:background="@color/c14"
+        android:layout_width="match_parent"
+        android:layout_height="54dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="17dp"
+            android:text="可租时间"
+            android:textSize="@dimen/f2"
+            android:textColor="@color/c4"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/ban_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="周五限行"
+            android:textSize="@dimen/f3"
+            android:textColor="@color/c8"
+            android:layout_marginRight="17dp"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <com.squareup.timessquare.CalendarPickerView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_below="@id/title_root"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_above="@+id/tip"
+        android:paddingBottom="16dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:clipToPadding="false"
+        android:background="#FFFFFF" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/tip"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/ban_day_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ban_day_icon"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/s1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ban_day_icon"
+                android:text="全天不可租"
+                android:layout_centerVertical="true"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f5"
+                android:layout_marginLeft="@dimen/s1" />
+
+            <ImageView
+                android:id="@+id/half_ban_day_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/half_ban_day_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/half_ban_day_icon"
+                android:text="部分时间不可租"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f5"
+                android:layout_marginLeft="@dimen/s1" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

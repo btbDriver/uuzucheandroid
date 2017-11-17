@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/car_info_bg"
+    android:layout_margin="@dimen/s1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/f5"
+            android:padding="@dimen/s1"
+            android:textColor="@color/c8"
+            android:text="车主在xxxxxxx" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/c13" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/s1"
+        android:layout_height="wrap_content">
+
+        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+            android:id="@+id/car_img"
+            android:layout_width="126dp"
+            android:layout_height="78dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/list_car_img_def" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/s1"
+            android:textSize="@dimen/f2"
+            android:layout_toLeftOf="@+id/status"
+            android:singleLine="true"
+            android:layout_marginRight="@dimen/s1"
+            android:textColor="@color/c4"
+            android:text="车型"
+            android:id="@+id/brand"
+            android:layout_toRightOf="@id/car_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进行中"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/c3"
+            android:textSize="@dimen/f2" />
+
+        <RelativeLayout
+            android:id="@+id/start_time_root"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/brand"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/car_img"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_height="wrap_content">
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/start_icon"
+                android:layout_width="wrap_content"
+                android:background="@drawable/start_icon"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/start_time"
+                android:layout_width="wrap_content"
+                android:text="2014年8月26日"
+                android:layout_toRightOf="@id/start_icon"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:textSize="@dimen/f3"
+                android:textColor="@color/c8"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/end_time_root"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/start_time_root"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@id/car_img"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_height="wrap_content">
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/end_icon"
+                android:layout_width="wrap_content"
+                android:background="@drawable/end_icon"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/end_time"
+                android:layout_width="wrap_content"
+                android:text="2014年8月26日"
+                android:layout_toRightOf="@id/end_icon"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+
+                android:textSize="@dimen/f3"
+                android:textColor="@color/c8"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/over_root"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/over"
+            android:gravity="center"
+            android:text="结束行程"
+            android:textSize="@dimen/f2"
+            android:textColor="@color/c1" />
+    </RelativeLayout>
+
+</LinearLayout>

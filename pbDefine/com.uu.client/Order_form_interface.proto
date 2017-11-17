@@ -1,0 +1,169 @@
+import "uu_common.proto";
+package com.uu.client.bean.order;
+
+// 结束行程
+message FinishTrip {
+	message Request {
+		required string orderId = 1; // 订单id
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败 ...
+	}
+
+}
+
+// 评价订单，注意：租客评价车、车主评价租客都调用这个命令字
+message AppraiseOrder {
+	message Request {
+		required string orderId = 1; // 订单id
+		optional float stars = 2;
+		optional string note = 3;
+		optional string note2 = 4;
+		optional string note3 = 5;
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		optional string msg = 2; //评价成功后，送券提示；
+	}
+
+}
+
+// 租客确认支付
+message ConfirmToPay {
+	message Request {
+		required string orderId = 1;
+		repeated string couponIds = 2; // 优惠券号列表
+		optional bool isNonDeductibleChecked = 3; // 不计免赔是否选中
+		required string sessionKey = 4; // 客户端回填租客订单详情里的 sessionKey 
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：支付成功；-1：失败; -2:需充值；-3：订单状态有冲突，需要刷新页面，以便拿到订单的最新状态；
+		optional float needRechargeAmount = 2; // 需充值的数额
+		repeated PayTypeInfo payTypeInfoList = 3; // 可用的支付方式
+	}
+
+	// 支付方式
+	enum PayType {
+		ALIPAY = 1; // 支付宝
+		UPAY = 2; // U付
+		WECHAT = 3; // 微信支付
+	}
+
+	message PayTypeInfo {
+		required PayType type = 1; // 支付方式
+		required string name = 2; // 支付方式名称
+		optional string callbackUrl = 3; // 支付回调
+		optional string tradeNo = 4; // 支付流水号
+		optional string payOrderId = 5; // 支付的订单id，客户端使用这个字段当做订单id，传给第三方支付
+	}
+
+}
+
+// 第三方支付方式
+enum ThirdPayType {
+	ALI_PAY = 1; // 支付宝
+	WECHAT_PAY = 2; // 微信支付
+	LIANLIAN_PAY = 3; // 连连支付
+	U_PAY = 4; // U付
+}
+// 支付笔数方式
+enum PayCountType {
+	ONCE = 0; // 单笔支付
+	MULTI = 1; // 多笔支付
+}
+
+// 租客确认支付
+message ConfirmToPayNew {
+	message Request {
+		required string orderId = 1;
+		repeated string couponIds = 2; // 优惠券号列表
+		optional bool isNonDeductibleChecked = 3; // 不计免赔是否选中
+		required string sessionKey = 4; // 客户端回填租客订单详情里的 sessionKey 
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：支付成功；-1：失败; -2:需充值；-3：订单状态有冲突，需要刷新页面，以便拿到订单的最新状态；
+		optional float needRechargeAmount = 2; // 需充值的数额
+		repeated PayTypeInfo payTypeInfoList = 3; // 可用的支付方式
+	}
+
+	enum PayShowType {
+		NORMAL = 0;
+		RECOMMEND = 1; // 推荐
+		LAST = 2; // 上一次使用的支付方式
+	}
+
+	message PayTypeInfo {
+		required ThirdPayType type = 1; // 支付方式
+		required string name = 2; // 支付方式名称
+		optional string desc = 3; // 描述
+		optional PayShowType showType = 4; // 展示类型
+	}
+
+}
+
+// 查支付单相关参数
+message QueryPayOrderInfo {
+	message Request {
+		required string orderId = 1;
+		required float chargeAmout = 2; // 钱数
+		required ThirdPayType payType = 3; // 支付方式
+		optional PayCountType payCountType = 4; // 支付笔数方式
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：支付成功；-1：失败;
+		optional PayOrderInfo payOrderInfo = 3; // 支付相关参数
+	}
+
+	message PayOrderInfo {
+		optional ThirdPayType type = 1; // 支付方式
+		optional string payNo = 2; // 友友支付单号
+		optional string tradeNo = 4; // 第三方支付流水号
+		optional string callbackUrl = 5; // 支付回调
+		optional WechatPayParam wechatPayParam = 10; // 微信支付相关参数
+		optional LianlianPayParam lianlianPayParam = 11; // 连连支付相关参数
+		optional UpayParam upayParam = 12; // U付支付相关参数
+	}
+	// 微信支付相关参数
+	message WechatPayParam {
+		optional string appId = 1;
+		optional string appkey = 2;
+		optional string appSecret = 3;
+		optional string accessToken = 4;
+		optional string traceId = 5; // 用户ID
+		optional string partnerId = 6;
+		optional string partnerKey = 7;
+		optional string prePayId = 8; // 预支付ID
+		optional string spbillCreateIp = 10;
+		optional string package = 11;
+		optional string nonceStr = 12;
+		optional int32 timestamp = 13; // 时间截，精确到秒
+	}
+
+	message LianlianPayParam{
+		optional string partnerId = 1;
+		optional string busiPartner = 2;// 虚拟商品销售：101001
+		optional string orderDate = 3;// 订单日期 YYYYMMDDH24MISS  14位数字，精确到秒
+		optional string orderInfo = 4;// 订单备注
+		optional string goodsName = 5;// 订单商品名称
+		optional int32 expireTime = 6 [default = 10080]; // 过期时间，单位分钟
+		optional string param = 7;
+		optional string frmsWareCategory = 8;	// 商品类目 2999
+		optional string userRegTime = 9;			// 用户注册时间 YYYYMMDDH24MISS
+		optional string userFullName = 10;		 
+		optional string userIdNo = 11;			
+		optional string userIdentifyState = 12;	// 是否实名认证，1=是，0=无认证
+		optional string userIdentifyType = 13;	// 实名认证方式，3=身份证远程认证
+	}
+	
+	message UpayParam{
+		optional string busiAgreementId = 1;
+		optional string payAgreementId = 2;
+		optional string payType = 3;
+		optional string gateId = 4;
+	}
+}

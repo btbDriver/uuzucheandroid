@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:background="@drawable/main_bg"
+                android:layout_height="match_parent"
+                tools:context="com.youyou.uucar.UI.Main.Login.LoginActivity">
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/phone_root"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/input_bg_normal">
+
+        <ImageView
+            android:id="@+id/phone_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/register_phone_normal"/>
+
+        <EditText
+            android:id="@+id/phone_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/phone_clear"
+            android:layout_toRightOf="@id/phone_icon"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/register_phone_phone_hint"
+            android:inputType="number"
+            android:maxLength="11"
+            android:singleLine="true"
+            android:textColor="@color/c7"
+            android:textColorHint="@color/c21"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/f3"/>
+
+        <ImageView
+            android:id="@+id/phone_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/input_clear"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/password_root"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_below="@id/phone_root"
+        android:background="@drawable/input_bg_normal">
+
+        <ImageView
+            android:id="@+id/password_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/password_icon_normal"/>
+
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/password_clear"
+            android:layout_toRightOf="@id/password_icon"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/login_password_hint"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="@color/c7"
+            android:textColorHint="@color/c21"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/f3"/>
+
+        <ImageView
+            android:id="@+id/password_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/input_clear"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/password_root"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/red_button_bg"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="@string/register_phone_title"
+        android:textSize="@dimen/drawer_item_text_size"
+        android:textColor="@color/action_bar_text_color"/>
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="立即注册"
+        android:textColor="@drawable/login_text_pressed_color"
+        android:textSize="@dimen/f3"
+        android:layout_below="@id/login"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="18dp"/>
+
+    <TextView
+        android:id="@+id/no_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_below="@id/login"
+        android:text="无密码快速登录"
+        android:textSize="@dimen/f3"
+        android:textColor="@drawable/login_text_pressed_color"
+        android:layout_alignParentRight="true"
+
+        />
+</RelativeLayout>

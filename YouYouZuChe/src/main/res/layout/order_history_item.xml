@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/create_time"
+        android:layout_marginTop="@dimen/s1"
+        android:layout_width="wrap_content"
+        android:text="2014-12-31"
+        android:layout_marginLeft="@dimen/s1"
+        android:textColor="@color/c13"
+        android:textSize="@dimen/bf1"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_marginTop="@dimen/s2"
+        android:text="呵呵呵"
+        android:textColor="@color/c8"
+        android:textSize="@dimen/f5"
+        android:layout_below="@id/create_time"
+        android:singleLine="true"
+        android:layout_toLeftOf="@+id/state"
+        android:layout_marginRight="@dimen/s1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/s1"
+        android:textSize="@dimen/bf1"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/msg"
+        android:textColor="@color/c8"
+        android:text="用车时间：" />
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/s1"
+        android:text="预约成功"
+        android:textSize="@dimen/f5"
+        android:textColor="@color/c1"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_below="@id/time"
+        android:layout_height="@dimen/s1" />
+</RelativeLayout>

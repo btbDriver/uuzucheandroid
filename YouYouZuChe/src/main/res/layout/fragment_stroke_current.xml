@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.youyou.uucar.Utils.View.UUProgressFramelayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/all_framelayout"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/main_root"
+        android:layout_width="match_parent"
+        android:background="@drawable/main_bg"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/miss_root"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff7d8">
+
+            <TextView
+                android:id="@+id/miss_tip"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#e0a044"
+                android:layout_marginRight="13dp"
+                android:layout_toLeftOf="@+id/close"
+                android:textSize="@dimen/f5" />
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/close_icon"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_below="@id/miss_tip"
+                android:layout_height="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/root"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_below="@id/miss_root"
+            android:layout_marginRight="@dimen/s1"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/pullToRefresh"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/s1"
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:fitsSystemWindows="true"
+                    android:divider="@null"
+                    android:dividerHeight="@dimen/s1"
+                    android:headerDividersEnabled="true"
+                    android:layout_height="match_parent" />
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@id/miss_root"
+            android:id="@+id/nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:src="@drawable/find_car_list_nocar_icon" />
+
+            <TextView
+                android:id="@+id/nodata_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/icon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="23dp"
+                android:gravity="center"
+                android:text="您还没有进行中的订单"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+
+            <TextView
+                android:id="@+id/findcar"
+                android:layout_width="233dp"
+                android:layout_height="45dp"
+                android:visibility="gone"
+                android:layout_below="@id/nodata_tip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="96dp"
+                android:background="@drawable/change_city_maincolor_bg"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="10dp"
+                android:text="先去找车"
+                android:textColor="@color/c11"
+                android:textSize="@dimen/f2" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>

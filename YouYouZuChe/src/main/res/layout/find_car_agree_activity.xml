@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youyou.uucar.Utils.View.UUProgressFramelayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/all_framelayout"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg">
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/bottom_root"
+            android:background="@drawable/main_bg"
+            android:layout_marginLeft="8dp"
+            android:scrollbars="none"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            android:cacheColorHint="#00FFFFFF"
+            android:divider="@color/nocolor"
+            android:dividerHeight="@dimen/s1"
+            android:footerDividersEnabled="false"
+            android:hapticFeedbackEnabled="false"
+            android:listSelector="#00FFFFFF"></ListView>
+
+        <RelativeLayout
+            android:id="@+id/bottom_root"
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:layout_alignParentBottom="true">
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/find_car_agree_activity_bottom_bg"
+                android:layout_height="60dp" />
+
+            <RelativeLayout
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="24dp"
+                android:layout_toLeftOf="@+id/right_root"
+                android:layout_height="60dp">
+
+                <TextView
+                    android:id="@+id/num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/s1"
+                    android:text="1111"
+                    android:textColor="@color/c8"
+                    android:textSize="@dimen/f3" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/right_root"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/find_car_agree_time_bg"
+                android:layout_marginRight="15dp">
+                <com.ab.view.progress.AbCircleProgressBar
+                    android:id="@+id/circleProgressBar"
+                    android:layout_width="61dip"
+                    android:layout_height="61dip"
+                    android:layout_centerInParent="true" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/f2" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>

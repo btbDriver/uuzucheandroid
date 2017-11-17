@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@android:id/background"
+        android:drawable="@drawable/new_car_info_rating_bg_new" />
+    <item
+        android:id="@android:id/secondaryProgress"
+        android:drawable="@drawable/new_car_info_rating_select_new"></item>
+    <item
+        android:id="@+android:id/progress"
+        android:drawable="@drawable/new_car_info_rating_select_new"></item>
+
+</layer-list>

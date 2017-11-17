@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_linear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/contentViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/content_item_size"
+        android:layout_alignBottom="@id/contentViewPager"
+        android:background="@color/background_bar_color"
+        android:baselineAligned="true"
+        android:baselineAlignedChildIndex="0"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/drawer_header_text_size"
+            android:gravity="center_vertical"
+            android:text="20"
+            android:textColor="@color/c1"
+            android:textSize="@dimen/price_range_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元 / 小时"
+            android:textColor="@color/c8"
+            android:textSize="@dimen/f3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/drawer_header_text_size"
+            android:text="160"
+            android:textColor="@color/c1"
+            android:textSize="@dimen/f3" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="元 / 天"
+            android:textColor="@color/c8"
+            android:textSize="@dimen/f3" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/drawer_header_text_size">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/red_oval_button"
+                android:textColor="@color/red_button_text_color"
+                android:textSize="@dimen/f3"
+                android:text="收藏" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_header_text_size"
+        android:layout_above="@id/linear">
+
+        <com.youyou.uucar.Utils.View.viewpagerindicator.LinePageIndicator
+            android:id="@+id/indicator"
+            android:padding="5dip"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            app:strokeWidth="4dp"
+            app:lineWidth="30dp"
+            app:unselectedColor="#a4a4a4"
+            app:selectedColor="#FE4E5B" />
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="action_bar_text_color">#FFFFFF</color>
+    <color name="drawer_header_text_color">#B9B9B9</color>
+    <color name="drawer_item_text_color_normal">#3A4149</color>
+    <color name="drawer_item_text_color_select">#FD677F</color>
+    <color name="drawer_phone_guest">#FE4E5B</color>
+    <color name="drawer_phone_login">#FFFFFF</color>
+    <color name="drawer_bg_color">#F3F3F3</color>
+    <!-- UI标注的大小和颜色 -->
+    <color name="button_text_color">#FFFFFF</color>
+    <color name="renter_title_color">#e3e3e3</color>
+    <color name="button_unenable_text_gray_color">#DDDDDD</color>
+    <color name="button_unenable_text_red_color">#FF8D9F</color>
+    <color name="login_input_color">#B9B9B9</color>
+    <color name="nocolor">#00FFFFFF</color>
+    <color name="subtitle_color">#333333</color>
+    <color name="price_range_text_color">#FE4E50</color>
+    <color name="filter_button_red_pressed_bg_color">#D4334D</color>
+    <color name="filter_button_white_pressed_bg_color">#F9F9F9</color>
+    <!--透明系列颜色-->
+    <color name="pressed_touch_color">#ddd9d9d9</color>
+    <color name="photo_front_color">#CCFFFFFF</color>
+    <color name="photo_front_pressed_color">#99a4a4a4</color>
+    <color name="title_bg_color">#99000000</color>
+    <color name="photo_framelayout_color">#33000000</color>
+
+    <integer-array name="gplus_colors">
+        <item>@color/shuaxin_color</item>
+        <item>@color/shuaxin_color</item>
+        <item>@color/shuaxin_color</item>
+        <item>@color/shuaxin_color</item>
+    </integer-array>
+
+    <color name="gplus_color_1">#3e802f</color>
+    <color name="gplus_color_2">#427fed</color>
+    <color name="gplus_color_3">#b23424</color>
+    <color name="gplus_color_4">#f4b400</color>
+
+    <color name="background_bar_color">#ee333333</color>
+    <color name="title_color">#fe4e5b</color>
+    <color name="action_bar_menu_text_color">#79808a</color>
+    <color name="transparent_background">#50000000</color>
+    <color name="c1">#55acef</color>
+    <color name="c2">#76b9e6</color>
+    <color name="c3">#f08300</color>
+    <color name="c4">#3c4041</color>
+    <color name="c5">#e70003</color>
+    <color name="c6">#171717</color>
+    <color name="c7">#515151</color>
+    <color name="c8">#808080</color>
+    <color name="c9">#ccc7c7c7</color>
+    <color name="c10">#007aff</color>
+    <color name="c11">#FFFFFF</color>
+    <color name="c12">#898989</color>
+    <color name="c13">#b5b5b5</color>
+    <color name="c14">#e5e5e5</color>
+    <color name="c15">#d84200</color>
+    <color name="c16">#66bf97</color>
+    <color name="c17">#d3efff</color>
+    <color name="c18">#d9d9d9</color>
+    <color name="c19">#e8e8e8</color>
+    <color name="c20">#ff9600</color>
+    <color name="c21">#BABABA</color>
+    <color name="shuaxin_color">#67BF97</color>e
+    <drawable name="nocolord">#00FFFFFF</drawable>
+    <drawable name="c1">#55acef</drawable>
+    <drawable name="c10">#007aff</drawable>
+    <color name="wx_pressed">#00ac89</color>
+    <color name="friend_pressed">#f08400</color>
+    <color name="weibo_pressed">#ea5556</color>
+    <color name="tx_weibo_pressed">#007cff</color>
+
+
+</resources>

@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_bg"
+                tools:context="com.youyou.uucar.UI.Owner.addcar.AutoReceiveOrderActivity">
+
+    <RelativeLayout
+        android:id="@+id/auto_receive_order"
+        android:layout_width="match_parent"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_height="68dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/auto_receive_order_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自动接收订单"
+            android:layout_marginLeft="9dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/c4"
+            android:textSize="@dimen/f3"/>
+
+        <ToggleButton
+            android:id="@+id/is_rent"
+            android:layout_marginRight="9dp"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:focusable="false"
+            android:checked="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textOn=""
+            android:textOff=""
+            android:background="@drawable/toggle_button"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/gongnengshuoming"
+        android:layout_below="@id/auto_receive_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="18dp"
+        android:textSize="@dimen/f5"
+        android:textColor="@color/c4"
+        android:text="功能说明"/>
+
+    <TextView
+        android:id="@+id/content_auto_receive"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="18dp"
+        android:layout_below="@id/gongnengshuoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/f5"
+        android:textColor="@color/c8"/>
+
+    <TextView
+        android:layout_marginTop="3dp"
+        android:id="@+id/chakanweiyuejin"
+        android:layout_below="@+id/content_auto_receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textSize="@dimen/f5"
+        android:layout_marginLeft="18dp"
+        android:text="查看违约金"
+        android:textColor="@color/c20"/>
+
+</RelativeLayout>

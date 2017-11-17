@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="3月21日19:23"
+        android:layout_below="@+id/content"
+        android:layout_marginLeft="12dp"
+        android:textColor="@color/c8"
+        android:textSize="@dimen/bf1" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:text="提现"
+        android:layout_toLeftOf="@+id/price"
+        android:textColor="@color/c4"
+        android:textSize="@dimen/f5" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:layout_marginRight="12dp"
+
+        android:text="-1500元"
+        android:textColor="@color/c4"
+        android:textSize="@dimen/f2" />
+
+    <View
+        android:layout_below="@id/time"
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_height="1px"
+        android:background="#484949" />
+</RelativeLayout>

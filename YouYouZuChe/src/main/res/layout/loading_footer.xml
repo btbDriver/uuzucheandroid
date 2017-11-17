@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.dd.processbutton.iml.ActionProcessButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loader"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_marginBottom="16dp"
+    android:text="@string/Load"
+    android:textColor="@color/c8"
+    android:textSize="18sp"
+    custom:colorComplete="@color/c14"
+    custom:colorNormal="@color/c14"
+    custom:colorPressed="@color/c14"
+    custom:colorProgress="@color/c14"
+    custom:textComplete="@string/Success"
+    custom:textProgress="@string/Loading" />

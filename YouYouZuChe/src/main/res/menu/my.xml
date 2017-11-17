@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.youyou.uucar.pay.MyActivity">
+    <item
+        android:id="@+id/logout"
+        android:title="@string/logout_text"
+        android:orderInCategory="100"
+        android:showAsAction="always" />
+</menu>

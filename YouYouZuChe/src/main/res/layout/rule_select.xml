@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_marginRight="@dimen/s1"
+        android:layout_marginTop="17dp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#c6cfcb" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ede5e0" />
+
+        <RelativeLayout
+            android:id="@+id/rule1"
+            android:background="@drawable/car_info_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="20dp"
+                android:layout_toRightOf="@id/icon"
+                android:text="平台规则"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/find_car_right_arrow" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#c6cfcb" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ede5e0" />
+
+        <RelativeLayout
+            android:id="@+id/rule2"
+            android:layout_width="match_parent"
+            android:background="@drawable/car_info_bg"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="20dp"
+                android:layout_toRightOf="@id/icon"
+                android:text="车主服务协议"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/find_car_right_arrow" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#c6cfcb" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ede5e0" />
+
+        <RelativeLayout
+            android:id="@+id/rule3"
+            android:layout_width="match_parent"
+            android:background="@drawable/car_info_bg"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="20dp"
+                android:layout_toRightOf="@id/icon"
+                android:text="租客服务协议"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/find_car_right_arrow" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#c6cfcb" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ede5e0" />
+
+        <RelativeLayout
+            android:id="@+id/rule4"
+            android:layout_width="match_parent"
+            android:background="@drawable/car_info_bg"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="20dp"
+                android:layout_toRightOf="@id/icon"
+                android:text="保险协议"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/find_car_right_arrow" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#c6cfcb" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ede5e0" />
+
+    </LinearLayout>
+
+</RelativeLayout>

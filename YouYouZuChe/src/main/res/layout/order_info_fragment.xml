@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            android:layout_weight="1">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/c13" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/f3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/car_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|left"
+                            android:paddingLeft="@dimen/activity_vertical_margin"
+                            android:text="日产天籁"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                        <TextView
+                            android:id="@+id/plate_number"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|right"
+                            android:paddingRight="@dimen/activity_vertical_margin"
+                            android:text="日产天籁"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="@dimen/thirteen_size"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:text="订单编号："
+                            android:layout_marginLeft="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                        <TextView
+                            android:id="@+id/number"
+                            android:text="123456789"
+                            android:layout_marginRight="@dimen/activity_vertical_margin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|right"
+
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="@dimen/thirteen_size"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:text="租车收入："
+                            android:layout_marginLeft="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                        <TextView
+                            android:id="@+id/rental_income"
+                            android:text="123456789"
+                            android:layout_marginRight="@dimen/activity_vertical_margin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|right"
+
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="@dimen/thirteen_size"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:text="延时收入："
+                            android:layout_marginLeft="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                        <TextView
+                            android:id="@+id/delay_income"
+                            android:text="123456789"
+                            android:layout_marginRight="@dimen/activity_vertical_margin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|right"
+
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="@dimen/thirteen_size"
+                        android:layout_marginBottom="@dimen/f3"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:text="保险公司："
+                            android:layout_marginLeft="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                        <TextView
+                            android:id="@+id/insurance_company"
+                            android:text="123456789"
+                            android:layout_marginRight="@dimen/activity_vertical_margin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|right"
+
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/c13" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/comments_item_size"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/activity_vertical_margin"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/drawer_header_text_size"
+                            android:text="开始时间"
+                            android:textColor="@color/login_input_color"
+                            android:textSize="@dimen/f3" />
+
+                        <TextView
+                            android:id="@+id/start_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:text="周六 6月1日 13:00"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/c13" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/activity_vertical_margin"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/drawer_header_text_size"
+                            android:text="结束时间"
+                            android:textColor="@color/login_input_color"
+                            android:textSize="@dimen/f3" />
+
+                        <TextView
+                            android:id="@+id/end_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:text="周日 6月2日 13:00"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/c13" />
+
+                <LinearLayout
+                    android:id="@+id/address_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/comments_item_location_size"
+                    android:layout_marginLeft="@dimen/f1"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/getcar_address_title"
+                        android:textColor="@color/login_input_color"
+                        android:textSize="@dimen/f3" />
+
+                    <TextView
+                        android:maxLines="3"
+                        android:id="@+id/get_car_location_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/thirteen_size"
+                        android:ellipsize="start"
+                        android:text="海淀区中关村北街海中关村北街"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/get_car_location_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/thirteen_size"
+                        android:text="中关村北街"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/c13" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/header_image_size"
+                    android:id="@+id/time_linear"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/show_time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/activity_vertical_margin"
+                        android:gravity="center_vertical"
+                        android:text="@string/use_car_start_title"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="@dimen/f1" />
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="00:05:56"
+                        android:textColor="@color/title_color"
+                        android:textSize="@dimen/f1" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/c13" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_bg"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/activity_vertical_margin">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="19dp"
+                        android:text="@string/careful_one"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/action_bar_subtitle_text_size" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/action_bar_subtitle_text_size"
+                        android:text="@string/careful_two"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/action_bar_subtitle_text_size" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/action_bar_subtitle_text_size"
+                        android:text="@string/careful_three"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/action_bar_subtitle_text_size" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/drawer_header_text_size"
+                        android:layout_marginTop="@dimen/drawer_header_text_size"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/careful_four"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/action_bar_subtitle_text_size" />
+
+                        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/order_info_wenhao_icon" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/c13" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <FrameLayout
+            android:id="@+id/frame_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/bottom_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/not_get_car"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_button_bg"
+                    android:gravity="center"
+                    android:enabled="false"
+                    android:paddingBottom="15.5dp"
+                    android:paddingTop="15.5dp"
+                    android:text="@string/not_get_car"
+                    android:textColor="@color/title_bg_color"
+                    android:textSize="@dimen/f2" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/c13" />
+
+                <TextView
+                    android:id="@+id/sure_get_car"
+                    android:layout_width="0dp"
+                    android:enabled="false"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/red_button_bg"
+                    android:gravity="center"
+                    android:paddingBottom="15.5dp"
+                    android:paddingTop="15.5dp"
+                    android:text="@string/sure_car"
+                    android:textColor="@color/red_button_text_color"
+                    android:textSize="@dimen/f2" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/settlement"
+                android:layout_width="match_parent"
+                android:enabled="true"
+                android:layout_height="wrap_content"
+                android:background="@drawable/red_button_bg"
+                android:gravity="center"
+                android:paddingBottom="15.5dp"
+                android:paddingTop="15.5dp"
+                android:text="@string/settlement"
+                android:textColor="@color/red_button_text_color"
+                android:textSize="@dimen/f2" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_progress"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                style="?android:progressBarStyleSmall" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/f3"
+                android:text="正在加载数据"
+                android:textColor="@color/photo_front_pressed_color" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

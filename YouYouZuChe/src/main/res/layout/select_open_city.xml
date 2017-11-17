@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youyou.uucar.Utils.View.UUProgressFramelayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/all_framelayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg">
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/main_bg"
+            android:cacheColorHint="#00000000"
+            android:divider="#B9B9B9"
+            android:dividerHeight="1px"
+            android:drawSelectorOnTop="false"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none" />
+
+    </RelativeLayout>
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>

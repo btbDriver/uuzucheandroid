@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/background"
+        android:drawable="@drawable/find_car_list_rat_background" />
+    <item
+        android:id="@android:id/secondaryProgress"
+        android:drawable="@drawable/find_car_list_rat_background" />
+    <item
+        android:id="@android:id/progress"
+        android:drawable="@drawable/find_car_list_rat_progress" />
+</layer-list>

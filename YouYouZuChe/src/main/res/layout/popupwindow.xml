@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/c13" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:choiceMode="multipleChoice"
+        xmlns:android="http://schemas.android.com/apk/res/android" />
+
+    <TextView
+        android:id="@+id/sure"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/one_centimeter_size"
+        android:textSize="@dimen/f2"
+        android:textColor="@color/drawer_phone_login"
+        android:text="确定"
+        android:gravity="center"
+        android:background="@drawable/red_button_bg" />
+
+</LinearLayout>

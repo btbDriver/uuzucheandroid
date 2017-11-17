@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="StarSmallRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/star_small_rating_bar</item>
+        <item name="android:minHeight">12dip</item>
+        <item name="android:maxHeight">12dip</item>
+    </style>
+
+    <style name="StarBigRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/star_big_rating_bar</item>
+        <item name="android:minHeight">15dip</item>
+        <item name="android:maxHeight">15dip</item>
+    </style>
+
+    <style name="FindCarRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/find_car_list_rating_bar</item>
+        <item name="android:minHeight">14dip</item>
+        <item name="android:maxHeight">14dip</item>
+    </style>
+
+    <style name="StarMoreBigRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/star_more_big_rating_bar</item>
+        <item name="android:minHeight">28dip</item>
+        <item name="android:maxHeight">28dip</item>
+    </style>
+
+    <style name="StyledIndicators" parent="@android:style/Theme.Light">
+        <item name="vpiCirclePageIndicatorStyle">@style/CustomCirclePageIndicator</item>
+        <item name="vpiLinePageIndicatorStyle">@style/CustomLinePageIndicator</item>
+        <item name="vpiTitlePageIndicatorStyle">@style/CustomTitlePageIndicator</item>
+        <item name="vpiUnderlinePageIndicatorStyle">@style/CustomUnderlinePageIndicator</item>
+    </style>
+
+    <style name="CustomTitlePageIndicator">
+        <item name="android:background">#18FF0000</item>
+        <item name="footerColor">#FFAA2222</item>
+        <item name="footerLineHeight">1dp</item>
+        <item name="footerIndicatorHeight">3dp</item>
+        <item name="footerIndicatorStyle">underline</item>
+        <item name="android:textColor">#AA000000</item>
+        <item name="selectedColor">#FF000000</item>
+        <item name="selectedBold">true</item>
+    </style>
+
+    <style name="CustomLinePageIndicator">
+        <item name="strokeWidth">4dp</item>
+        <item name="lineWidth">30dp</item>
+        <item name="unselectedColor">#FF888888</item>
+        <item name="selectedColor">#FF880000</item>
+    </style>
+
+    <style name="CustomCirclePageIndicator">
+        <item name="fillColor">#FF888888</item>
+        <item name="strokeColor">#FF000000</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="radius">20dp</item>
+        <item name="centered">true</item>
+    </style>
+
+    <style name="CustomTabPageIndicator.Text" parent="android:TextAppearance.Medium">
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="CustomUnderlinePageIndicator">
+        <item name="selectedColor">#FFCC0000</item>
+        <item name="android:background">#FFCCCCCC</item>
+        <item name="fadeLength">1000</item>
+        <item name="fadeDelay">1000</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">@style/ButtonBar</item>
+        <item name="metaButtonBarButtonStyle">@style/ButtonBarButton</item>
+    </style>
+
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+
+    <style name="ButtonBarButton" />
+
+    <style name="Rating_small_car_info" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/car_info_rating_small_img</item>
+    </style>
+
+    <style name="Rating_small_car_info_new" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/car_info_rating_small_img_new</item>
+    </style>
+
+    <style name="Transparent">
+        <item name="android:windowBackground">@color/transparent_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+</resources>

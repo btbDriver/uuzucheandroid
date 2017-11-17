@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youyou.uucar.Utils.View.UUProgressFramelayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/all_framelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg"
+        tools:context="com.youyou.uucar.UI.Owner.addcar.SetNotRentTimeActivity">
+
+        <LinearLayout
+            android:id="@+id/cross_bar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:orientation="horizontal"
+            android:background="@color/c11">
+
+            <RelativeLayout
+                android:id="@+id/gongzuori"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_height="match_parent"
+                android:background="@color/c11">
+
+                <ImageView
+                    android:id="@+id/gongzuori_btn"
+                    android:src="@drawable/calendar_white"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/gongzuori_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="工作日"
+                    android:textColor="@color/c7"
+                    android:layout_marginRight="30dp"
+                    android:textSize="@dimen/f3" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/c12"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/zhouliu"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/c11">
+
+                <ImageView
+                    android:id="@+id/zhouliu_btn"
+                    android:src="@drawable/calendar_white"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/zhouliu_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="周六"
+                    android:textColor="@color/c7"
+                    android:layout_marginRight="40dp"
+                    android:textSize="@dimen/f3" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/c12"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/zhouri"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/c11">
+
+                <ImageView
+                    android:id="@+id/zhouri_btn"
+                    android:src="@drawable/calendar_white"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/zhouri_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="周日"
+                    android:textColor="@color/c7"
+                    android:layout_marginRight="40dp"
+                    android:textSize="@dimen/f3" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bar_line"
+            android:layout_below="@id/cross_bar"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:background="@color/c12"
+            android:layout_alignParentRight="true" />
+
+        <LinearLayout
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_below="@id/bar_line"
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <RelativeLayout
+            android:layout_below="@id/calendar"
+            android:layout_marginTop="9dp"
+            android:id="@+id/explain_dot"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+
+            <ImageView
+                android:id="@+id/dian1"
+                android:src="@drawable/calendar_red"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/dian1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/dian1"
+                android:layout_marginLeft="6dp"
+                android:layout_centerVertical="true"
+                android:text="设置为不可租"
+                android:textSize="@dimen/f3" />
+
+            <ImageView
+                android:id="@+id/dian2"
+                android:src="@drawable/calendar_blue"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/dian1_tv"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/dian2"
+                android:layout_marginLeft="6dp"
+                android:layout_centerVertical="true"
+                android:text="有订单"
+                android:textSize="@dimen/f3" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/calendar_save"
+            android:layout_below="@id/explain_dot"
+            android:layout_margin="18dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/red_button_bg"
+            android:gravity="center"
+            android:textColor="@color/c11"
+            android:textSize="@dimen/f3"
+            android:text="保存"
+            android:layout_height="45dp">
+
+        </TextView>
+
+        <TextView
+            android:layout_below="@id/calendar_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:textSize="@dimen/f5"
+            android:textColor="@color/c8"
+            android:text="您可以设置6个月内的不可租时间，租客不能在对应的日期搜索到车辆，也不能再日期内提交订单。" />
+
+    </RelativeLayout>
+
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>
+

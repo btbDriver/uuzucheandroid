@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_marginTop="24dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/content_item_left"
+            android:layout_marginRight="@dimen/content_item_left"
+            android:orientation="horizontal"
+            android:layout_height="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="银行卡号"
+                android:gravity="center"
+                android:textSize="@dimen/f2"
+                android:textColor="@color/c4" />
+
+            <TextView
+                android:id="@+id/card_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c6"
+                android:textSize="@dimen/f2"
+                android:gravity="right"
+
+                />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/content_item_left"
+            android:background="@color/c13" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/content_item_left"
+            android:layout_marginRight="@dimen/content_item_left"
+            android:orientation="horizontal"
+            android:layout_height="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="银行"
+                android:gravity="center"
+                android:textSize="@dimen/f2"
+                android:textColor="@color/c4" />
+
+            <TextView
+                android:id="@+id/card_bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c6"
+                android:textSize="@dimen/f2"
+                android:gravity="right"
+              />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/content_item_left"
+            android:background="@color/c13" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/content_item_left"
+            android:layout_marginRight="@dimen/content_item_left"
+            android:orientation="horizontal"
+            android:layout_height="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="添加时间"
+                android:gravity="center"
+                android:textSize="@dimen/f2"
+                android:textColor="@color/c4" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c6"
+                android:textSize="@dimen/f2"
+                android:gravity="right"
+              />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13" />
+    </LinearLayout>
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/delete"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_margin="20dp"-->
+    <!--android:background="@drawable/red_button_bg"-->
+    <!--android:paddingBottom="5dp"-->
+    <!--android:paddingLeft="20dp"-->
+    <!--android:paddingRight="20dp"-->
+    <!--android:paddingTop="5dp"-->
+    <!--android:text="解除绑定"-->
+    <!--android:textColor="@color/red_button_text_color"-->
+    <!--android:textSize="@dimen/f2" />-->
+
+
+</LinearLayout>

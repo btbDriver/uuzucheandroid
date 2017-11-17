@@ -1,0 +1,1407 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.youyou.uucar.Utils.View.UUProgressFramelayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   android:id="@+id/all_framelayout"
+                                                   android:layout_height="match_parent"
+                                                   android:background="@drawable/main_bg"
+                                                   android:layout_width="match_parent">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:id="@+id/main_linear"
+                  android:layout_width="match_parent"
+                  android:background="@drawable/main_bg"
+                  android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:paddingBottom="@dimen/s1"
+            android:layout_width="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/tips_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="#fff7d8"
+                    android:paddingLeft="@dimen/f5"
+                    android:paddingRight="@dimen/f5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/start_time_tv_1"
+                        android:textSize="@dimen/f2"
+                        android:textColor="#e0a044"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/s1"
+                    android:paddingRight="@dimen/s1"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/status"
+                        android:layout_width="match_parent"
+                        android:padding="@dimen/s1"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3"
+                        android:layout_height="match_parent"/>
+
+                    <FrameLayout
+                        android:id="@+id/car_linear"
+                        android:layout_width="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_select_3">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_margin="@dimen/s1"
+                            android:layout_height="wrap_content">
+
+                            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                                android:id="@+id/car_img"
+                                android:layout_width="126dp"
+                                android:layout_height="78dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/list_car_img_def"/>
+
+                            <TextView
+                                android:id="@+id/price_day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/c3"
+                                android:textSize="@dimen/f2"/>
+
+                            <TextView
+                                android:layout_marginLeft="@dimen/s1"
+                                android:textSize="@dimen/f2"
+                                android:textColor="@color/c4"
+                                android:id="@+id/brand"
+                                android:layout_toRightOf="@id/car_img"
+                                android:ellipsize="middle"
+                                android:singleLine="true"
+                                android:layout_toLeftOf="@id/price_day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                                android:id="@+id/car_details"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/find_car_right_arrow"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/c3"
+                                android:textSize="@dimen/f2"/>
+
+                            <RelativeLayout
+                                android:id="@+id/start_time_root"
+                                android:layout_width="wrap_content"
+                                android:layout_below="@id/brand"
+                                android:layout_marginTop="12dp"
+                                android:layout_toRightOf="@id/car_img"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/plate_number"
+                                    android:layout_width="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/s1"
+                                    android:textSize="@dimen/f3"
+                                    android:textColor="@color/c8"
+                                    android:layout_height="wrap_content"/>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/end_time_root"
+                                android:layout_width="wrap_content"
+                                android:layout_below="@id/start_time_root"
+                                android:layout_marginTop="7dp"
+                                android:layout_toRightOf="@id/car_img"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/rsn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/s1"
+                                    android:textSize="@dimen/f3"
+                                    android:textColor="@color/c8"
+                                    android:layout_height="wrap_content"/>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_1"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/s1"
+                        android:background="@android:color/white"
+                        android:layout_height="90dp">
+
+                        <LinearLayout
+                            android:layout_width="224dp"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/s1"
+                                android:paddingRight="@dimen/s1"
+                                android:layout_height="45dp">
+
+                                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                                    android:layout_width="wrap_content"
+                                    android:background="@drawable/start_icon"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:text="取车时间"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:layout_marginLeft="@dimen/s2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:id="@+id/start_time"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:layout_marginLeft="@dimen/s2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="@color/c13"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/s1"
+                                android:paddingRight="@dimen/s1"
+                                android:layout_height="45dp">
+
+                                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                                    android:layout_width="wrap_content"
+                                    android:background="@drawable/end_icon"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:text="计划还车"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:layout_marginLeft="@dimen/s2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:id="@+id/end_time"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:layout_marginLeft="@dimen/s2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="@color/c13"/>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <View
+                                android:id="@+id/view"
+                                android:layout_centerInParent="true"
+                                android:layout_width="1px"
+                                android:layout_height="1px"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:textSize="@dimen/f3"
+                                android:textColor="@color/c4"
+                                android:text="@string/all"
+                                android:layout_above="@id/view"
+                                android:gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/plan_time"
+                                android:layout_width="match_parent"
+                                android:textSize="@dimen/f3"
+                                android:textColor="@color/c3"
+                                android:gravity="center_horizontal"
+                                android:layout_below="@id/view"
+                                android:layout_height="wrap_content"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linear_2"
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/s1"
+                        android:background="@android:color/white"
+                        android:layout_height="135dp">
+
+                        <LinearLayout
+                            android:layout_width="224dp"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/s1"
+                                android:paddingRight="@dimen/s1"
+                                android:layout_height="45dp">
+
+                                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                                    android:layout_width="wrap_content"
+                                    android:background="@drawable/start_icon"
+                                    android:layout_height="wrap_content"/>
+
+
+                                <TextView
+                                    android:text="取车时间"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:layout_marginLeft="@dimen/s2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:id="@+id/start_time_2"
+                                    android:text="03-24 18:00"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:layout_marginLeft="@dimen/s2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="@color/c13"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/s1"
+                                android:paddingRight="@dimen/s1"
+                                android:layout_height="45dp">
+
+                                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                                    android:layout_width="wrap_content"
+                                    android:background="@drawable/end_blue"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:text="计划还车"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:layout_marginLeft="@dimen/s2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:id="@+id/end_time_2"
+                                    android:text="03-24 18:00"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:layout_marginLeft="@dimen/s2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="@color/c13"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/s1"
+                                android:paddingRight="@dimen/s1"
+                                android:layout_height="45dp">
+
+                                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                                    android:layout_width="wrap_content"
+                                    android:background="@drawable/end_icon"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:text="实际还车"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:layout_marginLeft="@dimen/s2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:id="@+id/actual_time_2"
+                                    android:text="03-24 18:00"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:layout_marginLeft="@dimen/s2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="@color/c13"/>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <View
+                                android:id="@+id/view_1"
+                                android:layout_centerInParent="true"
+                                android:layout_width="1px"
+                                android:layout_height="1px"/>
+
+                            <TextView
+                                android:id="@+id/actual_tv"
+                                android:layout_width="match_parent"
+                                android:textSize="@dimen/f3"
+                                android:textColor="@color/c3"
+                                android:layout_above="@id/view_1"
+                                android:gravity="center_horizontal"
+                                android:layout_marginBottom="5dp"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:textSize="@dimen/f3"
+                                android:textColor="@color/c4"
+                                android:text="实际租时"
+                                android:layout_above="@id/actual_tv"
+                                android:gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/chaoshi"
+                                android:layout_width="match_parent"
+                                android:textSize="@dimen/f3"
+                                android:textColor="@color/c4"
+                                android:text="超时"
+                                android:gravity="center_horizontal"
+                                android:layout_below="@id/view_1"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/chaoshi_time"
+                                android:layout_width="match_parent"
+                                android:textSize="@dimen/f3"
+                                android:textColor="@color/c3"
+                                android:layout_below="@id/chaoshi"
+                                android:gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:layout_height="wrap_content"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/coupon_linear"
+                        android:clickable="true"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/s1"
+                        android:background="@drawable/button_select_3"
+                        android:paddingLeft="@dimen/s1"
+                        android:paddingRight="@dimen/s1"
+                        android:layout_height="@dimen/x1">
+
+                        <TextView
+                            android:id="@+id/use_coupon_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textSize="@dimen/f3"
+                            android:textColor="@color/c4"
+                            android:gravity="center_vertical"
+                            android:text="@string/use_coupon"/>
+
+                        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                            android:id="@+id/coupon_question"
+                            android:layout_width="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/use_coupon_text"
+                            android:layout_marginLeft="@dimen/s2"
+                            android:background="@drawable/quesion_icon"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/coupon"
+                            android:gravity="right"
+                            android:layout_centerVertical="true"
+                            android:text="200元"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3"
+                            android:layout_width="match_parent"
+                            android:layout_toLeftOf="@+id/coupon_arrow"
+                            android:layout_height="wrap_content"/>
+
+                        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                            android:id="@+id/coupon_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/find_car_right_arrow"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="@dimen/s1"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/c3"
+                            android:textSize="@dimen/f2"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bjmp_choose_linear"
+                        android:layout_width="match_parent"
+                        android:clickable="true"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/s1"
+                        android:background="@drawable/button_select_3"
+                        android:paddingLeft="@dimen/s1"
+                        android:paddingRight="@dimen/s1"
+                        android:layout_height="@dimen/x1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textSize="@dimen/f3"
+                            android:textColor="@color/c4"
+                            android:gravity="center_vertical"
+                            android:text="@string/bjmp"/>
+
+                        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                            android:id="@+id/question"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/s2"
+                            android:background="@drawable/quesion_icon"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/price"
+                            android:gravity="right|center_vertical"
+                            android:text="200元/天"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"/>
+                         
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/check"
+                            android:checked="false"
+                            android:layout_marginLeft="@dimen/s2"
+                            android:button="@drawable/filter_check_bg"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/money"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/s1"
+                        android:animateLayoutChanges="true"
+                        android:background="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/money_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x1"
+                            android:clickable="true"
+                            android:background="@drawable/button_select_3"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/need_money"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/f3"
+                                android:gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/s1"
+                                android:textColor="@color/c4"
+                                android:layout_height="match_parent"/>
+
+                            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                                android:id="@+id/click"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="@dimen/s1"
+                                android:background="@drawable/ic_expand_small_holo_light"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/need_money_show"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="@color/c13"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:paddingRight="@dimen/s1"
+                                android:paddingLeft="@dimen/s1"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/s1"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:text="@string/car_fee"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/rent_fee"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:paddingRight="@dimen/s1"
+                                android:paddingLeft="@dimen/s1"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:text="@string/renter_order_seafty_fee"/>
+
+                                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                                    android:id="@+id/actual_insurance_question_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/s2"
+                                    android:background="@drawable/quesion_icon"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/rent_insurance"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:paddingRight="@dimen/s1"
+                                android:paddingLeft="@dimen/s1"
+                                android:orientation="horizontal"
+                                android:id="@+id/bjmp_linear"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:text="@string/bjmp"/>
+
+                                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                                    android:id="@+id/bjmp_question"
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/s2"
+                                    android:background="@drawable/quesion_icon"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/rent_bjmp"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/rent_coupon_linear"
+                                android:layout_width="match_parent"
+                                android:paddingRight="@dimen/s1"
+                                android:paddingLeft="@dimen/s1"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:text="@string/use_coupon"/>
+
+                                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                                    android:id="@+id/coupon_question_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/s2"
+                                    android:background="@drawable/quesion_icon"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/rent_coupon"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:paddingRight="@dimen/s1"
+                                android:paddingLeft="@dimen/s1"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:text="@string/deposit_fee"/>
+
+                                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                                    android:id="@+id/deposit_question"
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/s2"
+                                    android:background="@drawable/quesion_icon"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/deposit_fee"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:paddingRight="@dimen/s1"
+                                android:paddingLeft="@dimen/s1"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/c3"
+                                    android:textSize="@dimen/f3"
+                                    android:text="@string/all_fee"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/all_fee"
+                                    android:textColor="@color/c3"
+                                    android:textSize="@dimen/f3"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:paddingRight="@dimen/s1"
+                                android:paddingLeft="@dimen/s1"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/sign_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:text="@string/account_balance"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/account_balance"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/pay_linear"
+                                android:layout_width="match_parent"
+                                android:paddingRight="@dimen/s1"
+                                android:paddingLeft="@dimen/s1"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/sign_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/c3"
+                                    android:textSize="@dimen/f3"
+                                    android:text="@string/need_prepaid"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/need_prepaid"
+                                    android:textColor="@color/c3"
+                                    android:textSize="@dimen/f3"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/actual_money_linear"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/s1"
+                        android:animateLayoutChanges="true"
+                        android:background="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/actual_money"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x1"
+                            android:clickable="true"
+                            android:background="@drawable/button_select_3"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/actual_money_tv"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/f3"
+                                android:gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/s1"
+                                android:textColor="@color/c4"
+                                android:layout_height="match_parent"/>
+
+                            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                                android:id="@+id/actual_click"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="@dimen/s1"
+                                android:background="@drawable/ic_expand_small_holo_light"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/need_actual_money_show"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="@color/c13"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:paddingRight="@dimen/s1"
+                                android:paddingLeft="@dimen/s1"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/s1"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:text="@string/car_fee"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/actual_rent_fee"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:paddingRight="@dimen/s1"
+                                android:paddingLeft="@dimen/s1"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:text="@string/renter_order_seafty_fee"/>
+
+                                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                                    android:id="@+id/actual_insurance_question"
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/s2"
+                                    android:background="@drawable/quesion_icon"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/actual_rent_insurance"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:paddingRight="@dimen/s1"
+                                android:paddingLeft="@dimen/s1"
+                                android:orientation="horizontal"
+                                android:id="@+id/actual_bjmp_linear"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:text="@string/bjmp"/>
+
+                                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                                    android:id="@+id/actual_bjmp_question"
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/s2"
+                                    android:background="@drawable/quesion_icon"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/actual_rent_bjmp"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/rent_coupon_shiji_linear"
+                                android:layout_width="match_parent"
+                                android:paddingRight="@dimen/s1"
+                                android:paddingLeft="@dimen/s1"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:text="@string/use_coupon"/>
+
+                                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                                    android:id="@+id/coupon_questionshiji"
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/s2"
+                                    android:background="@drawable/quesion_icon"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/rent_coupon_shiji"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/time_out_fee_linear"
+                                android:layout_width="match_parent"
+                                android:paddingRight="@dimen/s1"
+                                android:paddingLeft="@dimen/s1"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:text="@string/time_out_fee"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/actual_deposit_fee"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/violations_linear"
+                                android:layout_width="match_parent"
+                                android:paddingRight="@dimen/s1"
+                                android:paddingLeft="@dimen/s1"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:text="@string/violations"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/violations"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:paddingRight="@dimen/s1"
+                                android:paddingLeft="@dimen/s1"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:text="@string/total_fee"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/total_fee"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/cancle_money_linear"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/s1"
+                        android:animateLayoutChanges="true"
+                        android:background="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/cancle_money"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x1"
+                            android:clickable="true"
+                            android:background="@drawable/button_select_3"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/cancle_money_tv"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/f3"
+                                android:gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/s1"
+                                android:textColor="@color/c4"
+                                android:layout_height="match_parent"/>
+
+                            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                                android:id="@+id/cancle_click"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="@dimen/s1"
+                                android:background="@drawable/ic_expand_small_holo_light"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cancle_money_show"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="@color/c13"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:paddingRight="@dimen/s1"
+                                android:paddingLeft="@dimen/s1"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/s1"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:text="违约损失"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/cancle_fee"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:paddingRight="@dimen/s1"
+                                android:paddingLeft="@dimen/s1"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:text="共计消费"/>
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/cancle_all_fee"
+                                    android:textColor="@color/c8"
+                                    android:textSize="@dimen/f3"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/owner_linear"
+                        android:orientation="vertical"
+                        android:animateLayoutChanges="true"
+                        android:layout_marginTop="@dimen/s1"
+                        android:background="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_marginLeft="@dimen/s1"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/c4"
+                                android:textSize="@dimen/f2"
+                                android:text="评价车主"
+                                android:gravity="center_vertical"/>
+
+                            <RatingBar
+                                android:id="@+id/ratingbar_owner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                style="@style/StarBigRatingBar"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="@color/c13"/>
+
+                            <TextView
+                                android:id="@+id/owner_evaluate"
+                                android:layout_width="match_parent"
+                                android:textSize="@dimen/f3"
+                                android:gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/s1"
+                                android:layout_marginTop="@dimen/s1"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:textColor="@color/c4"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/kefu_linear"
+                        android:orientation="vertical"
+                        android:animateLayoutChanges="true"
+                        android:layout_marginTop="@dimen/s1"
+                        android:background="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/s1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x1"
+                            android:textColor="@color/c4"
+                            android:textSize="@dimen/f2"
+                            android:text="客服补充"
+                            android:gravity="center_vertical"/>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="@color/c13"/>
+
+                            <TextView
+                                android:id="@+id/kefu_content"
+                                android:layout_width="match_parent"
+                                android:textSize="@dimen/f3"
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="@dimen/s1"
+                                android:layout_marginBottom="@dimen/s1"
+                                android:textColor="@color/c4"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/need_attention_linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/s2"
+                        android:layout_marginBottom="@dimen/s1"
+                        android:layout_marginTop="@dimen/s1"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x1"
+                            android:textColor="@color/c4"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/f3"
+                            android:text="@string/matter_need_attention"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/c14"/>
+
+                        <TextView
+                            android:id="@+id/save"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/s1"
+                            android:layout_marginBottom="@dimen/s1"
+                            android:textColor="@color/c8"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/f3"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/order_cancle_linear"
+                        android:layout_width="match_parent"
+                        android:paddingLeft="@dimen/s1"
+                        android:paddingRight="@dimen/s1"
+                        android:paddingTop="@dimen/s1"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/order_cancle"
+                            android:text="@string/order_cancle_idea"
+                            android:textSize="@dimen/f3"
+                            android:textColor="@color/c4"
+                            android:layout_height="wrap_content"/>
+
+                        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                            android:id="@+id/order_question"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/s2"
+                            android:background="@drawable/quesion_icon"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/button_linear"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:layout_gravity="bottom"
+            android:layout_height="60dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/c14"/>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:padding="@dimen/s2"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/button"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/f2"
+                    android:textColor="@color/c11"
+                    android:text="评价车主"
+                    android:layout_marginLeft="@dimen/s2"
+                    android:layout_marginRight="@dimen/s2"
+                    android:gravity="center"
+                    android:background="@drawable/button_select_2"
+                    android:layout_height="match_parent"/>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>

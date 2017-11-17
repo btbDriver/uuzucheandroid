@@ -1,0 +1,27 @@
+import "uu_common.proto";
+package com.uu.client.bean.banner.common;
+
+message BannerItem {
+	required int32 bannerId = 1; // banner id
+	required string imgUrl = 2; // 图片地址
+	required string actionUrl = 3; // 跳转地址，经过url encode后的字符串
+	optional string name = 4; // banner名称
+	required int32 heightPixel = 5; // 高度像素
+	required int32 widthPixel = 6; // 宽度像素
+	required int32 startTime = 7; // banner开始展示的时间戳，单位秒
+	required int32 endTime = 8; // banner结束展示的时间戳，单位秒
+	required int32 displayDuration = 9; // 展示时长，单位秒
+	required bool canClose = 10; // 是否可关闭
+}
+
+message BannerList {
+	required int32 version = 1; // 版本号
+	repeated BannerItem bannerItems = 2; // banner 列表
+}
+
+enum BannerActionType {
+	CLICK = 1; // 点击
+	CLOSE = 2; // 关闭
+	SHOW = 3; // 展示
+}
+

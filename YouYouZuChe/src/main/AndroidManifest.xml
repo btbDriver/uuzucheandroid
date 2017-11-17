@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.youyou.uucar"
+    android:versionCode="16"
+    android:versionName="2.0" >
+
+    <!-- <uses-sdk tools:node="replace"/> -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.Activity.NOTIFICATION_SERVICE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.youyou.uucar.permission.MMOAUTH_CALLBACK" />
+    <uses-permission android:name="com.youyou.uucar.permission.MM_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:name=".UUAppCar"
+        android:allowBackup="true"
+        android:anyDensity="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:logo="@drawable/actionbar_icon"
+        android:theme="@style/Theme.Uuzuche"
+        tools:replace="android:label" >
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5329780156240b0cf20281cb" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="neibu" />
+
+        <!-- 刘瀚阳开发模式的key -->
+        <!--
+            <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="d47e0ddfb49b6d970c3b37243e1dd6c2" />
+        -->
+
+
+        <!-- LC高德地图开发模式的key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="3f017d3cf127014102ae6763136e5772" />
+
+        <!-- 发布模式使用的key -->
+        <!--
+            <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="233d67e5ec1b4ba617dda73d150a9c91" />
+        -->
+        <!-- 用这个Activity专门处理本App调起的情况 -->
+        <activity
+            android:name=".API.NativeAppActivity"
+            android:label="@string/app_name" >
+
+            <!-- 要想在别的App上能成功调起App，必须添加intent过滤器 -->
+            <intent-filter>
+
+                <!-- 协议部分，随便设置 -->
+                <data android:scheme="uuzuchemobile" />
+                <!-- 下面这几行也必须得设置 -->
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.Welcome.StartActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- android:launchMode="singleTask" -->
+        <activity
+            android:name=".UI.Main.MainActivityTab"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Holo.CustomSmoothProgressBar" />
+        <!-- 引导页 -->
+        <activity android:name=".UI.Welcome.GuestStart" />
+
+        <!-- 注册或登录 -->
+        <activity
+            android:name=".UI.Main.Login.NoPasswordLogin"
+            android:label="无密码快速登录" />
+        <!-- 添加车辆 -->
+        <activity
+            android:name=".UI.Owner.addcar.AddCarBrandActivity"
+            android:label="@string/addcar_brand_title" />
+        <!-- 车辆品牌 -->
+        <activity
+            android:name=".UI.Owner.addcar.BrandActivity"
+            android:label="@string/brand" />
+        <activity
+            android:name=".UI.Main.MyStrokeFragment.RenterRegisterVerify"
+            android:label="租客审核" />
+        <activity
+            android:name=".UI.Main.MyStrokeFragment.RenterRegisterVerifyError"
+            android:label="租客审核" />
+        <!-- 申请客服协助 -->
+        <activity
+            android:name=".UI.Owner.addcar.WaitApplyServiceActivity"
+            android:label="@string/wait_apply_service_title" />
+        <!-- 发布车辆 -->
+        <activity
+            android:name=".UI.Owner.addcar.ReleaseCarActivity"
+            android:label="编辑车辆" />
+        <activity
+            android:name=".UI.Owner.addcar.CarLocationActivity"
+            android:label="@string/give_car_address" />
+        <activity
+            android:name=".UI.Owner.addcar.AddCarPhotoVolleyActivity"
+            android:label="@string/add_car_photo_tilte" />
+        <!-- 发布车辆 车辆详情 -->
+        <activity
+            android:name=".UI.Owner.addcar.CarInfoNewActivity"
+            android:label="@string/car_info" />
+        <!-- 发布车辆-出租价格 -->
+        <activity
+            android:name=".UI.Owner.addcar.PriceActivity"
+            android:label="@string/car_price" />
+        <activity
+            android:name=".UI.Owner.addcar.SafetyActivity"
+            android:label="@string/car_safety" />
+        <activity
+            android:name=".UI.Owner.addcar.AddCarDescActivity"
+            android:label="@string/car_desc" />
+        <activity
+            android:name=".UI.Renter.filter.RentFilterActivity"
+            android:label="@string/title_activity_rent_filter" />
+        <activity
+            android:name=".UI.Main.rent.SpeedRentCarActivity"
+            android:label="@string/title_activity_speed_rentcar" />
+        <activity
+            android:name=".UI.Renter.filter.FilteredCarListActivity"
+            android:label="@string/title_activity_rent_filtered" />
+        <activity
+            android:name=".UI.Renter.Register.RenterRegisterIDActivity"
+            android:label="租客审核" />
+        <activity
+            android:name=".UI.Renter.Register.RenterRegisterDriverActivity"
+            android:label="租客审核" />
+        <!--
+             注册Receiver,并且设置优先级
+        		读取登录验证码短信
+        -->
+        <receiver android:name=".Utils.Support.AutoSMS" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".UI.Owner.addcar.CarInfoSimpleActivity"
+            android:label="@string/car_info" />
+        <activity
+            android:name=".UI.Owner.addcar.OwnerEvaluationRenterActivity"
+            android:label="@string/title_owner_order_review" />
+        <activity
+            android:name=".UI.Owner.addcar.FinishAddCarActivity"
+            android:label="@string/car_info_submit_ok" />
+        <activity
+            android:name=".UI.Main.my.SelectOpenCity"
+            android:label="@string/title_select_open_city" />
+        <activity
+            android:name=".UI.Main.my.RuleSelect"
+            android:label="@string/title_rule_select" />
+        <activity
+            android:name=".UI.Main.my.money.AddCard"
+            android:label="@string/title_addcar" />
+        <activity
+            android:name=".UI.Main.my.CollectList"
+            android:label="@string/title_collect_list" />
+        <activity
+            android:name=".UI.Main.my.Coupon"
+            android:label="@string/title_coupon_list" />
+        <activity
+            android:name=".UI.Main.my.URLWebView"
+            android:label="规则" />
+        <activity
+            android:name=".UI.Main.rent.SelectTime"
+            android:label="@string/title_select_time_list" />
+        <activity
+            android:name=".UI.Main.rent.NoCarWait"
+            android:label="一键约车" />
+        <activity
+            android:name=".UI.Main.FindCarFragment.SelectAddressActivity"
+            android:label="@string/title_activity_select_address" />
+        <activity android:name=".UI.Renter.carinfo.OldCarInfoActivity" />
+        <activity
+            android:name=".UI.Main.MyStrokeFragment.RenterOrderReviewActivity"
+            android:label="@string/title_renter_order_review" />
+        <activity
+            android:name=".UI.Main.rent.FindCarAgreeActivity"
+            android:label="@string/title_renter_find_car_agree" />
+        <activity
+            android:name=".UI.Main.rent.OneToOneWaitActivity"
+            android:label="约车" />
+        <activity
+            android:name=".UI.Main.MyStrokeFragment.UseCouponActivity"
+            android:label="@string/title_use_coupon" />
+        <activity
+            android:name=".UI.Main.MyStrokeFragment.SelectPayActivity"
+            android:label="@string/title_select_pay" />
+        <activity
+            android:name=".UI.Main.my.money.MoneyManager"
+            android:label="我的财务" />
+        <activity
+            android:name=".UI.Main.my.money.MyCard"
+            android:label="我的银行卡" />
+        <activity
+            android:name=".UI.Main.my.money.MoneyDetail"
+            android:label="交易记录" />
+        <activity
+            android:name=".UI.Owner.addcar.CarRealTimeStatusInfoActivity"
+            android:label="实时状态" />
+        <activity
+            android:name=".UI.Owner.addcar.OwnerInfoActivity"
+            android:label="更多评论" />
+        <activity
+            android:name=".UI.Renter.RenterInfoActivity"
+            android:label="租客详情" />
+        <activity
+            android:name=".UI.Main.my.GetFriend"
+            android:label="@string/title_get_friend" />
+
+        <receiver android:name=".Receiver.UUReceiver" >
+            <intent-filter>
+
+                <!-- 开机广播 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!-- 关机广播 -->
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <!-- 网络连接变化的广播 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.tencent.mm.sdk.plugin.MMPluginOAuth$Receiver"
+            android:permission="com.tencent.mm.oauth.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.tencent.mm.sdk.plugin.Intent.ACTION_RESPONSE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.tencent.mm.sdk.channel.MMessage$Receiver"
+            android:permission="com.tencent.mm.plugin.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.tencent.mm.sdk.channel.Intent.ACTION_MESSAGE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" />
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.umeng.fb.ConversationActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.umeng.fb.ContactActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <!-- 联动优势支付activity -->
+        <activity
+            android:name="com.umpay.quickpay.UmpayActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/ump_translucent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 支付宝支付 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name=".UI.Renter.carinfo.CheckRouteActivity"
+            android:label="取车位置" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".UI.Orderform.RenterOrderInfoActivity"
+            android:label="订单详情" />
+        <activity
+            android:name=".UI.Orderform.OwnerOrderInfoActivity"
+            android:label="订单详情" />
+        <activity
+            android:name=".UI.Orderform.OwnerWishInfoActivity"
+            android:label="意向单详情" />
+        <activity
+            android:name=".UI.Orderform.OrderCancleActivity"
+            android:label="查看路线" />
+        <activity
+            android:name=".UI.Common.Car.CarInfoAndLocationActivity"
+            android:label="车辆实时位置" />
+        <activity
+            android:name=".UI.Owner.addcar.OwnerCarInfoActivity"
+            android:label="发布车辆预览" />
+        <activity
+            android:name=".UI.Orderform.Tips.WebHtmlActivity"
+            android:label="押金费用规则" />
+
+        <!-- <service -->
+        <!-- android:name="com.youyou.uucar.Service.UUService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false" /> -->
+        <!-- <service android:name="com.youyou.uucar.Service.RentingService" /> -->
+
+        <activity
+            android:name=".UI.Main.Login.SetPassword"
+            android:label="@string/title_activity_set_password" />
+        <activity
+            android:name=".UI.Main.Login.ResetPasswordSetPassword"
+            android:label="忘记密码" />
+        <activity
+            android:name=".UI.Main.my.About"
+            android:label="关于" />
+        <activity
+            android:name=".UI.Main.my.Feedback"
+            android:label="@string/title_activity_feedback" />
+        <activity
+            android:name=".UI.Owner.calculate.CalculatePriceActivity"
+            android:label="@string/title_activity_calculate_price" />
+
+        <service
+            android:name=".core3.CoreLooperService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".UI.operate.OperatePopActivity"
+            android:label="@string/title_activity_operate_pop"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name=".UI.Owner.addcar.SetTimeLimitActivity"
+            android:label="@string/title_activity_set_time_limit" />
+        <activity
+            android:name=".UI.Owner.addcar.AutoReceiveOrderActivity"
+            android:label="@string/title_activity_auto_receive_order" />
+        <activity
+            android:name=".UI.Owner.addcar.SetNotRentTimeActivity"
+            android:label="@string/title_activity_set_not_rent_time" />
+        <activity
+            android:name=".UI.Main.MyStrokeFragment.OrderHistoryActivity"
+            android:label="@string/title_activity_order_history" />
+        <!-- LLYT SDK START -->
+        <activity
+            android:name="com.yintong.secure.activity.BaseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service
+            android:name="com.yintong.secure.service.PayService"
+            android:exported="false" />
+
+        <activity
+            android:name=".UI.Main.Login.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".UI.Main.Login.ResetPasswordPhone"
+            android:label="@string/title_activity_reset_password" />
+        <activity
+            android:name=".UI.Main.Login.Register"
+            android:label="@string/title_activity_register" />
+        <activity
+            android:name=".UI.Owner.help.OwnerHelpManager"
+            android:label="@string/title_activity_owner_help" />
+        <activity
+            android:name=".UI.Main.MyStrokeFragment.OrderReviewFinishActivity"
+            android:label="@string/title_activity_order_review_finish" />
+
+        <!-- 测试activity -->
+
+        <service android:name=".Service.LongConnService" >
+            <intent-filter>
+                <action android:name="com.youyou.uucar.Service.LongConnService" />
+            </intent-filter>
+        </service>
+
+        <!-- 订单详情html5页面 -->
+        <activity
+            android:name=".UI.Orderform.H5Activity"
+            android:label="@string/title_activity_renter_order_info_h5" >
+        </activity>
+    </application>
+
+</manifest>

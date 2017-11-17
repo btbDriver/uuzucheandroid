@@ -1,0 +1,14 @@
+import "uu_common.proto";
+import "Car_common.proto";
+import "Banner_common.proto";
+package com.uu.client.bean.banner;
+
+// banner操作动作上报请求，响应为 uu_common.CommonReportResponse
+message BannerActionReportRequest {
+	required int32 bannerId = 1;
+	required com.uu.client.bean.banner.common.BannerActionType actionType = 2;
+}
+
+
+
+

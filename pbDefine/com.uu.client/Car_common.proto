@@ -1,0 +1,182 @@
+import "uu_common.proto";
+package com.uu.client.bean.car.common;
+
+// 变速器类型
+enum CarTransmissionType {
+	AUTO = 1; // 自动档
+	HAND = 2; // 手动档
+} /**
+ * 车辆类型
+ */ enum CarType {
+	COMPACT = 0; // 紧凑型
+	SUV = 1; // SUV
+	COMFORTABLE = 2; // 舒适型
+	ECONOMICAL = 3; // 经济型
+	LUXURIOUS = 4; //	 豪华型
+	BUSINESS = 5; // 商务型
+	SPECIFIC = 6; // 个性车
+} /**
+ * 车辆配置
+ */ enum CarConfig {
+	GPS = 0; // GPS导航
+	USE = 1; // USB
+	VOICE_INPUT = 2; // 语音输入
+	BLUE_TOOTH = 3; // 蓝牙
+	SEAT_HEATING = 4; // 座椅加热
+	TACHOGRAPH = 5; // 行车记录仪
+	RADAR = 6; // 倒车雷达
+	AIR_CONDITION = 7; // 冷气空调
+} /**
+ * 车辆状态
+ */ enum CarStatus {
+	CUSTOMER_SERVICE_PUBLISHING = 1; // 客服正在发布
+	SUSPEND_RENT = 2; // 暂不出租
+	CAN_RENT = 3; // 可出租
+	WAIT_COMPLETE_EDIT = 4; // 待编辑完成
+	CHECK_NOT_PASSED = 5; // 审核不通过
+	WAIT_PUBLISHING = 6; // 等待发布
+}
+
+// 车辆图片类型
+enum CarImgType {
+	HEAD_IMG = 1; // 车辆左前照片
+	CONSTRAINT_INSURANCE = 2; // 交强险
+	CAR_LICENSE_FRONT = 3; // 车辆行驶证正面
+	CAR_LICENSE_BACK = 4; // 车辆行驶证反面
+	ID_FRONT = 5; // 身份证正面
+}
+
+/**
+ * 筛选车辆的场景
+ */ 
+enum FilterCarListScene {
+	RENT_MULTI_CAR = 1; // 发起一对多约车的场景
+}
+
+message CarBriefInfo {
+	required string carId = 1; // 车辆唯一标示id
+	required int32 userId = 12; // 车主用户id
+	required CarStatus carStatus = 11; // 车辆状态
+	required string licensePlate = 2; // 汽车牌照
+	required string brand = 3; // 汽车品牌
+	required string carModel = 4; // 汽车型号
+	required CarTransmissionType transmissionType = 5; // 变速箱类型
+	optional float pricePerDay = 6; // 汽车价格，按天算
+	required float priceByHour = 13; // 价格按小时算
+	optional string thumbImg = 7; // 车辆缩略图
+	optional string address = 8; // 取车地址
+	optional float distanceFromRenter = 9; // 车辆离租客有多少公里，单位为公里
+	optional com.uu.client.bean.common.LatlngPosition position = 10; // 车辆地理位置坐标
+	optional CarSourceType carSourceType = 14; // 车辆来源类型
+	optional int32 rentingType = 15; // 1：当前访问用户正在对该车进行点对点、点对多的约车中；2：正在对该车进行快速约车中
+	optional string passedMsg = 16; // 透传消息
+	optional string waterMarkPic = 17; // 水印图片
+	optional com.uu.client.bean.common.ColoredText coloredAddress = 18; // 取车地址，带颜色的
+	optional float stars = 19; // 车主评星
+	optional string carLimitedInfo = 20; // 车辆限行提示信息
+	optional string carDetailInfo = 21; // 车辆的详细描述，可选，在某些场景下才出现
+	optional int32  displayPosition = 22;   // 是否展示租客设置的取车位置   0：是  1：否
+}
+
+message CarProperties {
+	required string descStr = 1; // 属性描述
+	required string imgName = 2; // 图片名称，如果该字段以"http://"开通，则客户端直接拿该url去下载图片
+}
+
+message CarDetailInfo {
+	required string carId = 1; // 车辆id
+	required int32 userId = 22; // 车主用户id
+	required string licensePlate = 17; // 汽车牌照
+	required string brand = 18; // 汽车品牌
+	required string carModel = 19; // 汽车型号
+	optional CarTransmissionType transmissionType = 20; // 变速箱类型
+	optional CarStatus carStatus = 21; // 车辆状态
+	optional bool ifCollected = 23 [default = false]; // 当前用户是否收藏过该车辆
+	repeated CarImg carImgs = 2; // 车辆图片列表
+	optional float priceByDay = 3; // 价格按天算
+	optional float priceByHour = 4; // 价格按小时算
+	optional float priceByWeek = 5; // 价格按周算
+	optional string address = 6; // 取车地址
+	optional com.uu.client.bean.common.LatlngPosition position = 7; // 车辆地理位置坐标
+	optional string carOwnerName = 9; // 车主
+	optional int32 acceptOrderPercent = 10; // 车主订单接收率
+	optional int32 averageResponseTimes = 11; // 车主平均响应时间，单位秒
+	optional string carDesc = 12; // 车辆描述
+	optional string carImgUrlPrefix = 13; // 客户端拿该字段 + imgName 得到车辆的图片地址
+	repeated CarProperties carProperties = 14; // 车辆属性列表
+	optional float carOwnerStars = 15; // 车主评星
+	repeated RenterAppraisal appraisalList = 16; // 评价列表
+    optional bool appraisalHasMore = 52; //是否有更多评论
+	optional string shareWord = 24; // 分享文案
+	optional int32 displacementType = 26; // 排量 1:1.6L以下 2:1.6L ~ 1.9L 3：2.0L ~ 2.3L  4：2.4L以上
+	optional int32 carRegYear = 27; // 车辆注册年份，单位年，如 2010
+	optional int32 seatsCount = 28; // 1：5座 2：7座
+	optional int32 drivingKM = 29; // 1：2万公里以下 2：2万至5万 3：5万至10万 4：10万以上
+	optional int32 gasType = 30; // 油号 1:92/93 2:95
+	optional bool hasRadar = 31; // 是否有倒车雷达
+	optional bool hasGPS = 32; // 是否有导航仪
+	optional int32 guidePricePerDay = 33; // 指导价格，按天算
+	repeated CarImgType carRefusedImgType = 34; // 车辆被拒绝的图片类型
+	optional string carRefusedReason = 35; // 被拒绝原因
+	repeated CarImgType needUploadImgType = 36; // 需要上传的图片的类型
+	optional int32 rentingType = 37; // 1：当前访问用户正在对该车进行点对点、点对多的约车中；2：正在对该车进行快速约车中
+	optional CarSourceType carSourceType = 38; // 车辆来源类型
+	optional bool idFrontPassed = 39; // 身份证正面是否通过了审核 该字段仅在车主拉取的时候有
+	optional string carLimitUseDesc = 40; // 车辆由于限行规则导致的限行说明，比如“周二限行”
+	optional CarSelectRentTime carSelectRentTime = 8; // 表示车辆的限行时间，但是车辆还是可以租，具体在日历里选择时间时，用户可以点击
+	optional CarSelectRentTime carDisableTime = 41; // 表示车辆因为订单导致的不可租时间，在此时间段内，不允许租客进行约车，具体在日历选择时间时，用户不可以点击
+	optional string city = 42; // 车辆所在城市编码，例如 北京：010
+	optional string waterMarkPic = 43; // 水印图片
+	optional com.uu.client.bean.common.ColoredText coloredAddress = 44; // 带颜色的地址字段
+	optional com.uu.client.bean.common.ColoredText coloredCarOpDesc = 45; // 车辆运营的描述字段
+	optional com.uu.client.bean.common.ColoredText opDesc1 = 46; // 车辆运营描述1 
+	optional string carCanntRentDesc = 47; // 车辆不可租的文案描述
+	optional string carOwnerSetRentLimitDesc = 48; // 车主设置的租期限制描述
+	optional com.uu.client.bean.common.ColoredText acceptOrderPercentTxt = 49; // 车主订单接收率，带颜色的文案
+	optional com.uu.client.bean.common.ColoredText averageResponseTimesTxt = 50; // 车主平均响应时间，带颜色的文案
+	optional int32 displayPosition = 51;   // 是否展示租客设置的取车位置   0：是  1：否
+	message RenterAppraisal {
+		required string name = 1; // 租客名称
+		optional string avatar = 2; // 头像
+		required string appraisalContent = 3; // 评价内容
+		required int32 occurTime = 4; // 评价发生的时间戳，单位秒
+	}
+
+}
+
+message CarSelectRentTime {
+
+// 根据该车辆的订单时间，计算出来的不可用的日期，按照 startTime 计算得到一个日期，以该日期为基准
+// 如第一天不可租，则本数组会有一个元素，其中的 unavailableDay 字段等于1，如果第三天不可租，则有一个元素的 unavailableDay 字段等于3
+	repeated CarUnavailableTime unavailableTime = 1;
+	required int32 startTime = 2; // 单位秒，表示从该时间戳开始算不可租时间，这么处理是为了防止客户端本地的时间不正确，导致展示的不可租有误
+	required int32 showDays = 3 [default = 7]; // 展示多少天，在日历里，往后展示多少天的不可租
+}
+
+// 车辆不可用时间定义
+message CarUnavailableTime {
+	required int32 unavailableDay = 1; // 不可用的天，从1开始，比如当天不可用，则该字段是1
+	required CarUnavailableTimeType type = 2; // 类型
+}
+
+enum CarUnavailableTimeType {
+	AM = 1; // 上午
+	PM = 2; // 下午
+	ALL_DAY = 3; // 全天
+}
+
+message CarImg {
+	required string imgId = 1;
+	required int32 type = 2; // 1=车主合影 2=左前 3=正前 4=右后 5=正后 6=左侧面 7=中控台 8=车内前排 9=车内后排 99=其他
+	optional string carId = 3;
+	optional string imgSource = 4;
+	optional string imgThumb = 5;
+	optional com.uu.client.bean.common.LatlngPosition position = 6;
+	optional int32 uploadTime = 7; // 时间戳，单位秒
+}
+
+// 车辆来源类型
+enum CarSourceType {
+	PRIVATE_CAR = 1; // 私家车
+	CAR_RENTAL_COMPANY = 2; // 租车公司
+}

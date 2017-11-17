@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/car_comment_linear"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/f3"
+        android:background="@color/c13" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ower_comments_header_size"
+        android:layout_marginLeft="@dimen/content_item_left"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+            android:id="@+id/owner_imageview"
+            android:layout_width="@dimen/ower_header_size"
+            android:layout_height="@dimen/ower_header_size"
+            android:background="@drawable/car_ower_header" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/drawer_header_text_size"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/owner_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="王花花"
+                    android:textColor="@color/subtitle_color"
+                    android:textSize="@dimen/f3" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <RatingBar
+                    android:id="@+id/owner_star"
+                    style="@style/StarBigRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/one_centimeter_size"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="4" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/owner_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="注册时间：2014-03-10 12:10:48"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3"
+
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/content_item_left"
+        android:background="@color/c13" />
+
+    <LinearLayout
+        android:id="@+id/comment_linear_mains"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/comment_linear_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/comments_item_size"
+            android:layout_marginLeft="@dimen/content_item_left"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/header_small_top_linear_size"
+                android:orientation="horizontal">
+
+                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                    android:id="@+id/image_1"
+                    android:layout_width="@dimen/header_small_size"
+                    android:layout_height="@dimen/header_small_size"
+                    android:layout_marginBottom="@dimen/header_small_top_linear_size"
+                    android:background="@drawable/car_ower_header" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/thirteen_size"
+                    android:layout_marginRight="@dimen/one_centimeter_size"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/name_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="王花花"
+                            android:textColor="@color/subtitle_color"
+                            android:textSize="@dimen/f3" />
+
+                        <TextView
+                            android:id="@+id/time_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="4月13日"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+
+                    </LinearLayout>
+
+                    <RatingBar
+                        android:id="@+id/star_1"
+                        style="@style/StarSmallRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/one_centimeter_size"
+                        android:layout_marginTop="9dp"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="4" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/comment_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="车主人和好，希望有机会下次继续合作"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/action_bar_menu_text_size" />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/comment_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/content_item_left"
+            android:background="@color/c13" />
+
+        <LinearLayout
+            android:id="@+id/comment_linear_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/comments_item_size"
+            android:layout_marginLeft="@dimen/content_item_left"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/header_small_top_linear_size"
+                android:orientation="horizontal">
+
+                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                    android:id="@+id/image_2"
+                    android:layout_width="@dimen/header_small_size"
+                    android:layout_height="@dimen/header_small_size"
+                    android:layout_marginBottom="@dimen/header_small_top_linear_size"
+                    android:background="@drawable/car_ower_header" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/thirteen_size"
+                    android:layout_marginRight="@dimen/one_centimeter_size"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/name_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="王花花"
+                            android:textColor="@color/subtitle_color"
+                            android:textSize="@dimen/f3" />
+
+                        <TextView
+                            android:id="@+id/time_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="4月13日"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+
+                    </LinearLayout>
+
+                    <RatingBar
+                        android:id="@+id/star_2"
+                        style="@style/StarSmallRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/one_centimeter_size"
+                        android:layout_marginTop="9dp"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="4" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/comment_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="车主人和好，希望有机会下次继续合作"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/action_bar_menu_text_size" />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/comment_line_3"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/content_item_left"
+            android:background="@color/c13" />
+
+        <LinearLayout
+            android:id="@+id/comment_linear_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/comments_item_size"
+            android:layout_marginLeft="@dimen/content_item_left"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/header_small_top_linear_size"
+                android:orientation="horizontal">
+
+                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                    android:id="@+id/image_3"
+                    android:layout_width="@dimen/header_small_size"
+                    android:layout_height="@dimen/header_small_size"
+                    android:layout_marginBottom="@dimen/header_small_top_linear_size"
+                    android:background="@drawable/car_ower_header" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/thirteen_size"
+                    android:layout_marginRight="@dimen/one_centimeter_size"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/name_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="王花花"
+                            android:textColor="@color/subtitle_color"
+                            android:textSize="@dimen/f3" />
+
+                        <TextView
+                            android:id="@+id/time_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="4月13日"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+
+
+                    </LinearLayout>
+
+                    <RatingBar
+                        android:id="@+id/star_3"
+                        style="@style/StarSmallRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/one_centimeter_size"
+                        android:layout_marginTop="9dp"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="4" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/comment_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="车主人和好，希望有机会下次继续合作"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/action_bar_menu_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/one_centimeter_size"
+        android:background="@color/button_unenable_text_gray_color"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/need_more_comments"
+            android:textColor="@color/c8"
+            android:textSize="@dimen/f3" />
+    </FrameLayout>
+</LinearLayout>

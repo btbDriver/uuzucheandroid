@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/c1"
+        android:text="请选择您要租车的城市"
+        android:textSize="@dimen/f2"
+        android:textColor="@color/c11"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/city_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/c13"
+        android:orientation="vertical">
+
+    </LinearLayout>
+</LinearLayout>

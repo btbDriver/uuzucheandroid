@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/pullToRefresh"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/title_header_1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/f3"
+                    android:text="优先事项"
+                    android:textColor="@color/red_button_text_color"
+                    android:textSize="@dimen/f3" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/listview_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.youyou.uucar.Utils.View.MyListView
+                        android:id="@+id/ptwop_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:footerDividersEnabled="false"
+                        android:headerDividersEnabled="false"
+                        android:listSelector="@drawable/front_transport_bg"
+                        android:visibility="visible" />
+
+                    <com.youyou.uucar.Utils.View.MyListView
+                        android:id="@+id/broad_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:footerDividersEnabled="false"
+                        android:headerDividersEnabled="false"
+                        android:listSelector="@drawable/front_transport_bg"
+                        android:visibility="visible" />
+
+                    <com.youyou.uucar.Utils.View.MyListView
+                        android:id="@+id/needfinish_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:footerDividersEnabled="false"
+                        android:headerDividersEnabled="false"
+                        android:listSelector="@drawable/front_transport_bg"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/master_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:background="@drawable/main_bg"
+                    android:visibility="visible">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/c13" />
+
+                    <TextView
+                        android:id="@+id/master_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="此时没有你需要处理的事项"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+
+                        android:id="@+id/master_progress"
+                        style="?android:progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_gravity="bottom"
+                        android:background="@color/c13" />
+                </FrameLayout>
+
+            </FrameLayout>
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/title_header_2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/f3"
+                    android:text="已确认租用的订单"
+                    android:textColor="@color/red_button_text_color"
+                    android:textSize="@dimen/f3" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <com.youyou.uucar.Utils.View.MyListView
+                    android:id="@+id/rent_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawSelectorOnTop="true"
+                    android:listSelector="@drawable/photo_front_transport_bg"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:id="@+id/rent_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:background="@drawable/main_bg"
+                    android:visibility="visible">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/c13" />
+
+                    <TextView
+                        android:id="@+id/rent_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="此时没有你需要处理的订单"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        android:id="@+id/rent_progress"
+                        style="?android:progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_gravity="bottom"
+                        android:background="@color/c13" />
+                </FrameLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

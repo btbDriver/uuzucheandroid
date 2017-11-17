@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright 2012 Square, Inc. -->
+
+<resources>
+    <string name="day_name_format">EEE</string>
+    <string name="invalid_date">日期须在 %1$s 至 %2$s之间.</string>
+    <string name="month_name_format">yyyy MMMM</string>
+</resources>

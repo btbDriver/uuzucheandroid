@@ -1,0 +1,70 @@
+package com.uu.client.bean.common;
+
+// 用户票据
+message UserSecurityTicket {
+	required bytes b2 = 1; // 用于标示用户身份
+	required bytes b3 = 2; // b3、b3Key用于传输通道加密
+	required bytes b3Key = 3;
+	required int32 validSecs = 4; // 票据有效时间 secs
+}
+
+message UserSecurityTicketWrapper {
+	required UserSecurityTicket ticket = 1;
+	required int32 createTime = 2; // 创建时间，单位秒
+	required bytes a1 = 3;
+	required int32 userId = 4; // 用户id
+}
+
+// 地理位置信息，经纬度
+message LatlngPosition {
+	optional double lat = 1; // 经度
+	optional double lng = 2; // 纬度
+}
+
+// 翻页结构
+message PageResult {
+	optional bool hasMore = 1; // 是否还有更多
+	optional string nextPageStart = 2; // 下一页的偏移起始量(下标)
+}
+
+// 翻页请求
+message PageRequest {
+	optional int32 direction = 1 [default = 0]; // 0:最新页；1：向后翻页
+	optional string pointer = 2; // 翻页点
+}
+
+// 号码翻页
+message PageNoRequest {
+	optional int32 pageNo = 2 [default = 1]; // 页码
+}
+
+// 号码翻页响应
+message PageNoResult {
+	optional bool hasMore = 1; // 是否还有更多
+	optional int32 totalRecord = 2; // 总数
+}
+
+// 提示类型
+enum PromptType {
+	TipsNum = 1; // 气泡数字
+	RedPoint = 2; // 红点
+}
+
+// 提示消息
+message TipsMsg {
+	required int32 num = 1; // 行程列表button的气泡数字
+	required PromptType type = 2; // 提示类型
+	optional string toastMsg = 3; // toast提示消息
+	optional string noticeBarMsg = 4; // 当应用不在前台，展示在通知栏的消息
+	optional string toPageUrl = 5; // 跳转的页面url
+}
+
+// 通用的上报响应
+message CommonReportResponse {
+	required int32 ret = 1; // 0：成功；-1：失败
+}
+
+message ColoredText {
+	required string text = 1; // 文案
+	optional string textHexColor = 2; // 文案颜色，以"#"开头的16进制表示颜色的字符串，不区分大小写，如：#ffffff
+}

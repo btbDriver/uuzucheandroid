@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youyou.uucar.Utils.View.UUProgressFramelayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/progressFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg">
+
+        <RelativeLayout
+            android:id="@+id/coupon_pass_root"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/tip"
+            android:background="#cdcdcd">
+
+            <RelativeLayout
+                android:id="@+id/phone_root"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginTop="@dimen/s1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_marginLeft="@dimen/s1"
+                android:layout_toLeftOf="@+id/verifi_coupon"
+                android:background="@drawable/coupon_code_input_bg">
+
+                <EditText
+                    android:id="@+id/coupon_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/clear"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/coupon_input_hint"
+                    android:singleLine="true"
+                    android:textColor="@color/c6"
+                    android:textColorHint="@color/c11"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/f2" />
+
+                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                    android:id="@+id/clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:background="@drawable/input_clear"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/verifi_coupon"
+                android:layout_width="56dp"
+                android:layout_marginTop="@dimen/s1"
+                android:layout_marginRight="@dimen/s1"
+                android:layout_height="37dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/coupon_code_ver_bg"
+                android:gravity="center"
+                android:textSize="@dimen/f2"
+                android:text="添加"
+                android:textColor="@color/c1" />
+        </RelativeLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:id="@+id/swiperefreshlayout"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:fitsSystemWindows="true"
+                android:divider="@color/c8"
+                android:dividerHeight="1px"
+                android:headerDividersEnabled="true"
+                android:layout_height="match_parent" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/nodata_root"
+            android:layout_width="match_parent"
+            android:layout_below="@id/coupon_pass_root"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content">
+
+                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                    android:id="@+id/icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/coupon_nodata_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:layout_below="@id/icon"
+                    android:layout_height="wrap_content"
+                    android:text="您还没有优惠券，可以\n邀请朋友获得奖励"
+                    android:gravity="center_horizontal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottom_root"
+                android:layout_width="match_parent"
+                android:background="@color/c11"
+                android:layout_alignParentBottom="true"
+                android:layout_height="59dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/c8" />
+
+                <TextView
+                    android:id="@+id/get_friend"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:background="@drawable/red_button_bg"
+                    android:gravity="center"
+                    android:text="邀请好友得50元优惠券"
+                    android:textColor="@color/red_button_text_color"
+                    android:textSize="@dimen/f2" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>

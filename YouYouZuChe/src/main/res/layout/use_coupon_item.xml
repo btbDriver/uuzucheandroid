@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/main_bg">
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="1px"
+        android:layout_height="@dimen/s1" />
+
+    <RelativeLayout
+        android:id="@+id/price_root"
+        android:layout_below="@id/view1"
+        android:layout_width="117dp"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_height="83dp"
+        android:background="@drawable/coupon_event_left_bg">
+
+        <ImageView
+            android:id="@+id/isdouble"
+            android:background="@drawable/coupon_double"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26dp"
+            android:text="800"
+            android:textColor="#FFFFFF"
+            android:textSize="50dp" />
+
+        <TextView
+            android:id="@+id/price_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:text="￥"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_marginRight="6dp"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/view1"
+        android:id="@+id/right_root"
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:layout_toLeftOf="@+id/used"
+        android:background="@drawable/coupon_event_left_bg"
+        android:layout_toRightOf="@id/price_root">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="名字"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/c11"
+            android:textSize="@dimen/f5" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:text="描述"
+            android:textColor="@color/c11"
+            android:textSize="@dimen/bf1"
+            android:layout_below="@id/name"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/desc"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:singleLine="true"
+            android:text="2014/04/13-2014/04/15有效"
+            android:textColor="@color/c11"
+            android:textSize="@dimen/f4" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/used"
+        android:layout_width="55dp"
+        android:layout_below="@id/view1"
+        android:layout_height="83dp"
+        android:background="@drawable/coupon_event_right_normal_bg"
+        android:layout_marginRight="@dimen/s1"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:text="待使用"
+        android:textColor="#00a0e3"
+        android:textSize="@dimen/f3" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_below="@id/view1"
+        android:layout_toRightOf="@id/price_root"
+        android:background="@drawable/coupon_line_bg"
+        android:layout_height="83dp" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="@dimen/s1"
+        android:layout_below="@id/price_root" />
+</RelativeLayout>

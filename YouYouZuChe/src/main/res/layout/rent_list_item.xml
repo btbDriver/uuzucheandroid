@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/c13" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/one_centimeter_size"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/renter_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/drawer_header_text_size"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="周先生"
+            android:textSize="@dimen/f3" />
+
+        <TextView
+            android:id="@+id/renter_status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/textview_left_image_size"
+            android:gravity="center_vertical"
+            android:text="租客正在用车"
+            android:textColor="@color/red_error"
+            android:textSize="@dimen/f3" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/drawer_header_text_size"
+        android:background="@color/c13" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="184dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="116dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="@dimen/ower_header_size"
+                android:layout_height="@dimen/ower_header_size"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/header_border">
+
+                <com.youyou.uucar.Utils.ImageView.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/head"
+                    android:layout_width="@dimen/header_image_size"
+                    android:layout_height="@dimen/header_image_size"
+                    app:border_color="#999999"
+                    app:border_width="1dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/header_neibu" />
+            </FrameLayout>
+
+            <RatingBar
+                android:id="@+id/star"
+
+                style="@style/StarBigRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/f1" />
+
+            <TextView
+                android:id="@+id/rent_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/header_small_top_linear_size"
+                android:text="租车次数：100次"
+                android:textColor="@color/c8"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/content_item_left"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/image_content_size"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/car_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="天籁"
+                    android:textColor="@color/c1"
+                    android:textSize="@dimen/f2" />
+
+                <TextView
+                    android:id="@+id/plate_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/f1"
+                    android:text="京N4QQ28"
+                    android:textColor="@color/c1"
+                    android:textSize="@dimen/f2" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/f1"
+                    android:text="700元"
+                    android:visibility="gone"
+                    android:textColor="@color/c1"
+                    android:textSize="@dimen/f2" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/rent_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="租期：3天4小时"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+
+            <TextView
+                android:id="@+id/start_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="开始时间：周一 3月24日 11:00"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+
+            <TextView
+                android:id="@+id/end_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="结束时间：周二 4月2日 11:00"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/c13" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/c13" />
+
+
+</LinearLayout>

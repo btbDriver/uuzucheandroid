@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent">
+
+    <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+        android:id="@+id/img"
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="23dp"
+        android:src="@drawable/list_car_img_def" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/img"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="23dp">
+
+        <TextView
+            android:id="@+id/brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/f1"
+            android:layout_toLeftOf="@+id/number"
+            android:singleLine="true"
+            android:layout_marginRight="20dp"
+            android:ellipsize="start"
+            android:textColor="@color/subtitle_color"
+            android:text="呵呵呵呵呵呵" />
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:text="京N12345"
+            android:textSize="@dimen/f1"
+            android:textColor="@color/subtitle_color"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/start_time_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/brand"
+            android:layout_marginTop="9dp"
+            android:textColor="@color/c8"
+            android:textSize="@dimen/action_bar_subtitle_text_size"
+            android:text="@string/start_time_title" />
+
+        <TextView
+            android:id="@+id/start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/brand"
+            android:singleLine="true"
+            android:layout_marginTop="9dp"
+            android:textColor="@color/c8"
+            android:textSize="@dimen/action_bar_subtitle_text_size"
+            android:layout_toRightOf="@id/start_time_title"
+            android:text="周三 07月07日 12:54" />
+
+
+        <TextView
+            android:id="@+id/end_time_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/start_time_title"
+            android:layout_marginTop="9dp"
+            android:textColor="@color/c8"
+            android:textSize="@dimen/action_bar_subtitle_text_size"
+            android:text="@string/end_time_title" />
+
+        <TextView
+            android:id="@+id/end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/start_time_title"
+            android:layout_marginTop="9dp"
+            android:singleLine="true"
+            android:textColor="@color/c8"
+            android:textSize="@dimen/action_bar_subtitle_text_size"
+            android:layout_toRightOf="@id/end_time_title"
+            android:text="周三 07月07日 12:54" />
+
+
+        <TextView
+            android:id="@+id/address_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/end_time_title"
+            android:layout_marginTop="9dp"
+            android:textColor="@color/c8"
+            android:textSize="@dimen/action_bar_subtitle_text_size"
+            android:text="@string/getcar_address_title" />
+
+        <TextView
+            android:id="@+id/address_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/end_time_title"
+            android:layout_marginTop="9dp"
+            android:textColor="@color/c8"
+            android:textSize="@dimen/action_bar_subtitle_text_size"
+            android:layout_toRightOf="@id/end_time_title"
+            android:singleLine="true"
+            android:ellipsize="start" />
+
+        <TextView
+            android:id="@+id/order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/address_title"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="9dp"
+            android:text="已完成"
+            android:textColor="@color/c1"
+            android:textSize="@dimen/action_bar_subtitle_text_size"
+            android:paddingBottom="13dp" />
+    </RelativeLayout>
+</RelativeLayout>

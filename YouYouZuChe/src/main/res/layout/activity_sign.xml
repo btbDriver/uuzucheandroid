@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <WebView
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tiaokuan" />
+
+    <CheckBox
+        android:id="@+id/tiaokuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sure"
+        android:layout_margin="10dp"
+        android:checked="false" />
+
+    <TextView
+        android:id="@+id/tiaokuan_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tiaokuan"
+        android:layout_toRightOf="@id/tiaokuan"
+        android:text="@string/renter_register_tiaokuan_text"
+        android:textColor="@color/c8"
+        android:textSize="@dimen/f2" />
+
+    <TextView
+        android:id="@+id/sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/red_button_bg"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="立即注册"
+        android:textColor="@color/red_button_text_color"
+        android:textSize="@dimen/f2" />
+
+
+</RelativeLayout>

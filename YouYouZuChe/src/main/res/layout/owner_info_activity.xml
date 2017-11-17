@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youyou.uucar.Utils.View.UUProgressFramelayout
+    android:id="@+id/all_framelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/c13" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <com.youyou.uucar.Utils.ImageView.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    app:border_color="#999999"
+                    app:border_width="1dp"
+                    android:id="@+id/image"
+                    android:layout_width="@dimen/content_item_size"
+                    android:layout_height="@dimen/content_item_size"
+                    android:layout_centerInParent="true"
+
+                    android:layout_marginLeft="@dimen/drawer_header_text_size"
+                    android:layout_marginTop="@dimen/image_content_size"
+                    android:src="@drawable/header_neibu" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/drawer_header_text_size"
+                    android:layout_marginTop="@dimen/drawer_header_text_size"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="王花花"
+                            android:textColor="@color/subtitle_color"
+                            android:textSize="@dimen/f1" />
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:layout_weight="1">
+
+                            <RatingBar
+                                android:id="@+id/star"
+                                style="@style/StarBigRatingBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:isIndicator="true"
+                                android:numStars="5" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/f3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+
+                                android:text="平均响应时间"
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/c8"
+                                android:textSize="@dimen/action_bar_subtitle_text_size" />
+
+                            <TextView
+                                android:id="@+id/time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center"
+                                android:layout_marginLeft="3dp"
+                                android:text="32分钟"
+                                android:textColor="@color/action_bar_menu_text_color"
+                                android:textSize="@dimen/f2" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="@dimen/image_content_size"
+                            android:layout_gravity="center"
+                            android:background="@color/c13" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="平均分享概率"
+                                android:textColor="@color/c8"
+                                android:textSize="@dimen/action_bar_subtitle_text_size" />
+
+                            <TextView
+                                android:id="@+id/share"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="47%"
+                                android:textColor="@color/action_bar_menu_text_color"
+                                android:textSize="@dimen/f2" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/c13" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_bg">
+
+                <TextView
+                    android:id="@+id/empty_sub"
+                    android:textSize="@dimen/f1"
+                    android:text="@string/not_have_appraise"
+                    android:layout_margin="@dimen/drawer_header_text_size"
+                    android:textColor="@color/c8"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="match_parent" />
+
+                <com.youyou.uucar.Utils.View.MyListView
+                    android:layout_width="match_parent"
+                    android:id="@+id/listview"
+                    android:divider="@color/c13"
+                    android:dividerHeight="1px"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:headerDividersEnabled="true"
+                    android:footerDividersEnabled="false"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/c13" />
+        </LinearLayout>
+    </ScrollView>
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>

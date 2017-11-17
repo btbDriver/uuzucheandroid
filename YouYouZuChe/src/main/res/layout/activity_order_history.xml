@@ -1,0 +1,87 @@
+<com.youyou.uucar.Utils.View.UUProgressFramelayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/all_framelayout"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/root">
+
+            <RelativeLayout
+                android:id="@+id/tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff7d8">
+
+                <TextView
+                    android:id="@+id/tip_1"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/c20"
+                    android:text="您可以查看过去30天的预约和被预约记录。"
+                    android:layout_toLeftOf="@+id/close"
+                    android:textSize="@dimen/f5" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_below="@id/tip_1"
+                    android:layout_height="10dp" />
+            </RelativeLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/pullToRefresh"
+                android:layout_below="@id/tip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:cacheColorHint="#00FFFFFF"
+                    android:divider="@color/c13"
+                    android:dividerHeight="1px"
+                    android:footerDividersEnabled="false"
+                    android:hapticFeedbackEnabled="false"
+                    android:listSelector="#00FFFFFF" />
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:src="@drawable/find_car_list_nocar_icon" />
+
+            <TextView
+                android:id="@+id/nodata_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/icon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="23dp"
+                android:gravity="center"
+                android:text="暂无预约历史"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>

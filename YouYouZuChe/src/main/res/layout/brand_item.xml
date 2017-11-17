@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/main_bg"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/catalog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#A7A7A7"
+        android:paddingBottom="1dip"
+        android:paddingLeft="20dip"
+        android:paddingTop="1dip"
+        android:text="A"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/f2" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/catalog"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dip"
+        android:gravity="center_vertical"
+        android:layout_toLeftOf="@+id/xinghao"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="hhhh"
+        android:textColor="@color/c8"
+        android:textSize="@dimen/f2" />
+
+    <TextView
+        android:id="@+id/xinghao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/catalog"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="20dip"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="hhhh"
+        android:textColor="@color/c1"
+        android:textSize="@dimen/f2" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="18dp"
+        android:background="#A7A7A7" />
+
+</RelativeLayout>

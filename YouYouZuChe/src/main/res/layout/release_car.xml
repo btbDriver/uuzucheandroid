@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.youyou.uucar.Utils.View.UUProgressFramelayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/all_framelayout">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg">
+
+
+        <RelativeLayout
+            android:id="@+id/bottom_root"
+            android:layout_width="match_parent"
+            android:background="@color/c11"
+            android:layout_alignParentBottom="true"
+            android:layout_height="59dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/c8" />
+
+            <TextView
+                android:id="@+id/releasecar"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="14dp"
+                android:layout_marginLeft="14dp"
+                android:background="@drawable/red_button_bg"
+                android:gravity="center"
+                android:text="预览并发布车辆"
+                android:textColor="@color/red_button_text_color"
+                android:textSize="@dimen/f2" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_above="@+id/bottom_root"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/s1"
+                android:layout_marginRight="@dimen/s1"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/plate_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/action_bar_subtitle_text_size"
+                    android:text="京A12345"
+                    android:layout_marginBottom="@dimen/s2"
+                    android:textSize="@dimen/f1"
+                    android:gravity="center"
+                    android:textColor="@color/c8" />
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:progressDrawable="@drawable/progress_drawable_large"
+                    android:layout_width="match_parent"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progress="0"
+                    android:layout_height="12dp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/action_bar_subtitle_text_size"
+                        android:text="快点丰富资料出租赚钱啦！现在完成度"
+                        android:layout_marginBottom="@dimen/s2"
+                        android:textSize="@dimen/f3"
+                        android:gravity="center"
+                        android:textColor="@color/c8" />
+
+                    <TextView
+                        android:id="@+id/progress_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/action_bar_subtitle_text_size"
+                        android:text="25%"
+                        android:layout_marginBottom="@dimen/s2"
+                        android:textSize="@dimen/f3"
+                        android:gravity="center"
+                        android:textColor="@color/c2" />
+
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:background="@color/c11"
+                    android:padding="@dimen/s2"
+                    android:layout_height="217dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/renter_register_img_bg">
+
+                        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                            android:id="@+id/user_driver_front"
+                            android:layout_width="match_parent"
+                            android:layout_margin="2dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/car_big_pic" />
+
+                        <TextView
+                            android:id="@+id/renter_reigster_id_front_tip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:layout_marginLeft="21dp"
+                            android:text="封面是租客看车的第一印象，很重要哦！"
+                            android:layout_marginBottom="@dimen/f1"
+                            android:textColor="@color/c11"
+                            android:textSize="@dimen/f5" />
+                    </RelativeLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:id="@+id/photo_framelayout"
+                        android:background="@drawable/photo_framlayout_selector" />
+
+                    <ImageView
+                        android:id="@+id/photo_icon"
+                        android:focusable="false"
+                        android:enabled="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/add_photo_icon" />
+
+                    <TextView
+                        android:id="@+id/jsz_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="125dp"
+                        android:text="添加车辆照片"
+                        android:textColor="@color/c11"
+                        android:textSize="@dimen/f2" />
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/action_bar_subtitle_text_size"
+                    android:layout_marginBottom="@dimen/action_bar_subtitle_text_size"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:visibility="gone"
+                        android:background="@color/c13" />
+
+                    <RelativeLayout
+                        android:id="@+id/car_plate"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:visibility="gone"
+                        android:background="@drawable/addcar_image_overlay"
+                        android:clickable="true">
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/s1"
+                            android:text="车牌信息"
+                            android:textColor="@color/c4"
+                            android:textSize="@dimen/f2" />
+
+                        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                            android:id="@+id/sure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/s1"
+                            android:background="@drawable/add_car_check_no" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/c13" />
+
+                    <RelativeLayout
+                        android:id="@+id/car_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/addcar_image_overlay"
+                        android:clickable="true">
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/s1"
+                            android:text="@string/car_info"
+                            android:textColor="@color/c7"
+                            android:textSize="@dimen/f2" />
+
+                        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                            android:id="@+id/sure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/s1"
+                            android:background="@drawable/add_car_check_no" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/c13" />
+
+                    <RelativeLayout
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/addcar_image_overlay">
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/s1"
+                            android:text="@string/give_car_address"
+                            android:textColor="@color/c7"
+                            android:textSize="@dimen/f3" />
+
+                        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                            android:id="@+id/sure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/s1"
+                            android:background="@drawable/add_car_check_no" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/c13" />
+
+                    <RelativeLayout
+                        android:id="@+id/price"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/addcar_image_overlay">
+
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/s1"
+                            android:text="@string/car_price"
+                            android:textColor="@color/c7"
+                            android:textSize="@dimen/f3" />
+
+                        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                            android:id="@+id/sure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/s1"
+                            android:background="@drawable/add_car_check_no" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/c13" />
+
+                    <RelativeLayout
+                        android:id="@+id/desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/addcar_image_overlay">
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/s1"
+                            android:text="@string/car_desc"
+                            android:textColor="@color/c7"
+                            android:textSize="@dimen/f3" />
+
+                        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                            android:id="@+id/sure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/s1"
+                            android:background="@drawable/add_car_check_no" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/c13" />
+
+                    <RelativeLayout
+                        android:id="@+id/safety"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/addcar_image_overlay">
+
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/s1"
+                            android:text="认证资料"
+                            android:textColor="@color/c7"
+                            android:textSize="@dimen/f3" />
+
+                        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                            android:id="@+id/sure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/s1"
+                            android:background="@drawable/add_car_check_no" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/c13" />
+
+                    <!--<RelativeLayout-->
+                    <!--android:id="@+id/photo"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="45dp"-->
+                    <!--android:background="@drawable/addcar_image_overlay">-->
+
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="@dimen/s1"-->
+                    <!--android:text="@string/car_photo"-->
+                    <!--android:textColor="@color/c7"-->
+                    <!--android:textSize="@dimen/f3" />-->
+
+                    <!--<com.youyou.uucar.Utils.ImageView.BaseNetworkImageView-->
+                    <!--android:id="@+id/sure"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginRight="@dimen/s1"-->
+                    <!--android:background="@drawable/add_car_check_no" />-->
+                    <!--</RelativeLayout>-->
+
+
+                    <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1px"-->
+                    <!--android:background="@color/c13" />-->
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/applyService"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="申请客服协助"
+                    android:textColor="@color/c1"
+                    android:textSize="@dimen/f2"
+                    android:layout_marginLeft="@dimen/s1"
+                    android:layout_marginBottom="@dimen/f1" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>

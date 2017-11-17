@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/title_root"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:background="@drawable/car_info_bg"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/f5"
+            android:padding="@dimen/s1"
+            android:textColor="@color/c8"
+            android:text="车主在xxxxxxx"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_below="@id/tip"
+            android:layout_height="1px"
+            android:background="@color/c13"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/top_root"
+        android:layout_width="match_parent"
+        android:layout_below="@id/title_root"
+        android:paddingBottom="@dimen/s1"
+        android:paddingRight="@dimen/s1"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:background="@drawable/car_info_bg"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/car_img_root"
+            android:layout_width="126dp"
+            android:layout_height="78dp">
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/car_img"
+                android:layout_width="126dp"
+                android:layout_height="78dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="4dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/list_car_img_def"/>
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/water_mark_img"
+                android:layout_width="46dp"
+                android:visibility="gone"
+                android:layout_height="46dp"/>
+
+            <TextView
+                android:id="@+id/status"
+                android:textColor="@color/c11"
+                android:text="等待回应"
+                android:textSize="@dimen/f5"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:background="#E455acef"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="@dimen/s1"
+            android:layout_toLeftOf="@+id/gearbox_text"
+            android:layout_toRightOf="@id/car_img_root"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="大众CC"
+            android:textColor="@color/c6"
+            android:textSize="@dimen/f3"/>
+
+        <TextView
+            android:id="@+id/gearbox_text"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="2dp"
+            android:text="手动挡"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/c8"
+            android:textSize="@dimen/bf2"/>
+
+        <TextView
+            android:id="@+id/banday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="2dp"
+            android:layout_below="@id/brand"
+            android:layout_marginTop="9dp"
+            android:layout_alignParentRight="true"
+            android:text="周三限行"
+            android:textColor="@color/c8"
+            android:textSize="@dimen/bf2"/>
+
+        <TextView
+            android:id="@+id/price_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_below="@id/brand"
+            android:layout_toRightOf="@id/car_img_root"
+            android:layout_marginTop="9dp"
+            android:text="240"
+            android:textColor="@color/c20"
+            android:textSize="@dimen/f2"/>
+
+        <TextView
+            android:id="@+id/price_day_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/brand"
+            android:layout_toRightOf="@id/price_day"
+            android:layout_alignBaseline="@id/price_day"
+            android:layout_marginTop="18dp"
+            android:text="/天"
+            android:textColor="@color/c20"
+            android:textSize="@dimen/f5"/>
+
+
+        <RatingBar
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="14dp"
+            android:layout_marginTop="12dp"
+            android:layout_alignParentRight="true"
+            style="@style/FindCarRatingBar"
+            android:layout_below="@id/brand"/>
+
+        <RelativeLayout
+            android:id="@+id/address_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/price_day"
+            android:layout_toRightOf="@id/car_img_root">
+
+            <TextView
+                android:id="@+id/address_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="手动挡2"
+                android:layout_toLeftOf="@+id/dis"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/bf2"/>
+
+            <TextView
+                android:id="@+id/dis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/s2"
+                android:layout_alignParentRight="true"
+                android:text="1km"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/bf2"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_root"
+        android:layout_width="match_parent"
+        android:layout_below="@id/top_root"
+        android:orientation="vertical"
+        android:background="@drawable/car_info_bg"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c8"/>
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_margin="@dimen/s1"
+            android:ellipsize="end"
+            android:textSize="@dimen/f5"
+            android:textColor="@color/c8"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c8"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/rent"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="@dimen/f3"
+                android:text="预约此车"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/bottom_left_bottom_bg_nokuang"
+                android:textColor="@color/white_button_text_color"
+                android:layout_toLeftOf="@+id/center_view"
+                android:layout_centerHorizontal="true"/>
+
+            <View
+                android:id="@+id/center_view"
+                android:layout_width="1px"
+                android:layout_height="45dp"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:background="@color/c1"/>
+
+            <TextView
+                android:id="@+id/toowner"
+                android:layout_toRightOf="@id/center_view"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="联系车主"
+                android:visibility="gone"
+                android:textSize="@dimen/f2"
+                android:gravity="center"
+                android:textColor="@color/c1"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

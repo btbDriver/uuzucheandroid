@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youyou.uucar.Utils.View.UUProgressFramelayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/all_framelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@drawable/main_bg"
+        android:id="@+id/root"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:fitsSystemWindows="true"
+            android:divider="@color/c8"
+            android:layout_above="@+id/button_linear"
+            android:dividerHeight="1px"
+            android:headerDividersEnabled="true"
+            android:layout_height="match_parent" />
+
+
+        <LinearLayout
+            android:id="@+id/button_linear"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_height="60dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/c14" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:padding="@dimen/s2"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/button"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/f2"
+                    android:textColor="@color/c11"
+                    android:text="确定"
+                    android:layout_marginLeft="@dimen/s2"
+                    android:layout_marginRight="@dimen/s2"
+                    android:gravity="center"
+                    android:background="@drawable/button_select_2"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/nodata_root"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content">
+                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                    android:id="@+id/icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/find_car_list_nocar_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:layout_below="@id/icon"
+                    android:layout_height="wrap_content"
+                    android:text="您当前没有可用优惠券哟"
+                    android:gravity="center_horizontal" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>

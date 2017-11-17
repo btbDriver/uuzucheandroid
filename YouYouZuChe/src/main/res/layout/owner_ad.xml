@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/main_bg"
+    android:layout_height="match_parent">
+
+    <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/owner_ad_title"
+        android:layout_height="wrap_content" />
+
+    <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:background="@drawable/owner_ad_img"
+        android:layout_below="@id/title"
+        android:layout_marginTop="19dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/addcar"
+        android:layout_width="232dp"
+        android:layout_height="45dp"
+        android:textColor="@color/c11"
+        android:textSize="@dimen/f2"
+        android:text="出租我的爱车"
+        android:gravity="center"
+        android:background="@color/c16"
+        android:layout_below="@id/img"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/get_friend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/f3"
+        android:textColor="@color/c6"
+        android:text="@string/owner_ad_get_friend"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/addcar"
+        android:layout_marginTop="20dp" />
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<searchable xmlns:android="http://schemas.android.com/apk/res/android"
+    android:hint="输入地址"
+    android:icon="@drawable/actionbar_icon"
+    android:label="位置"
+    android:searchSuggestAuthority="locationsearchprovider" />

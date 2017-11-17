@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/car_info_bg"
+    android:layout_margin="@dimen/s1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/f5"
+            android:padding="@dimen/s1"
+            android:textColor="@color/c8"
+            android:text="车主在xxxxxxx" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/c13" />
+
+
+    <RelativeLayout
+        android:id="@+id/top_root"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/s1"
+        android:layout_height="92dp">
+
+        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/s1"
+            android:background="@drawable/filtered_list_check_bg" />
+
+        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+            android:layout_toRightOf="@+id/check"
+            android:id="@+id/car_img"
+            android:layout_width="126dp"
+            android:layout_height="78dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/list_car_img_def" />
+
+        <TextView
+            android:id="@+id/brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_toLeftOf="@+id/price_day"
+            android:layout_toRightOf="@id/car_img"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:text="大众CC"
+            android:textColor="@color/c6"
+            android:textSize="@dimen/f2" />
+
+
+        <TextView
+            android:id="@+id/price_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/s2"
+            android:layout_alignParentRight="true"
+            android:text="240/天"
+            android:textColor="@color/c3"
+            android:textSize="@dimen/f2" />
+
+
+        <RelativeLayout
+            android:id="@+id/pro_root"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_toRightOf="@id/car_img">
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/gearbox_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/find_car_list_gearbox_a_icon" />
+
+            <TextView
+                android:id="@+id/gearbox_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@id/gearbox_icon"
+                android:text="手动挡"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/address_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_toRightOf="@id/car_img">
+
+            <TextView
+                android:id="@+id/address_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="start"
+                android:singleLine="true"
+                android:text="手动挡2"
+                android:layout_toLeftOf="@+id/dis"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+
+            <TextView
+                android:id="@+id/dis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/s2"
+                android:layout_alignParentRight="true"
+                android:text="1km"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/c1" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/cancel"
+            android:gravity="center"
+            android:text="取消该预约"
+            android:layout_toLeftOf="@+id/center_view"
+            android:textSize="@dimen/f2"
+            android:textColor="@color/select_city_white_button_text_color" />
+
+        <View
+            android:id="@+id/center_view"
+            android:layout_width="1px"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:background="@color/c1" />
+
+        <TextView
+            android:id="@+id/toowner"
+            android:layout_toRightOf="@id/center_view"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="联系车主"
+            android:textSize="@dimen/f2"
+            android:gravity="center"
+            android:textColor="@color/c1" />
+    </RelativeLayout>
+</LinearLayout>

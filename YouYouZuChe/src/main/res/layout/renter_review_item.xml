@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:background="@color/c11"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <com.youyou.uucar.Utils.ImageView.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                          android:layout_width="@dimen/one_centimeter_size"
+                                                          android:layout_height="@dimen/one_centimeter_size"
+                                                          android:layout_marginTop="12dp"
+                                                          android:layout_marginLeft="@dimen/s1"
+                                                          android:layout_marginRight="@dimen/s1"
+                                                          android:id="@+id/head"
+                                                          android:src="@drawable/header_neibu"
+                                                          app:border_color="#999999"
+                                                          app:border_width="1dp"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/s1"
+        android:layout_marginTop="11dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five_dimen"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:text="我哪敢"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/time"
+                android:layout_toRightOf="@id/name"
+                android:layout_marginLeft="@dimen/s1"
+                android:text="2014-7-8"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f5"/>
+
+            <RatingBar
+                android:id="@+id/star"
+                android:layout_width="wrap_content"
+                android:isIndicator="true"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"
+                style="@style/StarBigRatingBar"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="@dimen/five_dimen"
+            android:id="@+id/text"
+            android:text="车主人很好"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/f3"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/f5"
+            android:textColor="@color/c8"/>
+    </LinearLayout>
+</LinearLayout>

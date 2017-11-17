@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3"
+                android:text="为方便车友联系,请验证手机号"/>
+
+            <RelativeLayout
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_below="@id/tip"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/phone_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_toLeftOf="@+id/getsms"
+                    android:background="@drawable/input_bg_normal">
+
+                    <ImageView
+                        android:id="@+id/phone_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:background="@drawable/register_phone_normal"/>
+
+                    <EditText
+                        android:id="@+id/phone_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/phone_clear"
+                        android:layout_toRightOf="@id/phone_icon"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="@string/register_phone_phone_hint"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        android:textColor="@color/c7"
+                        android:textColorHint="@color/c21"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/f3"/>
+
+                    <ImageView
+                        android:id="@+id/phone_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:background="@drawable/input_clear"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/getsms"
+                    android:layout_width="72dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/input_right_bg_normal"
+                    android:gravity="center"
+                    android:textSize="@dimen/f3"
+                    android:text="@string/register_phone_getsms"
+                    android:textColor="@color/c8"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phone"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp">
+
+                <RelativeLayout
+                    android:id="@+id/sms_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:layout_toLeftOf="@+id/nosms"
+                    android:background="@drawable/input_bg_normal">
+
+                    <ImageView
+                        android:id="@+id/sms_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:background="@drawable/register_phone_sms_normal"/>
+
+                    <EditText
+                        android:id="@+id/sms_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/sms_clear"
+                        android:layout_toRightOf="@id/sms_icon"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="@string/register_phone_password_hint"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:singleLine="true"
+                        android:textColor="@color/c7"
+                        android:textColorHint="@color/c21"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/f3"/>
+
+                    <ImageView
+                        android:id="@+id/sms_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:background="@drawable/input_clear"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/password_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:layout_below="@id/sms_root"
+                    android:background="@drawable/input_bg_normal">
+
+                    <ImageView
+                        android:id="@+id/password_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:background="@drawable/password_icon_normal"/>
+
+                    <EditText
+                        android:id="@+id/password_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/password_clear"
+                        android:layout_toRightOf="@id/password_icon"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请设置至少6位数密码"
+                        android:inputType="textVisiblePassword"
+                        android:maxLength="20"
+                        android:singleLine="true"
+                        android:textColor="@color/c7"
+                        android:textColorHint="@color/c21"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/f3"/>
+
+                    <ImageView
+                        android:id="@+id/password_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:background="@drawable/input_clear"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/code_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:layout_below="@id/password_root"
+                    android:background="@drawable/input_bg_normal">
+
+                    <ImageView
+                        android:id="@+id/code_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:background="@drawable/code_icon"/>
+
+                    <EditText
+                        android:id="@+id/code_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/code_clear"
+                        android:layout_toRightOf="@id/code_icon"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="@string/register_phone_code_hint"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:textColor="@color/c7"
+                        android:textColorHint="@color/c21"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/f3"/>
+
+                    <ImageView
+                        android:id="@+id/code_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:background="@drawable/input_clear"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/nosms"
+                    android:layout_width="72dp"
+                    android:visibility="gone"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/input_right_bg_normal"
+                    android:gravity="center"
+                    android:textSize="@dimen/f3"
+                    android:text="@string/register_phone_nosms"
+                    android:textColor="@color/c8"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_below="@id/sms"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/red_button_bg"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="立即注册"
+                android:textSize="@dimen/f2"
+                android:textColor="@color/action_bar_text_color"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

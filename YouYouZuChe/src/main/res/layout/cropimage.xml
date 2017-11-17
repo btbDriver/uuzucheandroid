@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"/>
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#473554"
+        android:orientation="horizontal"
+        android:padding="5dip">
+
+        <Button
+            android:id="@+id/rotateLeft"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/left_n"/>
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_gray_n"
+            android:text="取消"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/okBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_green_n"
+            android:text="确定"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/rotateRight"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/right_n"/>
+    </LinearLayout>
+
+</RelativeLayout>

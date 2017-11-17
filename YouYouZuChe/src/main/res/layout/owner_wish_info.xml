@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.youyou.uucar.Utils.View.UUProgressFramelayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   android:layout_width="match_parent"
+                                                   android:id="@+id/all_framelayout"
+                                                   android:layout_height="match_parent"
+                                                   android:background="@drawable/main_bg">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/main"
+                  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:background="@drawable/main_bg"
+                  android:visibility="visible"
+                  android:layout_height="match_parent"
+                  android:animateLayoutChanges="true">
+
+        <LinearLayout
+            android:id="@+id/tips_linear"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="#fff7d8"
+            android:paddingLeft="@dimen/f5"
+            android:paddingRight="@dimen/f5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/start_time_tv_1"
+                android:textSize="@dimen/f2"
+                android:textColor="#e0a044"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/s1"
+            android:paddingLeft="@dimen/s1"
+            android:paddingRight="@dimen/s1"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:id="@+id/order_status"
+                android:layout_width="match_parent"
+                android:padding="@dimen/s1"
+                android:text="订单详情：刘先生想租用您的车，等待您同意"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3"
+                android:layout_height="wrap_content"/>
+
+            <FrameLayout
+                android:id="@+id/car_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:background="@drawable/button_select_3">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/s1"
+                    android:layout_height="wrap_content">
+
+                    <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                        android:id="@+id/car_img"
+                        android:layout_width="126dp"
+                        android:layout_height="78dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/list_car_img_def"/>
+
+
+                    <TextView
+                        android:id="@+id/price_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/c3"
+                        android:textSize="@dimen/f2"/>
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/s1"
+                        android:textSize="@dimen/f2"
+                        android:textColor="@color/c4"
+                        android:id="@+id/brand"
+                        android:layout_toRightOf="@id/car_img"
+                        android:ellipsize="middle"
+                        android:singleLine="true"
+                        android:layout_toLeftOf="@id/price_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                        android:id="@+id/car_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/find_car_right_arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/s1"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/c3"
+                        android:textSize="@dimen/f2"/>
+
+                    <RelativeLayout
+                        android:id="@+id/start_time_root"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/brand"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@id/car_img"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/plate_number"
+                            android:layout_width="wrap_content"
+                            android:text="京N4QQ28"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/s1"
+                            android:textSize="@dimen/f3"
+                            android:textColor="@color/c8"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/end_time_root"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/start_time_root"
+                        android:layout_marginTop="7dp"
+                        android:layout_toRightOf="@id/car_img"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/rsn"
+                            android:layout_width="wrap_content"
+                            android:text="暂无"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/s1"
+                            android:textSize="@dimen/f3"
+                            android:textColor="@color/c8"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/renter_info_root"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="@dimen/s1"
+                android:layout_marginBottom="@dimen/s1"
+                android:background="@drawable/car_info_bg">
+
+                <TextView
+                    android:id="@+id/renter_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="王先生"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/s1"
+                    android:textSize="@dimen/f3"
+                    android:textColor="@color/c4"/>
+
+                <RatingBar
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@id/renter_name"
+                    android:layout_height="14dp"
+                    android:isIndicator="true"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    style="@style/FindCarRatingBar"/>
+
+                <TextView
+                    android:id="@+id/new_renter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/f5"
+                    android:textColor="@color/c8"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@id/renter_name"
+                    android:text="（新会员）"/>
+
+                <TextView
+                    android:id="@+id/rent_times"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/f3"
+                    android:text="租车次数8次"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/renter_arrow"
+                    android:layout_marginRight="7dp"
+                    android:textColor="@color/c8"/>
+
+                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                    android:id="@+id/renter_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/find_car_right_arrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/s1"
+                    android:textColor="@color/c3"
+                    android:textSize="@dimen/f2"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/address_root"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/car_info_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="送车地点"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/s1"
+                    android:textSize="@dimen/f3"
+                    android:textColor="@color/c4"/>
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/f3"
+                    android:text="租车次数8次"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/address_arrow"
+                    android:layout_marginRight="7dp"
+                    android:textColor="@color/c8"/>
+
+                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                    android:id="@+id/address_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/find_car_right_arrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/s1"
+                    android:textColor="@color/c3"
+                    android:textSize="@dimen/f2"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/s1"
+                android:background="@android:color/white"
+                android:layout_height="90dp">
+
+                <LinearLayout
+                    android:layout_width="224dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/s1"
+                        android:paddingRight="@dimen/s1"
+                        android:layout_height="45dp">
+
+                        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                            android:layout_width="wrap_content"
+                            android:background="@drawable/start_icon"
+                            android:layout_height="wrap_content"/>
+
+
+                        <TextView
+                            android:id="@+id/start_time"
+                            android:text="03月24日 18：00"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3"
+                            android:layout_marginLeft="@dimen/s2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/c13"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/s1"
+                        android:paddingRight="@dimen/s1"
+                        android:layout_height="45dp">
+
+                        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                            android:layout_width="wrap_content"
+                            android:background="@drawable/end_icon"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/end_time"
+                            android:text="03月24日 18：00"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3"
+                            android:layout_marginLeft="@dimen/s2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="@color/c13"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_centerInParent="true"
+                        android:layout_width="1px"
+                        android:layout_height="1px"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:textSize="@dimen/f3"
+                        android:textColor="@color/c4"
+                        android:text="@string/all"
+                        android:layout_above="@id/view"
+                        android:gravity="center_horizontal"
+                        android:layout_marginBottom="1dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/rent_time"
+                        android:layout_width="match_parent"
+                        android:textSize="@dimen/f3"
+                        android:textColor="@color/c3"
+                        android:text="3天4小时"
+                        android:gravity="center_horizontal"
+                        android:layout_below="@id/view"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/button_linear"
+            android:background="@android:color/white"
+            android:layout_gravity="bottom"
+            android:layout_height="60dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/c14"/>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:padding="@dimen/s2"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/car_linear_show"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/refuse"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/s2"
+                        android:textSize="@dimen/f2"
+                        android:textColor="@color/c11"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:background="@drawable/button_select_1"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:id="@+id/agree"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/f2"
+                        android:textColor="@color/c11"
+                        android:layout_marginLeft="@dimen/s2"
+                        android:layout_marginRight="@dimen/s2"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:background="@drawable/button_select_2"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>

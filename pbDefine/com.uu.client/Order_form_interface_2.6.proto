@@ -1,0 +1,355 @@
+import "uu_common.proto";
+import "Order_form_common.proto";
+import "Car_common.proto";
+import "User_common.proto";
+package com.uu.client.bean.order;
+
+// 查询意向单订单详情
+message QueryPreOrderDetail {
+	message Request {
+		required string preOrderId = 1; // 意向单id
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		optional com.uu.client.bean.order.common.PreOrderFormInfo
+		preOrderDetailInfo = 2; // 意向单详情
+	}
+
+}
+
+// 租客查询订单详情
+message RenterQueryOrderDetail {
+	message Request {
+		required string orderId = 1; // 订单id
+		repeated string couponIds = 2; // 优惠券号列表
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		optional com.uu.client.bean.order.common.RenterOrderFormInfo orderInfo = 2; // 租客订单详情
+	}
+
+}
+
+// 车主查询订单详情
+message CarOwnerQueryOrderDetail {
+	message Request {
+		required string orderId = 1; // 订单id
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败；-2：订单不存在
+		optional com.uu.client.bean.order.common.CarOwnerOrderFormInfo orderInfo = 2; // 车主订单详情
+	}
+
+}
+
+// 查询行程列表，包括意向单和订单
+message QueryTripList {
+	message Request {
+		optional com.uu.client.bean.order.common.TripListQueryType queryType = 1; // 查询类型
+		optional com.uu.client.bean.common.PageNoRequest pageRequest = 2; // 翻页请求
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		repeated com.uu.client.bean.order.common.TripOrderCard tripOrderCards = 2; // 行程页订单卡片
+		optional com.uu.client.bean.common.PageNoResult pageResult = 3; // 翻页返回参数
+		optional int32 waitCommentCount = 4; // 待评论订单的数量
+		optional int32 waitRenterCommentCount = 5; //作为租客待评论订单的数量
+	}
+
+}
+
+// 确认意向单，1、租客快速约车选车 2、车主快速约车抢单 3、车主同意点对点、点对多约车都调用这个接口
+message ConfirmPreOrder {
+	message Request {
+		required string preOrderId = 1; // 意向单id
+		required bool agree = 2; // 是否同意
+	}
+
+	message Response {
+	// 0：成功；-1：失败；1：意向单已成功转为订单；-2：意向单已经失效；
+	// -3：与该用户在进行中的订单有时间冲突，不能预约该车辆；
+	// -4：有未支付的订单，不能预约
+	// -9: 预约时间和租客正在进行中的订单时间有冲突
+	// -10: 租客还没有通过首验，租车计划开始时间不能早于8点，晚于22点
+		required int32 ret = 1;
+		optional string orderId = 2; // 租客、车主双方确认意向单后生成的订单id，当返回码 ret = 1 时，该字段才会有值
+		optional string msg = 3; // 提示消息，客户端判断该字段是否有值，如果有值，则直接使用msg作为提示消息
+	}
+
+}
+
+// 租客取消订单（租客取消订单分两步，第一步取消弹出一个框，提示用户是否确认取消，如果已支付，还需要计算取消订单会扣多少钱）
+message RenterCancelOrder {
+	message Request {
+		required string orderId = 1;
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：系统错误；1：不能取消订单
+		optional string msg = 2; // 客户端在提示框中间展示的提示消息
+	}
+
+}
+// 租客确认取消订单
+message RenterCancelOrderConfirm {
+	message Request {
+		required string orderId = 1;
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+	}
+
+}
+
+// 车主确认是否收到车
+message CarOwnerConfirmIfGetCar {
+	message Request {
+		required string orderId = 1;
+		required bool isGetCar = 2; // 是否收到车
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+	}
+
+}
+
+// 租客查询快速约车列表响应车主列表命令字
+message RenterQueryQuickRentAgreeList {
+	message Request {
+		optional com.uu.client.bean.common.LatlngPosition position = 1; // 用户当前位置
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败；
+		repeated com.uu.client.bean.order.common.QuickRentCarAgreeCard
+		agreeCarList = 2; // 同意的车辆列表
+		optional int32 totalWaitTime = 3; // 总的超时时间，单位秒
+		optional int32 passedTime = 4; // 距离租客发起约车已经过去的时间，单位秒
+	}
+
+}
+
+// 租客查询点对点、点对多约车意向单列表页面
+message RenterQueryRentList {
+	message Request {
+		optional com.uu.client.bean.common.LatlngPosition position = 1; // 用户当前位置
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败；
+		repeated PreOrderCard cardList = 2; // 意向单列表
+		optional int32 totalWaitTime = 3; // 总的超时时间，单位秒
+		optional int32 passedTime = 4; // 距离租客发起约车已经过去的时间，单位秒
+	}
+
+	// card
+	message PreOrderCard {
+		required string preOrderId = 1;
+		required com.uu.client.bean.order.common.PreOrderFormStatus
+		preOrderStatus = 2; // 意向单状态
+		required com.uu.client.bean.car.common.CarBriefInfo carBriefInfo = 3; // 车辆信息
+		optional string carOwnerPhone = 4; // 车主联系电话
+		required string carOwnerName = 5; // 车主名字
+	}
+
+}
+
+// 快速约车
+message FastRentCar {
+	message Request {
+		required string cityId = 1; // 城市id
+		repeated com.uu.client.bean.car.common.CarType type = 2; //紧凑型，舒适型 。。
+		optional string brand = 3; // 品牌
+		optional string model = 4; // 型号
+		optional int32 priceMin = 5; // 最低价
+		optional int32 priceMax = 6; // 最高价
+		optional com.uu.client.bean.car.common.CarTransmissionType
+		carTransmissionType = 7; // 自动档还是手动挡
+		repeated com.uu.client.bean.car.common.CarConfig carConfig = 8; // 车辆配置
+		optional string address = 10; // 取车地址
+		optional com.uu.client.bean.common.LatlngPosition position = 11; // 取车位置
+		optional int32 startTime = 12; // 开始时间，单位秒
+		optional int32 endTime = 13; // 结束时间，单位秒
+		required bool cancelLastPreOrder = 14 [default = false]; // 是否取消正在进行中的点对点、点对多约车
+		repeated string carId = 15; // 指定车辆id进行快速约车 为了兼容旧版本而添加的参数
+	}
+
+	message Response {
+	// 0：成功；-1：失败; -2：没车；
+	// -3：有正在进行中的点对点、点对多约车(客户端要取消之前的意向单继续约车，把 Request 中的 cancelLastPreOrder 设置为true)；
+	// -4：有订单未支付完成；
+	// -5: 有正在进行中的快速约车，不能再发起快速约车请求
+	// -6: 该用户正在进行中的订单和此预约单的时间有冲突，不能发起快速约车
+	// -7: 该用户还没有通过租客审核，不能发起预约
+	// -10: 租客还没有通过首验，租车计划开始时间不能早于8点，晚于22点
+		required int32 ret = 1;
+		optional int32 totalWaitTime = 2; // 总的超时时间，单位秒
+		optional int32 passedTime = 3; // 距离租客发起约车已经过去的时间，单位秒
+		optional string waitToPayOrderId = 4; // 等待支付的订单id，当 ret = -4 时，该字段有值
+		optional string msg = 5; // 提示消息，客户端判断该字段是否有值，如果有值，则直接使用msg作为提示消息
+	}
+
+}
+
+// 租客发起预约单(点对点、点对多)
+message RenterStartPreOrder {
+	message Request {
+		repeated string carIds = 1; // 车辆列表
+		optional int32 startTime = 2; // 开始时间
+		optional int32 endTime = 3; // 结束时间
+		required bool cancelLastPreOrder = 4 [default = false]; // 是否取消正在进行中的快速约车
+		optional com.uu.client.bean.common.LatlngPosition position = 5; // 租客设置的取车位置坐标
+		optional string positionDesc = 6; // 租客设置的取车位置描述
+	}
+
+	message Response {
+	// 0：成功；-1：失败；
+	// -2：之前有快速约车正在进行中；
+	// -3：点对点的情况下，车辆由于时间不可用导致约车失败
+	// -4：有未支付的订单; 
+	// -7: 该用户还没有通过租客审核，不能发起预约
+	// -8: 选的车是自己的车，不能发起预约
+	// -9: 预约时间和该用户正在进行中的订单时间有冲突
+	// -10: 租客还没有通过首验，租车计划开始时间不能早于8点，晚于22点
+	// 1：部分成功；
+		required int32 ret = 1;
+		optional string msg = 2; // 提示消息，客户端判断该字段是否有值，如果有值，则直接使用msg作为提示消息
+		optional int32 tipsType = 3; // 0：toast；1：弹窗
+	}
+
+}
+
+// 租客取消意向单，点对多、快速与车都通过该接口取消
+message RenterCancelPreOrder {
+	message Request {
+		optional string preOrderId = 1; // 需要取消的点对点意向单id，如该字段为空，则表示取消的是当前用户的全部意向单（包括点对点和快速约车）
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败；
+	}
+
+}
+
+// 租客根据订单查询该订单可用的优惠券列表
+message RenterQueryCouponsByOrder {
+	message Request {
+		required string orderId = 1;
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		repeated com.uu.client.bean.user.common.Coupon coupons = 2; // 优惠券列表
+	}
+
+}
+
+// 租客提交选中的优惠券列表
+//message RenterSubmitCoupons {
+//	message Request {
+//		required string orderId = 1;
+//		repeated string couponIds = 2; // 优惠券id列表
+//	}
+//
+//	message Response {
+//		required int32 ret = 1; // 0：成功；-1：失败
+//		optional string errMsg = 2; // 提交出错的提示信息
+//	}
+//
+//}
+
+// 车主在行程列表点“知道了”
+message CarOwnerKnowPreOrderTimeOut {
+	message Request {
+		required string preOrderId = 1;
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+	}
+
+}
+
+// 行程列表页push
+message TripListPush {
+	required com.uu.client.bean.common.TipsMsg msg = 1; // 提示数字
+	optional string orderId = 2; // 订单id，本次push状态变化的订单
+	optional string preOrderId = 3; // 意向单id，本次push状态变化的意向单订单
+}
+
+// 快速约车页面push，租客发出快速约车后，如果有车主同意，则给租客下发这样的push，表示快速约车有车主响应
+message QuickRentCarPush {
+	required com.uu.client.bean.common.TipsMsg msg = 1; // 提示数字
+	required string preOrderId = 2; // 意向单id
+}
+
+// 车主同意租客的约车请求，建立起了订单，场景是租客发出点对点、点对多请求后，有车主同意租客的约车请求，建立起订单后，对租客下发的push
+message NewOrderCreatedPush {
+	required string orderId = 1; // 订单id
+	required com.uu.client.bean.common.TipsMsg msg = 2; // 提示数字
+}
+
+// 租客发起一对一、一对多约车请求后，如果车主拒绝或者超时未响应，则给租客下发该push
+message PreOrderCanceledPush {
+	required string preOrderId = 1; // 意向单id
+	optional int32 type = 2 [default = 0]; // 0：还有意向单在等待中；1：没有还在等待的意向单了
+	required com.uu.client.bean.common.TipsMsg msg = 3; // 提示数字
+	optional string carSn = 4; // 车辆id
+}
+
+// 订单完成充值后的push
+message OrderCompleteRechargePush {
+	required string orderId = 1; // 订单id
+}
+
+// 车主错过订单的push
+message CarOwnerMissRentCarPush {
+	required com.uu.client.bean.common.TipsMsg msg = 3; // 提示消息，使用里面的 toastMsg 字段座位展示消息
+}
+
+// 查询预约历史请求参数
+message QueryPreOrderHistoRequest {
+	optional com.uu.client.bean.common.PageNoRequest pageRequest = 1; // 翻页请求
+}
+
+// 查询预约历史响应结果
+message QueryPreOrderHistoResponse {
+	required int32 ret = 1; // 0：成功；-1：失败；
+	repeated com.uu.client.bean.order.common.PreOrderHistoCard cards = 2; // 意向单列表
+	optional com.uu.client.bean.common.PageNoResult pageResult = 3; // 翻页返回参数
+	optional int32 totalDay = 4; //总天数 （最近30天预约历史，totalDay=30）
+}
+
+//获取租客详情
+message QueryRenterDetailInfo {
+	message Request {
+		required int32 userId = 1; //租客userId
+		required int32 needRenterInfo = 2; //是否需要返回     0：需要；1：不需要
+		optional com.uu.client.bean.common.PageNoRequest page = 3; // 翻页
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		optional com.uu.client.bean.user.common.UserBriefInfo userBriefInfo = 2; //租客信息
+		optional int32 isNewMember = 3; // 是否为新会员     0：是   1：否
+		optional int32 drivingAge = 4; //驾龄 单位：月
+		optional int32 age = 5; //年龄  单位：年
+		optional string id_sn = 6; //身份证号
+		repeated string vipImgs = 10; //vip图片列表
+		repeated ReviewItem reviewItemList = 7; //评价列表
+		optional com.uu.client.bean.common.PageNoResult pageResult = 8; // 翻页
+	}
+
+	message ReviewItem {
+		optional com.uu.client.bean.user.common.UserBriefInfo ownerInfo = 1; //车主信息
+		optional com.uu.client.bean.order.common.OrderComment orderComment = 2; //评论
+	}
+
+}
+

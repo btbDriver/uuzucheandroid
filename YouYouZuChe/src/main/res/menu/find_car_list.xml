@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.youyou.main.FindCar">
+    <item
+        android:id="@+id/map"
+        android:showAsAction="always"
+        android:icon="@drawable/find_car_menu_map_icon"
+        android:title="@string/menu_find_car_map" />
+    <item
+        android:id="@+id/filter"
+        android:showAsAction="always"
+        android:icon="@drawable/find_car_menu_filter_icon"
+        android:title="@string/menu_find_car_filter" />
+</menu>

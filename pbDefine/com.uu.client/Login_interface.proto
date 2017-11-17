@@ -1,0 +1,144 @@
+import "uu_common.proto";
+import "User_common.proto";
+package com.uu.client.bean.login; /*
+ * 客户端启动后登陆策略如下：
+ * 1、客户端在没有票据或者票据失效的情况下，使用写死的对称加密密钥对接口请求进行加密
+ * 2、客户端启动后，在后台异步的使用uuid进行登录，拿到游客票据
+ * 3、客户端拿到游客票据后，使用票据里的密钥对通信通道进行加密
+ */ message LoginResponse {
+	optional int32 userId = 1; // 用户唯一标示
+	optional com.uu.client.bean.common.UserSecurityTicket userSecurityTicket = 2;
+	optional int32 signAgreePlatformRules = 3; // 0：没签过平台规则；1：已签过 租客注册的时候，需要签署同意平台规则，该字段表示是否已经签署
+	optional string avatar = 4; // 头像
+	optional string name = 5; // 名字
+	optional com.uu.client.bean.user.common.UserStatus userStatus = 6; // 用户状态
+}
+
+// 账户密码登陆
+message AccountLoginSSL {
+	message Request {
+		required string accountId = 1;
+		required string password = 2;
+		optional com.uu.client.bean.common.LatlngPosition latlngPosition = 3; // 用户地理位置信息
+	}
+
+	message Response {
+		required int32 ret = 1; // 0:登陆成功；-1：失败；-14：用户不存在
+		optional int32 errRetryCount = 2; // 密码验证错误重试次数
+		optional LoginResponse LoginResponse = 3;
+	}
+
+}
+
+enum VerifyCodeScene {
+	SMS_LOGIN = 0; // 短信登陆
+	FORGET_PASSWORD = 1; // 忘记密码
+	REG_ACCOUNT = 2; // 注册场景
+}
+
+// 请求下发短信验证码
+// user/sendsms
+message GetSmsVerifyCodeSSL {
+	message Request {
+		required string phone = 1; // 手机号码
+		optional com.uu.client.bean.common.LatlngPosition latlngPosition = 3; // 用户地理位置信息
+		optional VerifyCodeScene scene = 4 [default = SMS_LOGIN]; // 场景
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：获得验证码成功；-1:获得验证码失败；-2：手机号码格式不正确；-3；用户是新用户，导致不能下发验证码；-4；用户是老用户，导致不能下发验证码
+	}
+
+}
+
+// 请求语音验证码
+message GetVoiceCallVerifyCodeSSL {
+	message Request {
+		required string phone = 1; // 手机号码
+		optional com.uu.client.bean.common.LatlngPosition latlngPosition = 2; // 用户地理位置信息
+		optional VerifyCodeScene scene = 3 [default = SMS_LOGIN]; // 场景
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：获得验证码成功；-1:获得验证码失败；-2：手机号码格式不正确；-3；用户是新用户，导致不能下发验证码
+		optional string voiceCallNumber = 2; // 语音电话号码
+	}
+
+}
+
+// 提交短信验证码，如果该手机号码没有注册过，则直接给用户注册
+// user/loginex
+message SmsLoginSSL {
+	message Request {
+		required string phone = 1; // 手机号码
+		required string verifyCode = 2; // 验证码
+		optional com.uu.client.bean.common.LatlngPosition latlngPosition = 3; // 用户地理位置信息
+		optional string invitationCode = 4; // 邀请码
+		optional VerifyCodeScene scene = 5 [default = SMS_LOGIN]; // 场景
+		optional string password = 6; // 密码，仅限于注册场景下需要这个字段
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1:验证码错误；-2：登录失败；-4；请求是注册场景，用户是老用户，导致登录失败
+		optional int32 userId = 2; // 用户唯一标示
+		optional com.uu.client.bean.common.UserSecurityTicket userSecurityTicket = 3;
+		optional int32 signAgreePlatformRules = 4; // 0：没签过平台规则；1：已签过 租客注册的时候，需要签署同意平台规则，该字段表示是否已经签署
+		optional string avatar = 5; // 头像
+		optional string name = 6; // 名字
+		optional com.uu.client.bean.user.common.UserStatus userStatus = 7; // 用户状态
+		optional bool hasSetPassword = 8; // 是否设置了密码
+	}
+
+}
+
+message SetPasswordSSL {
+	message Request {
+		required string password = 1; // 密码
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：系统错误；2：密码太简单，简单原因用 msg 字段提示
+		optional string msg = 2; // 提示消息
+	}
+
+}
+
+// 客户端匿名登陆，客户端在没有有效票据时，需要在后台异步的执行调用该命令字，以便获得游客票据
+message AnonymousLoginSSL {
+	message Request {
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		optional int32 userId = 2; // 用户唯一标示
+		optional com.uu.client.bean.common.UserSecurityTicket userSecurityTicket = 3;
+	}
+
+}
+
+// 更新票据
+message UpdateTicketSSL {
+	message Request {
+		required int32 userId = 1;
+		required bytes b2 = 2;
+	}
+
+	message Response {
+		required int32 ret = 1; // 0:成功；-1：失败
+		optional com.uu.client.bean.common.UserSecurityTicket userSecurityTicket = 2;
+	}
+
+}
+
+// 注销请求
+// user/logout
+message LogoutSSL {
+	message Request {
+		optional int32 time = 1; // 客户端当前时间
+	}
+
+	message Response {
+		required int32 ret = 1; // 0:成功；-1：失败
+	}
+
+}

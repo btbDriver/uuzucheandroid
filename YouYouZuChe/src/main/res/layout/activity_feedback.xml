@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context="com.youyou.uucar.UI.Main.my.Feedback">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <EditText
+            android:id="@+id/feedback_content_edit"
+            android:layout_width="match_parent"
+            android:layout_height="126dp"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_marginRight="@dimen/s1"
+            android:layout_marginTop="18dp"
+            android:padding="@dimen/s1"
+            android:background="#FFFFFF"
+            android:textColorHint="@color/c9"
+            android:textSize="@dimen/f3"
+            android:textColor="@color/c4"
+            android:hint="尽量详细描述您遇到的问题，感谢您给我们提出建议"
+            android:gravity="top|left" />
+
+        <EditText
+            android:id="@+id/feedback_contact_edit"
+            android:layout_below="@id/feedback_content_edit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_marginRight="@dimen/s1"
+            android:layout_marginTop="@dimen/s1"
+            android:padding="@dimen/s1"
+            android:background="#FFFFFF"
+            android:textColorHint="@color/c9"
+            android:textSize="@dimen/f3"
+            android:textColor="@color/c4"
+            android:hint="请输入您的手机号码，QQ或者邮箱"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/feedback_info_text"
+            android:layout_below="@id/feedback_contact_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="18dp"
+            android:background="#00000000"
+            android:textSize="@dimen/f3"
+            android:textColor="@color/c8"
+            android:text="留下联系方式，以便能更好更快的给您答复，还可能有意外奖励哦" />
+
+        <TextView
+            android:id="@+id/feedback_ok_text"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/feedback_info_text"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_marginRight="@dimen/s1"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:text="提交"
+            android:textSize="@dimen/f2"
+            android:textColor="@color/c11"
+            android:background="@drawable/red_button_bg" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

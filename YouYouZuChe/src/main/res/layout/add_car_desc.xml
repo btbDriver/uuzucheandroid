@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context="com.youyou.addcar.AddCarDesc">
+
+
+    <EditText
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/white_input_bg"
+        android:gravity="left|top"
+        android:hint="@string/car_desc_input_hint"
+        android:lineSpacingExtra="9dp"
+        android:minHeight="160dp"
+        android:maxLines="6"
+        android:padding="16dp"
+        android:textColor="@color/c8"
+        android:textColorHint="@color/login_input_color"
+        android:textSize="@dimen/f3" />
+
+
+</RelativeLayout>

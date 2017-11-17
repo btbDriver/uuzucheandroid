@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/top_root"
+                android:layout_width="match_parent"
+                android:background="#fff7d8"
+                android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tip1"
+        android:textSize="@dimen/f3"
+        android:textColor="#e0a044"
+        android:text="@string/filtered_list_tip"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_marginTop="@dimen/s1"
+        android:layout_marginRight="@dimen/s1"
+        android:layout_toLeftOf="@+id/reset"
+        android:paddingBottom="@dimen/s1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/reset"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/s1"
+        android:layout_marginRight="@dimen/s1"
+        android:layout_centerVertical="true"
+        android:textColor="@color/c1"
+        android:textSize="@dimen/f3"
+        android:background="@drawable/white_input_bg"
+        android:layout_width="81dp"
+        android:gravity="center"
+        android:layout_height="34dp"
+        android:text="重新搜索"/>
+</RelativeLayout>

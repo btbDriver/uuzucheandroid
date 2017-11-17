@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    android:id="@+id/frame_progress"
+    android:layout_width="match_parent"
+    android:background="@drawable/main_bg"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nodata_icon" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_marginTop="23dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/f3"
+            android:gravity="center"
+            android:text="咦？好像网络不通？请检查网络\n设置或刷新试试！"
+            android:textColor="@color/c8" />
+
+        <TextView
+            android:id="@+id/refush"
+            android:text="刷 新"
+            android:textSize="@dimen/f2"
+            android:textColor="@color/c11"
+            android:gravity="center"
+            android:layout_marginTop="77dp"
+            android:background="@drawable/red_button_bg"
+            android:layout_width="233dp"
+            android:layout_height="45dp" />
+    </LinearLayout>
+</FrameLayout>

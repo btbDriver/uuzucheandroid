@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youyou.uucar.Utils.View.UUProgressFramelayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+                                                   android:id="@+id/all_framelayout"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:background="@drawable/main_bg"
+                  android:padding="9dp"
+                  tools:context="com.youyou.uucar.UI.Owner.addcar.SetTimeLimitActivity">
+
+        <RelativeLayout
+            android:id="@+id/auto_receive_order"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/auto_receive_order_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自动接收订单"
+                android:layout_marginLeft="9dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f3"/>
+
+            <TextView
+                android:id="@+id/tv_auto_receive_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:text="已打开"
+                android:layout_marginRight="7dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/arrow1"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f3"/>
+
+
+            <ImageView
+                android:id="@+id/arrow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="9dp"
+                android:src="@drawable/find_car_right_arrow"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/not_rent_time_set"
+            android:layout_width="match_parent"
+            android:layout_marginTop="9dp"
+            android:layout_height="45dp"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/not_rent_time_set_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不可租时间设置"
+                android:layout_marginLeft="9dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f3"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="9dp"
+                android:src="@drawable/find_car_right_arrow"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rent_time_set"
+            android:layout_width="match_parent"
+            android:layout_marginTop="9dp"
+            android:layout_height="90dp"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/zuichangzuiduan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最短/最长租期设置"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="9dp"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f3"/>
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="16dp"
+                android:layout_width="230dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/rent_short_time"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/rent_time_bg"
+                    android:text="4小时"
+                    android:gravity="center"
+                    android:textColor="@color/c8"
+                    android:textSize="@dimen/f3"/>
+
+                <TextView
+                    android:id="@+id/middle_zhi"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="至"
+                    android:textColor="@color/c8"
+                    android:textSize="@dimen/f3"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/rent_long_time"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/rent_time_bg"
+                    android:text=""
+                    android:gravity="center"
+                    android:textColor="@color/c8"
+                    android:textSize="@dimen/f3"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="9dp"
+            android:layout_height="68dp"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/zanshibukezu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂时不出租"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f3"/>
+
+            <TextView
+                android:layout_below="@id/zanshibukezu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设置为暂时不可租，车辆不会在平台上显示"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="7dp"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f5"/>
+
+            <ToggleButton
+                android:id="@+id/is_rent"
+                android:layout_marginRight="9dp"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:focusable="false"
+                android:checked="false"
+                android:textOn=""
+                android:textOff=""
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/toggle_button"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>

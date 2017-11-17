@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.youyou.uucar.UI.Renter.filter.RentFilterActivity">
+    <item
+        android:id="@+id/reset"
+        android:title="@string/filter_reset"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom" />
+</menu>

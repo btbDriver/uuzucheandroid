@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.youyou.uucar.UI.Main.Login.LoginActivity">
+
+    <item
+        android:id="@+id/reset_password"
+        android:title="忘记密码"
+        android:orderInCategory="100"
+        android:showAsAction="always"/>
+</menu>

@@ -1,0 +1,35 @@
+import "uu_common.proto";
+import "Car_common.proto";
+import "Banner_common.proto";
+package com.uu.client.bean.banner;
+
+// 运营弹窗push
+message OperatePopWindowPush {
+	required bool canClose = 1; // 是否可关闭
+	required string actionUrl = 2; // 点击跳转url
+	optional string wording = 3; // 文案
+	optional string imgUrl = 4; // 图片url
+	optional string title = 5; // 标题
+}
+
+// 用户反馈请求
+message CreateFeedbackRequest{
+	required string feedback = 1; //反馈内容
+	optional string mobile = 2; 
+}
+
+// 用户反馈响应
+message CreateFeedbackResponse{
+	required int32 ret = 1; //错误码  0：成功    -1：失败
+}
+
+// Apns 用户token记录请求
+message UpdateApnsTokenRequest{
+	optional string token = 1;
+	optional int32 userId = 2;
+}
+
+// Apns 用户token记录响应
+message UpdateApnsTokenResponse{
+	required int32 ret = 1;  //错误码  0：成功    -1：失败
+}

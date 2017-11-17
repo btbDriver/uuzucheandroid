@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2012 Square, Inc. -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item app:state_range_middle="true">
+        <color android:color="@color/calendar_selected_range_bg"/>
+    </item>
+    <item android:state_selected="true">
+        <color android:color="@color/calendar_selected_day_bg"/>
+    </item>
+    <!--<item android:state_pressed="true">-->
+    <!--<color android:color="@color/calendar_selected_day_bg"/>-->
+    <!--</item>-->
+    <item app:state_current_month="false">
+        <color android:color="@color/calendar_inactive_month_bg"/>
+    </item>
+    <item app:state_highlighted="true">
+        <color android:color="@color/calendar_highlighted_day_bg"/>
+    </item>
+    <item app:state_today="true">
+        <color android:color="@color/calendar_text_active"/>
+    </item>
+
+
+    <!--&lt;!&ndash;限行样式&ndash;&gt;-->
+    <item app:state_ban_day="true" android:drawable="@drawable/new_car_info_dont" />
+    <item app:state_up_half_ban_day="true" android:drawable="@drawable/up_half_ban_day" />
+    <item app:state_down_half_ban_day="true" android:drawable="@drawable/down_half_ban_day" />
+    <item>
+        <color android:color="@color/calendar_active_month_bg"/>
+    </item>
+</selector>

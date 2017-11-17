@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="240dp"
+              android:layout_height="wrap_content"
+              android:background="@color/drawer_bg_color"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:paddingTop="28dp"
+        android:paddingBottom="20dp"
+        android:textColor="@color/drawer_header_text_color"
+        android:textSize="@dimen/drawer_header_text_size"/>
+
+
+</LinearLayout>

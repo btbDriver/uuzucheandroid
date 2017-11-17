@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frame_progress"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="?android:progressBarStyleLarge" />
+    </FrameLayout>
+
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/scrollview"
+        android:layout_marginTop="24dp"
+        android:paddingBottom="25dp"
+        android:layout_above="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            android:background="@drawable/white_input_bg"
+            android:divider="@drawable/linear_divider">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/car_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|left"
+                        android:text="日产天籁"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:text="日产天籁"
+                        android:textColor="@color/c1"
+                        android:textSize="@dimen/f3" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/renter_order_rent_time_title"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3" />
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:text="日产天籁"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="@dimen/f3" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/start_time_title"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3" />
+
+                    <TextView
+                        android:id="@+id/start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:text="日产天籁"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="@dimen/f3" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/end_time_title"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3" />
+
+                    <TextView
+                        android:id="@+id/end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:text="日产天籁"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="@dimen/f3" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/renter_order_seafty_title"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3" />
+
+                    <TextView
+                        android:id="@+id/seafty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:text="日产天籁"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="@dimen/f3" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="16dp"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/renter_order_rsn_title"
+                        android:textColor="@color/c8"
+                        android:textSize="@dimen/f3" />
+
+                    <TextView
+                        android:id="@+id/rsn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:text="日产天籁"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="@dimen/f3" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/coupon_root"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingTop="24.5dp"
+                    android:paddingBottom="24.5dp"
+                    android:text="@string/renter_order_confirm_use_coupon"
+                    android:textColor="@color/c8"
+                    android:textSize="@dimen/f3" />
+
+
+                <TextView
+                    android:id="@+id/coupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingTop="24.5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/right_arrow"
+                    android:textColor="@color/subtitle_color"
+                    android:textSize="@dimen/f3" />
+
+                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                    android:id="@+id/right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/right_arrow"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bjmp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/bujinmianpei_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="14.5dp"
+                    android:textColor="@color/c8"
+                    android:textSize="@dimen/f3"
+                    android:text="不计免赔险" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/check"
+                    android:id="@+id/bjmp_price"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/f3"
+                    android:textColor="@color/c8"
+                    android:text="40/天" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/check" />
+
+                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                    android:id="@+id/bujimianpei_wenhao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/bujinmianpei_text"
+                    android:src="@drawable/order_info_wenhao_icon"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="19dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/c8"
+                    android:layout_below="@id/bujinmianpei_text"
+                    android:textSize="@dimen/action_bar_subtitle_text_size"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="14.5dp"
+                    android:text="请在取车时对车辆全身拍照或录像" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/price_root"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingTop="24.5dp"
+                    android:paddingBottom="24.5dp"
+                    android:text="@string/renter_order_confirm_need_price"
+                    android:textColor="@color/c8"
+                    android:textSize="@dimen/f3" />
+
+
+                <TextView
+                    android:id="@+id/price_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingTop="24.5dp"
+                    android:text="日产天籁"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/arrow"
+                    android:textColor="@color/c1"
+                    android:textSize="@dimen/f3" />
+
+                <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/right_arrow"
+                    android:layout_marginRight="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:animateLayoutChanges="true"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/price_info_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:animateLayoutChanges="true"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/renter_order_rent_fee_title"
+                            android:textColor="@color/login_input_color"
+                            android:textSize="@dimen/f3" />
+
+                        <TextView
+                            android:id="@+id/rend_fee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:text="日产天籁"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="19dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/renter_order_seafty_fee_title"
+                            android:textColor="@color/login_input_color"
+                            android:textSize="@dimen/f3" />
+
+                        <TextView
+                            android:id="@+id/seafty_fee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:text="日产天籁"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bjmp_fee_root"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="19dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|left"
+                            android:text="不计免赔险："
+                            android:textColor="@color/login_input_color"
+                            android:textSize="@dimen/f3" />
+
+                        <TextView
+                            android:id="@+id/bjmp_fee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:text="日产天籁"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="19dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/car_subsist_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/renter_order_car_subsist_title"
+                            android:textColor="@color/login_input_color"
+                            android:textSize="@dimen/f3" />
+
+                        <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                            android:id="@+id/yajin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/car_subsist_title"
+                            android:src="@drawable/order_info_wenhao_icon"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="19dp"
+                            android:paddingRight="10dp" />
+
+                        <TextView
+                            android:id="@+id/car_subsist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:text="日产天籁"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:paddingBottom="19dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/account_fee_title"
+                            android:textColor="@color/login_input_color"
+                            android:textSize="@dimen/f3" />
+
+                        <TextView
+                            android:id="@+id/account_fee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:text="日产天籁"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:paddingBottom="19dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|left"
+                            android:text="@string/renter_order_confirm_need_price2"
+                            android:textColor="@color/login_input_color"
+                            android:textSize="@dimen/f3" />
+
+                        <TextView
+                            android:id="@+id/need_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:text="日产天籁"
+                            android:textColor="@color/c8"
+                            android:textSize="@dimen/f3" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/confirm"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/red_button_bg"
+        android:gravity="center"
+        android:paddingBottom="15.5dp"
+        android:paddingTop="15.5dp"
+        android:text="@string/renter_order_confirm_sure_button_text"
+        android:textColor="@color/red_button_text_color"
+        android:textSize="@dimen/f2" />
+</LinearLayout>

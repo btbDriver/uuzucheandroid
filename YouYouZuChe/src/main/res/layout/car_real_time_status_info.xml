@@ -1,0 +1,24 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:id="@+id/map_root"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:animateLayoutChanges="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/one_centimeter_size"
+        android:id="@+id/text_show"
+        android:gravity="center"
+        android:background="@color/title_bg_color"
+        android:textSize="@dimen/f3"
+        android:textColor="@color/button_text_color"
+        android:text="离用车开始还有5小时5分钟" />
+
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

@@ -1,0 +1,49 @@
+import "uu_common.proto";
+import "Car_common.proto";
+package com.uu.client.bean.car.search;
+
+// 在地图上搜索到的车辆展示数据
+message CarInfoOnMap {
+	optional string carSn = 1; // 唯一标识
+	optional string brand = 2; // 品牌
+	optional com.uu.client.bean.car.common.CarTransmissionType type = 3; // 变速器类型
+	optional float price = 4; // 价格
+	optional string carImgUrl = 6; // 车辆图片地址
+}
+
+// 在搜索列表上的车辆展示数据
+message CarInfoInList {
+	optional string carSn = 1; // 唯一标识
+	optional string brand = 2; // 品牌
+	optional com.uu.client.bean.car.common.CarTransmissionType transmissionType = 3; // 变速器类型
+	optional float price = 4; // 价格
+	optional string carImgUrl = 6; // 车辆图片地址
+	optional string address = 7; // 距离
+}
+
+// 地图按点搜车条件或查看更多搜索条件
+message CarSearchMapCondition{
+	required com.uu.client.bean.common.LatlngPosition latLng = 1; // 搜索点经纬度
+	optional int64 distance = 2; // 搜索半径
+	optional int32 scale = 3; // 比例尺
+	optional com.uu.client.bean.common.LatlngPosition myLatLng = 4; // 当前位置经纬度
+	optional int32 start = 5; // 期望搜到的结果起始量(下标)
+	optional int32 count = 6; // 期望搜到的结果偏移量(数量)
+}
+// 地图按点搜车结果
+message CarSearchMapResult{
+	optional int32 hitCount = 1; // 总命中数
+	repeated CarSearchMapPosition positionList = 2; // 搜索结果点列表
+}
+// 地图按点搜车结果点
+message CarSearchMapPosition{
+	required com.uu.client.bean.common.LatlngPosition latLng = 1; // 经纬度
+	optional string carSn = 2; // 车辆唯一标识
+	optional com.uu.client.bean.car.common.CarTransmissionType transmissionType = 3; // 变速器类型
+	optional int32 count = 4; // 结果点车辆数量
+}
+// 车辆搜索列表结果
+message CarSearchListResult{
+	repeated CarInfoInList carList = 1; // 车辆信息列表
+	optional com.uu.client.bean.common.PageResult pageResult = 2; // 翻页相关
+}

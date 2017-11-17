@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg">
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/top_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/jiaoyi_root"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/money_shouru_text"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="@dimen/f3" />
+
+                    <TextView
+                        android:id="@+id/shouru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100元"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="@dimen/f3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/money_zhichu_text"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="@dimen/f3" />
+
+                    <TextView
+                        android:id="@+id/zhichu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100元"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="@dimen/f3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/money_yue_text"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="@dimen/f3" />
+
+                    <TextView
+                        android:id="@+id/yue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100元"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="@dimen/f3" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dongjie_root"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/money_dongjie_text"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="@dimen/f3" />
+
+                    <TextView
+                        android:id="@+id/dongjie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100元"
+                        android:textColor="@color/subtitle_color"
+                        android:textSize="@dimen/f3" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:id="@+id/swiperefreshlayout"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/main_bg"
+                android:cacheColorHint="#00FFFFFF"
+                android:divider="@color/nocolor"
+                android:dividerHeight="1px"
+                android:footerDividersEnabled="false"
+                android:hapticFeedbackEnabled="false"
+                android:listSelector="#00FFFFFF"></ListView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/nodata"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:text="您现在没有任何交易记录哟"
+        android:layout_height="match_parent" />
+</RelativeLayout>

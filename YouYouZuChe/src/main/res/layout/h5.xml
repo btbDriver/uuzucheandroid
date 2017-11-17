@@ -1,0 +1,13 @@
+<com.youyou.uucar.Utils.View.UUProgressFramelayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/all_framelayout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <WebView
+        android:id="@+id/mwebview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </WebView>
+
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>

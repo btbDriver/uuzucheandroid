@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"/>
+
+    <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+        android:id="@+id/iv_shadow"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/shadow"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:text="title"
+        android:textColor="#FF0000"/>
+
+    <LinearLayout
+        android:id="@+id/sv_left_menu"
+        android:layout_width="200dp"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <za.co.immedia.pinnedheaderlistview.PinnedHeaderListView
+            android:id="@+id/pinnedListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="#00FFFFFF"
+            android:dividerHeight="1px"
+            android:listSelector="#00FFFFFF"
+            android:scrollbars="none">
+        </za.co.immedia.pinnedheaderlistview.PinnedHeaderListView>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sv_right_menu"
+        android:layout_width="150dp"
+        android:layout_height="fill_parent"
+        android:layout_gravity="right"
+        android:paddingRight="30dp"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/layout_right_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

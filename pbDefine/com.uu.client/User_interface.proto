@@ -1,0 +1,360 @@
+import "Car_common.proto";
+import "uu_common.proto";
+import "User_common.proto";
+import "Order_form_common.proto";
+package com.uu.client.bean.user;
+
+// 上传身份证照片 
+message UploadIdCardFront {
+	message Request {
+		required string idCode = 1; // 识别码
+		required int32 scene = 2; // 场景 1：上传车主时身份证；2：上传租客时身份证
+		optional int32 type = 3; // 1:正面；2：反面
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败；-2：没有对应的图片，需要重新上传图片
+	}
+
+}
+
+// 上传头像 在上传照片时，需要在url里面添加 public=1 的参数，比如：http://115.28.82.160:28080/fileupload/fileupload.f?public=1
+message UploadUserAvatar {
+	message Request {
+		required string idCode = 1; // 识别码
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败；-2：没有对应的图片，需要重新上传图片
+		optional string avatar = 2; // 上传成功后头像的url地址
+	}
+
+}
+
+// 上传驾照正面照片 
+message UploadDrivingicenseFront {
+	message Request {
+		required string idCode = 1; // 识别码
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败；-2：没有对应的图片，需要重新上传图片
+	}
+
+}
+
+// 上传驾照反面照片 
+message UploadDrivingicenseBack {
+	message Request {
+		required string idCode = 1; // 识别码
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败；-2：没有对应的图片，需要重新上传图片
+	}
+
+}
+
+// 我的财务
+message MyAccountBalance {
+	message Request {
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		optional float totalIncome = 2; // 用户总收入
+		optional float balance = 3; // 当前账户余额
+		optional string cardNum = 4; // 银行卡号
+		optional string bankName = 5; // 银行名称
+	}
+
+}
+
+// 我的财务新接口
+message MyAccountBalanceV2 {
+	message Request {
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		optional float availableBalance = 2; // 可用余额
+		optional float applyCashAmount = 3; // 提现中的余额
+		optional float frozenAmount = 4; // 冻结中的余额
+		optional string cardNum = 5; // 银行卡号
+		optional string bankName = 6; // 银行名称
+	}
+
+}
+
+// 添加银行卡
+message AddBankCard {
+	message Request {
+		required int32 bankId = 1;
+		required string cardNum = 2;
+		required string applyCashPassword = 3; // 提现密码
+		optional string bankAccountProvince = 4; // 开户省份
+		optional string bankAccountCity = 5; //开户城市
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+	}
+
+}
+
+// 删除银行卡
+message DelBankCard {
+	message Request {
+		required int32 cardId = 1;
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+	}
+
+}
+
+// 我的银行卡列表
+message MyBankCards {
+	message Request {
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		optional int32 cardId = 2; // 银行卡号id
+		optional string cardNum = 3; // 银行卡号
+		optional int32 addTime = 4; // 添加时间
+		optional string bankName = 5; // 银行名称
+		repeated Bank banks = 6; // 银行选中列表
+	}
+
+	message Bank {
+		required int32 bankId = 1; // 银行id
+		required string bankName = 2; // 银行名称
+	}
+
+}
+
+// 申请提现
+message UserApplyCash {
+	message Request {
+		required float amount = 1; // 提现金额数
+		required string accountPwd = 2; // 提现密码
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败；-2：提现密码不正确
+	}
+
+}
+
+// 交易记录
+message ExchangeHisto {
+	message Request {
+		optional com.uu.client.bean.common.PageNoRequest page = 1; // 翻页
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		repeated ExchangeDetail exchangeDetails = 2; // 交易历史记录列表
+		optional com.uu.client.bean.common.PageNoResult pageResult = 3; // 翻页
+	}
+
+	message ExchangeDetail {
+		required float money = 1; // 金额数
+		required int32 occurTime = 2; // 发生操作的时间戳，单位秒
+		optional string note = 3; // 交易说明
+		optional string orderId = 4; // 订单id，可选的字段
+		optional int32 orderType = 5; // 订单类型，用以区分是车主订单还是租客订单 1：租客类型；2：车主类型
+	}
+
+}
+
+// 收藏车辆
+message CollectCar {
+	message Request {
+		required string carId = 1;
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+	}
+
+}
+
+// 取消收藏车辆
+message CancelCollectCar {
+	message Request {
+		required string carId = 1;
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+	}
+
+}
+
+// 收藏车辆列表
+message CollectCarList {
+	message Request {
+		optional com.uu.client.bean.common.LatlngPosition userPosition = 1; // 用户位置
+		optional com.uu.client.bean.common.PageNoRequest page = 2; // 翻页
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		repeated com.uu.client.bean.car.common.CarBriefInfo cars = 2; // 车辆列表
+		optional com.uu.client.bean.common.PageNoResult pageResult = 3; // 翻页
+	}
+
+}
+
+// 激活优惠码
+message ActivateCouponCode {
+	message Request {
+		required string couponCode = 1;
+	}
+
+	/* 0 —— 成功
+	 * -1—— 失败
+         * 1 —— 未找到该优惠码
+	 * 2 —— 当前时间 < 验证时间s
+	 * 3 —— 当前时间 > 验证时间e
+	 * 4 —— 输入同一优惠码（已经分配过该优惠码了）
+  	 */
+
+	message Response {
+		required int32 ret = 1; 
+		optional string msg = 2; // 错误提示消息
+	}
+
+}
+
+// 查询优惠券列表
+message QueryCouponCodes {
+	message Request {
+		optional com.uu.client.bean.common.PageNoRequest page = 1; // 翻页
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		repeated com.uu.client.bean.user.common.Coupon coupons = 2; // 优惠券列表
+		optional com.uu.client.bean.common.PageNoResult pageResult = 3; // 翻页
+	}
+
+}
+
+// 查询车主详情
+message QueryCarOwnerInfo {
+	message Request {
+		required int32 userId = 1; // 车主用户id
+		optional string carId = 2; // 车辆id 
+		optional com.uu.client.bean.common.PageNoRequest page = 3; // 翻页
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		optional com.uu.client.bean.user.common.UserBriefInfo carOwner = 2; // 车主信息
+		optional int32 acceptOrderPercent = 3; // 订单接收率
+		optional int32 averageResponseTimes = 4; // 平均响应时间，单位秒
+		repeated RenterComment commentList = 5; // 评价列表
+		optional com.uu.client.bean.common.PageNoResult pageResult = 6; // 翻页
+	}
+
+	message RenterComment {
+		required int32 userId = 1; // 租客id
+		required string name = 6; // 评价者姓名
+		required float stars = 2; // 评星
+		required string content = 3; // 评价内容
+		required int32 occurTime = 4; // 评价发生的时间
+		optional string avatar = 5; // 评价者头像
+	}
+
+}
+
+// 租客注册签协议
+message UserSignAgreement {
+	message Request {
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+	}
+
+}
+
+// 用户分享
+message UserShare {
+	message Request {
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		optional string word = 2; // 邀请文案
+		optional string invitationCode = 3; // 邀请码
+		optional string shareContent = 4; // 分享文案
+		optional string shareTitle = 5; // 分享标题
+		optional string shareUrl = 6; // url
+	}
+
+}
+
+// 客户端启动时，调用的通用查询接口，查询的内容包括
+// 1、各种配置的版本号
+// 2、如果有登录态，则查询用户的各种信息
+message StartQueryInterface {
+	message Request {
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		optional com.uu.client.bean.user.common.UserStatus userStatus = 2; // 用户状态
+		optional int32 carBrandsVersion = 3; // 汽车品牌版本号
+		optional int32 availableCitysVersion = 4; // 查询开通城市的版本号
+		optional int32 maxReserveCarDays = 5; // 最长可租多少天之后的车
+		optional int32 maxRentCarDays = 6; // 一次租车最多可租多少天
+	}
+
+}
+
+// 查询拒绝原因，拒绝图片类型
+message QueryRefusedReasonAndPic {
+	message Request {
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		optional string refusedReason = 2; // 拒绝原因
+		repeated com.uu.client.bean.user.common.RenterImgType refusedImgTypes = 3; // 拒绝的图片类型
+		repeated com.uu.client.bean.user.common.RenterImgType uploadedImgTypes = 4; // 已上传图片类型
+	}
+
+}
+
+// 查询用户提示消息列表
+message UserQueryTipsMsg {
+	message Request {
+		optional com.uu.client.bean.common.PageNoRequest page = 1; // 翻页
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		repeated TipsMsg msgs = 2; // 消息列表
+		optional com.uu.client.bean.common.PageNoResult pageResult = 3; // 翻页
+	}
+
+	message TipsMsg {
+		required int32 type = 1; // 0：订单；1：意向单
+		required string msg = 2; // 提示的消息文案
+	}
+
+}
+
+// 用户身份状态变化的push
+message UserStatusChangePush {
+	required com.uu.client.bean.common.TipsMsg my = 1; // 气泡数字
+	optional string contentMsg = 2; // 提示文案消息
+}
+
+
+

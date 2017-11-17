@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="呵呵"
+        android:textColor="@color/c6"
+        android:textSize="@dimen/f2" />
+
+    <TextView
+        android:id="@+id/address_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_margin="5dp"
+        android:text="哈哈哈"
+        android:layout_toLeftOf="@+id/select"
+        android:ellipsize="start"
+        android:singleLine="true"
+        android:textColor="@color/c8"
+        android:textSize="@dimen/f5" />
+
+    <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/add_car_check_sure" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/address_text"
+        android:background="@color/c13" />
+
+</RelativeLayout>

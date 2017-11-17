@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="18dp"
+        android:text="轻松当车主，月赚4000+"
+        android:id="@+id/tip2"
+        android:textSize="@dimen/f3"
+        android:textColor="@color/c8" />
+
+    <LinearLayout
+        android:id="@+id/linear_root"
+        android:layout_width="match_parent"
+        android:layout_below="@id/tip2"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_marginRight="@dimen/s1"
+        android:layout_height="wrap_content"
+        android:background="@color/c11"
+        android:layout_marginTop="10dp"
+        android:divider="@drawable/linear_divider"
+        android:showDividers="middle"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/open_city_root"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="车辆出租城市"
+                android:textSize="@dimen/f3"
+                android:textColor="@color/c8"
+                android:layout_marginLeft="@dimen/s1"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/open_city_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/find_car_right_arrow"
+                android:layout_marginRight="@dimen/s1" />
+
+            <TextView
+                android:id="@+id/open_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f3"
+                android:layout_toLeftOf="@id/open_city_arrow"
+                android:layout_marginRight="@dimen/s1"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <RelativeLayout
+                android:id="@+id/city_root"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/s1"
+                    android:text="京A"
+                    android:textColor="@color/c1"
+                    android:textSize="@dimen/f2" />
+
+                <ImageView
+                    android:id="@+id/city_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/city"
+                    android:background="@drawable/down_arrow"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/s1" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/left_line"
+                android:layout_width="1px"
+                android:layout_toRightOf="@id/city_root"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/s1"
+                android:background="@color/c13" />
+
+            <EditText
+                android:id="@+id/num"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/left_line"
+                android:background="@null"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/addcar_brand_num_hint"
+                android:maxLength="5"
+                android:singleLine="true"
+                android:gravity="center_vertical|right"
+                android:paddingRight="34dp"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/c7"
+                android:textColorHint="@color/c9"
+                android:textSize="@dimen/f2" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/brand_root"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="品牌车型"
+                android:textSize="@dimen/f3"
+                android:textColor="@color/c8"
+                android:layout_marginLeft="@dimen/s1"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/brand_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/find_car_right_arrow"
+                android:layout_marginRight="@dimen/s1" />
+
+            <TextView
+                android:id="@+id/brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f3"
+                android:layout_toLeftOf="@id/brand_arrow"
+                android:layout_marginRight="@dimen/s1"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/gearbox_root"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="变速箱"
+                android:textSize="@dimen/f3"
+                android:textColor="@color/c8"
+                android:layout_marginLeft="@dimen/s1"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/gearbox_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/find_car_right_arrow"
+                android:layout_marginRight="@dimen/s1" />
+
+            <TextView
+                android:id="@+id/gearbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f3"
+                android:layout_toLeftOf="@id/gearbox_arrow"
+                android:layout_marginRight="@dimen/s1"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/year_root"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="购买年份"
+                android:textSize="@dimen/f3"
+                android:textColor="@color/c8"
+                android:layout_marginLeft="@dimen/s1"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/year_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/find_car_right_arrow"
+                android:layout_marginRight="@dimen/s1" />
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f3"
+                android:layout_toLeftOf="@id/year_arrow"
+                android:layout_marginRight="@dimen/s1"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_root"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/addcar_brand_tip"
+        android:textColor="@color/c8"
+        android:textSize="@dimen/f3" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tip"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:padding="5dp"
+        android:button="@drawable/add_car_check_bg" />
+
+    <TextView
+        android:id="@+id/owner_xieyi_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c8"
+        android:text="注册即代表我同意"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@id/checkbox"
+        android:layout_below="@id/tip"
+        android:visibility="visible"
+        android:textSize="@dimen/f3" />
+
+    <TextView
+        android:id="@+id/owner_xieyi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/tip"
+        android:layout_toRightOf="@id/owner_xieyi_tip"
+        android:text="@string/owner_xieyi"
+        android:visibility="visible"
+        android:textSize="@dimen/f3"
+        android:textColor="@color/c2" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/c11">
+
+        <TextView
+            android:id="@+id/applyService"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:textSize="@dimen/f2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="申请客服协助"
+            android:textColor="@color/white_button_text_color"
+            android:background="@drawable/bottom_left_bottom_bg" />
+
+        <TextView
+            android:id="@+id/releasecar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/applyService"
+            android:text="发布车辆"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="14dp"
+            android:textColor="@color/red_button_text_color"
+            android:textSize="@dimen/f2"
+            android:background="@drawable/red_button_bg" />
+    </LinearLayout>
+
+</RelativeLayout>

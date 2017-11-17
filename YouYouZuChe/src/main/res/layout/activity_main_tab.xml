@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_above="@+id/tab_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/main_tab_bg" />
+
+    <LinearLayout
+        android:id="@+id/tab_root"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_height="54dp">
+
+        <RelativeLayout
+            android:id="@+id/findcar"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+
+            android:layout_height="54dp">
+
+            <ImageView
+                android:id="@+id/findcar_icon"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/main_tab_findcar_bg"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="找车"
+                android:textColor="@color/main_tab_text_color"
+                android:textSize="@dimen/f5"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/findcar_icon"
+                android:layout_marginTop="2dp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/order"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="54dp">
+
+            <ImageView
+                android:id="@+id/order_icon"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/main_tab_order_bg"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/order_num"
+                android:layout_marginTop="4dp"
+                android:text="11"
+                android:visibility="gone"
+                android:layout_marginLeft="17dp"
+                android:layout_alignLeft="@id/order_icon"
+                android:textColor="@color/c11"
+                android:layout_width="20dp"
+                android:gravity="center"
+                android:layout_height="20dp"
+                android:background="@drawable/radius_text_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="行程"
+                android:textColor="@color/main_tab_text_color"
+                android:textSize="@dimen/f5"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/order_icon"
+                android:layout_marginTop="2dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="0.9"
+            android:layout_height="match_parent"></RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/owner"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="54dp">
+
+            <ImageView
+                android:id="@+id/owner_icon"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/main_tab_owner_bg"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/owner_num"
+                android:layout_marginTop="4dp"
+                android:text="11"
+                android:layout_marginLeft="17dp"
+                android:layout_alignLeft="@id/owner_icon"
+                android:textColor="@color/c11"
+                android:visibility="gone"
+                android:layout_width="20dp"
+                android:gravity="center"
+                android:layout_height="20dp"
+                android:background="@drawable/radius_text_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车主"
+                android:textColor="@color/main_tab_text_color"
+                android:textSize="@dimen/f5"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/owner_icon"
+                android:layout_marginTop="2dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="54dp">
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/my_icon"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/main_tab_my_bg"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/my_new"
+                android:layout_marginTop="6dp"
+                android:visibility="gone"
+                android:layout_marginLeft="16dp"
+                android:layout_alignLeft="@id/my_icon"
+                android:layout_width="11dp"
+                android:gravity="center"
+                android:background="@drawable/radius_text_bg"
+                android:layout_height="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的"
+                android:textColor="@color/main_tab_text_color"
+                android:textSize="@dimen/f5"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/my_icon"
+                android:layout_marginTop="2dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/speed"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/main_tab_speed_bg"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/speed_name"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="一键约车"
+            android:textSize="@dimen/f5"
+            android:textColor="@color/c11" />
+
+        <TextView
+            android:id="@+id/speed_num"
+            android:visibility="gone"
+            android:layout_width="20dp"
+            android:gravity="center"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            android:text="11"
+            android:layout_marginLeft="60dp"
+            android:textColor="@color/c11"
+            android:background="@drawable/radius_text_bg" />
+    </RelativeLayout>
+</RelativeLayout>

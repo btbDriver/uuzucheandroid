@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">友友租车</string>
+    <string name="open_menu">open</string>
+    <string name="close_menu">close</string>
+    <string name="drawer_phone_def_text">注册或登录</string>
+    <!-- 登录 -->
+    <string name="register_phone_title">登录</string>
+    <string name="register_phone_tip">为方便车友联系，请验证手机号</string>
+    <string name="register_phone_phone_hint">请输入您的手机号</string>
+    <string name="register_phone_password_hint">请输入验证码</string>
+    <string name="register_phone_code_hint">请输入邀请码(选填)</string>
+    <string name="login_password_hint">请输入您的密码</string>
+    <string name="register_phone_getsms">验证</string>
+    <string name="register_phone_nosms">没收到?</string>
+    <!-- 添加车辆-车品牌 -->
+    <string name="addcar_brand_title">添加车辆</string>
+    <string name="addcar_brand_num_hint">请输入车牌号</string>
+    <string name="brand">品牌车型</string>
+    <string name="addcar_brand_tip">只能添加车龄10年以内,有交强险,7座以内(含7座)的车辆</string>
+    <string name="applyservice">申请客服协助</string>
+    <string name="releasecar">发布车辆</string>
+    <string name="releasecar_1">预览并发布</string>
+    <string name="applyservice_dialog">您是否需要客服上门协助发布车辆?</string>
+    <string name="brand_title">品牌车型</string>
+    <string name="dont_apply_service">请耐心等待客服协助.</string>
+    <string name="wait_apply_service">感谢您对友友的关注,客服会尽快联系您,安排上门服务</string>
+    <string name="guest">先去逛逛</string>
+    <string name="wait_apply_service_title">客服发布车辆</string>
+    <!-- 发布车辆 -->
+    <string name="release_car_title">发布车辆</string>
+    <string name="car_info">车辆信息</string>
+    <string name="give_car_address">交车地点</string>
+    <string name="car_price">出租价格</string>
+    <string name="car_desc">车辆描述</string>
+    <string name="car_safety">保险资料</string>
+    <string name="car_photo">车辆照片</string>
+    <!-- 车辆信息 -->
+
+    <string name="gearbox">变速箱</string>
+    <string name="gearbox_auto">自动挡</string>
+    <string name="gearbox_manual">手动挡</string>
+
+    <string-array name="gearbox_items">
+        <item>自动挡</item>
+        <item>手动挡</item>
+    </string-array>
+
+    <string name="cc">排量</string>
+
+    <string-array name="cc_items">
+        <item>1.6L以下</item>
+        <item>1.6L-1.9L</item>
+        <item>2.0L-2.3L</item>
+        <item>2.4以上</item>
+    </string-array>
+
+    <string name="year">注册年份</string>
+    <string name="seat">可载人数</string>
+
+    <string-array name="seat_items">
+        <item>5座</item>
+        <item>7座</item>
+    </string-array>
+
+    <string name="mileage">行驶里程</string>
+
+    <string-array name="mileage_items">
+        <item>2万公里以下</item>
+        <item>2万公里至5万公里</item>
+        <item>5万公里至10万公里</item>
+        <item>10万公里以上</item>
+    </string-array>
+
+    <string name="oil">油号</string>
+
+    <string-array name="oil_items">
+        <item>#93（京#92）</item>
+        <item>#97（京#95）</item>
+    </string-array>
+
+    <string name="car_set">车辆配置</string>
+
+    <string-array name="car_set_items">
+        <item>倒车雷达</item>
+        <item>导航仪</item>
+    </string-array>
+
+    <string name="sure">完成</string>
+    <!-- 出租价格 -->
+    <string name="addcar_price_tip">友友通过您提交的车辆配置和折价率进行综合计算,建议每天出租价格为%1$s元</string>
+    <string name="addcar_price_tips">建议您将车辆价格设为</string>
+    <string name="day_price_title">每天价格</string>
+    <string name="hour_price_title">时租价格：</string>
+    <string name="hour_price_title_1">=平均日租价格/8小时</string>
+    <string name="week_price_title">周租价格：</string>
+    <string name="week_price_title_1">=平均日租价格*6天</string>
+    <string name="price_unit">元</string>
+    <string name="price_unit_1">元/天</string>
+
+    <!-- Menu文字 -->
+    <string name="menu_save">保存</string>
+    <string name="menu_share">分享</string>
+    <string name="add_card">完成</string>
+    <string name="coupon_menu">帮助</string>
+    <string name="menu_cancel">取消</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">搜索</string>
+    <!-- 保险资料 -->
+    <string name="safety_tip">友友平台需要为所有认证车主叠加一份租赁期间的车辆及第三者责任险,请上传相关资料</string>
+    <string name="user_id_front">清晰身份证正面信息</string>
+    <string name="jiaoqiangxian_title">清晰交强险扫描件</string>
+    <string name="driving_front">清晰行驶证正反面信息</string>
+    <string name="upload_button">点击上传</string>
+    <string name="reupload_button">重新上传</string>
+    <!-- 车辆描述 -->
+    <string name="car_desc_input_hint">漂亮的车辆描述,能让租客有熟悉亲切的感觉,更容易出租,请描述您的爱车.</string>
+    <string name="car_desc_rule_1">不能长途驾驶(不超过300公里/天)</string>
+    <string name="car_desc_rule_2">不能吸烟</string>
+    <string name="car_desc_rule_3">保持车内清洁</string>
+    <string name="car_desc_rule_4">发生车损时请及时联系车主</string>
+    <string name="car_desc_rule_5">不能携带宠物</string>
+    <string name="car_desc_rule_6">油位表报警请及时加油</string>
+    <string name="title_activity_find_car">找车</string>
+    <string name="title_activity_rent_filter">搜索</string>
+    <string name="title_activity_speed_rentcar">一键约车</string>
+    <string name="title_activity_rent_filtered">搜索结果</string>
+    <string name="filter_price_title">价格区间</string>
+    <string name="filter_gearbox_title">变速箱</string>
+    <string name="filter_type_title">车型</string>
+    <string name="filter_set_title">配置</string>
+    <string name="filter_brand_title">车辆品牌</string>
+    <string name="sure_button_text">确定</string>
+    <string name="price_range_hour_unit">元/小时</string>
+    <string name="price_range_day_unit">元/天</string>
+    <string name="price_range_week_unit">元/星期</string>
+    <!-- 筛选 -->
+    <string name="filter_gearbox_auto">自动挡</string>
+    <string name="filter_gearbox_manual">手动挡</string>
+    <string name="filter_type_jincou">紧凑型</string>
+    <string name="filter_type_gexing">个性型</string>
+    <string name="filter_type_jingji">经济型</string>
+    <string name="filter_type_shushi">舒适型</string>
+    <string name="filter_type_suv">SUV</string>
+    <string name="filter_type_haohua">豪华型</string>
+    <string name="filter_type_shangwu">商务型</string>
+    <string name="filter_pro_gps">GPS导航</string>
+    <string name="filter_pro_daoche">倒车雷达</string>
+    <string name="filter_reset">重置</string>
+    <!-- 租客注册 -->
+    <string name="title_activity_register_id">"身份认证"</string>
+    <string name="renter_register_step_1">1</string>
+    <string name="renter_register_id_front_tip">身份证正面</string>
+    <string name="renter_register_id_back_tip">身份证背面</string>
+    <string name="renter_register_id_tip">请上传本人身份证</string>
+    <string name="renter_register_step_2">2</string>
+    <string name="renter_register_driver_front_tip">请上传清晰驾照</string>
+    <string name="renter_register_driver_back_tip">请上传带有效期的驾照副页</string>
+    <string name="renter_register_driver_tip">会员需持有效驾照,驾龄不少于半</string>
+    <string name="renter_register_step_3">3</string>
+    <string name="renter_register_verify_tip">客服人员正在加紧审核您的相关信息\n工作时间1小时内审核,其他时段时间顺延</string>
+    <string name="renter_register_verify_error_tip">抱歉!\n您提交的资料未审核通过,请重新上传!</string>
+    <string name="service_work_time_title">客服工作时间</string>
+    <string name="service_work_time_normal_start_title">工作日：</string>
+    <string name="service_work_time_holiday_start_title">节假日：</string>
+    <string name="service_work_time_normal_start">09:00-22:00</string>
+    <string name="service_work_time_holiday_start">09:00-18:00</string>
+    <string name="next_button_text">下一步</string>
+    <string name="title_activity_renter_register_driver">驾照认证</string>
+    <string name="title_activity_renter_register_verify">租客身份审核</string>
+    <string name="contact_service">联系客服</string>
+    <string name="history">预约历史</string>
+    <string name="reupload">重新上传</string>
+    <!-- 我的行程 -->
+    <string name="my_stroke_page1_title">进行中</string>
+    <string name="my_stroke_page2_title">已完成</string>
+    <string name="Load">加载更多</string>
+    <string name="Success">加载完成</string>
+    <string name="Loading">加载中...</string>
+    <string name="start_time_title">开始时间：</string>
+    <string name="end_time_title">结束时间：</string>
+    <string name="getcar_address_title">取车地址：</string>
+    <string name="use_car_start_title">离用车开始还有：</string>
+    <string name="use_car_end_title">离用车结束还有：</string>
+    <string name="stroke_tip">请提前联系车主,了解取车信息.\n取车时请与车主共同查看车况,确认里程表与油表位置.</string>
+    <string name="owner_menu_text">车主秘籍</string>
+    <!-- 车辆照片 -->
+    <string name="please_update_text">请上传带车牌的</string>
+    <string name="add_car_photo_tilte">车辆照片</string>
+    <string name="please_update">请上传</string>
+    <string name="queding">确定</string>
+    <string name="add_car_photo">照片</string>
+    <string name="add_car_addphoto">添加照片</string>
+    <string name="add_car_fengmian">封面</string>
+    <string name="add_car_zuoqian">左前</string>
+    <string name="add_car_zhengqian">正前</string>
+    <string name="add_car_youhou">右后</string>
+    <string name="add_car_zhenghou">正后</string>
+    <string name="add_car_zuocemian">左侧面</string>
+    <string name="add_car_zhongkongtai">中控台</string>
+    <string name="add_car_cheneiqianpao">车内前排</string>
+    <string name="add_car_cheneihoupai">车内后排</string>
+    <string name="add_car_tishi">添加更多优质照片，会提高租客租车的欲望</string>
+    <string name="menu_find_car_filter">筛选</string>
+    <string name="menu_find_car_map">地图</string>
+    <string name="menu_find_car_list">列表</string>
+    <!-- 找车-列表 -->
+    <string name="find_car_list_sort_dis">距离</string>
+    <string name="find_car_list_sort_price">价格</string>
+    <string name="find_car_list_cancel">取消选择</string>
+    <string name="find_car_list_rent">预约我选的车</string>
+    <string name="find_car_map_rent">预约附近的车</string>
+    <string name="find_car_list_nodata_text">友友暂时没有匹配的车了\n请重置筛选条件。</string>
+    <string name="find_car_list_reset_filter_tip">重新筛选</string>
+
+    <!-- 车辆预览-列表 -->
+    <string name="car_info_properties">车辆属性</string>
+    <string name="car_rule_info">用车规则</string>
+    <string name="need_more_comments">查看更多评论</string>
+    <string name="car_get_location">取车位置/实时位置</string>
+    <string name="add_call">加入呼叫列表</string>
+    <string name="book_car">预约此车</string>
+    <string name="car_all_order_title">本车所有订单</string>
+    <string name="set_not_rent_time">设置不可租时间</string>
+    <string name="auto_order">自动抢单</string>
+    <string name="tell_tenant_location">把我车的实时位置告诉租客</string>
+    <string name="change_pic">更改图片</string>
+    <string name="order_detils">订单详情</string>
+    <string name="tenant_detils">出租详情</string>
+    <string name="contact_tenant">联系租客</string>
+    <string name="careful_one">收车时请和租客共同确认车况及油位。</string>
+    <string name="careful_two">如租客确认已还车，请点击确认收车。</string>
+    <string name="careful_three">如有协商不一致的情况，请及时联系客服。</string>
+    <string name="careful_four">退改签政策</string>
+    <string name="not_get_car">尚未收车</string>
+    <string name="sure_car">确认收车</string>
+    <string name="tell_renter">请提前联系租客，了解取车信息。取车时请与租客共同查看车况，确认里程表与油表位置。</string>
+    <string name="jujue">拒绝</string>
+    <string name="accept">同意</string>
+    <string name="rent_chossing">租客正在选择中</string>
+    <string name="title_activity_sign">用户协议</string>
+    <string name="renter_register_tiaokuan_text">我已阅读友友租车服务条款</string>
+    <string name="renter_register_sign_register">立即注册</string>
+    <string name="i_already_read">我已经阅读并同意</string>
+    <string name="i_already_read_owner">我已经阅读并同意</string>
+    <string name="owner_xieyi">《车主服务协议》</string>
+    <string name="please_wait">请您耐心等待，客服会尽快帮您联系发布车辆！</string>
+    <string name="title_activity_my">我的</string>
+    <string name="title_select_open_city">请选择用车城市</string>
+    <string name="title_rule_select">平台规则</string>
+    <string name="title_addcar">我的银行卡</string>
+    <string name="title_collect_list">收藏列表</string>
+    <string name="title_coupon_list">我的优惠券</string>
+    <string name="title_select_time_list">预约信息</string>
+    <string name="title_no_car_wait">等待车主响应</string>
+    <string name="all">计划租期</string>
+
+    <!-- 我的 -->
+    <string name="login_text">立即登录</string>
+    <string name="logout_text">退出登录</string>
+    <string name="goto_list_tip">其他车主会二十分钟内陆续响应,请稍后刷新</string>
+    <string name="title_activity_select_address">位置</string>
+    <string name="title_activity_search_address">位置选择</string>
+    <string name="title_activity_old_car_info">CarInfo</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_order_info">订单详情</string>
+    <string name="order_info_page_1_title">订单信息</string>
+    <string name="order_info_page_2_title">联系车主</string>
+    <string name="renter_order_info_tip_1">还车时请注意以下事项。</string>
+    <string name="renter_order_info_tip_2">1,车已停放到指定地点。</string>
+    <string name="renter_order_info_tip_3">2,车上个人物品已收拾完毕。</string>
+    <string name="renter_order_info_tip_4">3,车钥匙已交还给车主本人。</string>
+    <string name="renter_order_info_tip_5">4,已和车主共同确认车况油位。</string>
+    <string name="renter_order_info_tip_6">还车后请务必点击结束行程,否则将产生延迟罚金.\n点击结束行程后,此车将不再保险范围</string>
+    <string name="renter_order_start">开始行程</string>
+    <string name="renter_order_yanshi">延时一小时</string>
+    <string name="renter_order_over">结束行程</string>
+    <string name="renter_order_review">评价</string>
+    <string name="settlement">结算</string>
+    <string name="apllay_car_show">发布车辆预览</string>
+    <string name="renter_order_over_tip">请确认以下事项：\n1、车已停放到指定地点。\n2、车上个人物品已收拾完毕。\n3、车钥匙已放回友友袋，或交还车主本人。\n4、如有车损或违章请尽快与车主联系商议。\n5、车主已确认油位(原油还车适用)。</string>
+    <string name="title_renter_order_review">评价</string>
+    <string name="title_owner_order_review">评价</string>
+    <string name="renter_order_rsn_title">订单编号：</string>
+    <string name="renter_order_rent_fee_title">租车费用：</string>
+    <string name="renter_order_seafty_fee_title">保险费用：</string>
+    <string name="renter_order_yanshi_fee_title">延时费用：</string>
+    <string name="renter_order_youhui_fee_title">优惠金额：</string>
+    <string name="renter_order_seafty_title">保险公司：</string>
+    <string name="renter_order_rent_time_title">租期：</string>
+    <string name="renter_order_rating_title">为您此次租车的体验评分</string>
+    <string name="owner_order_rating_title">为您此次出租的体验评分</string>
+    <string name="renter_order_platform_diss_title">您不满意的原因是</string>
+    <string name="renter_order_review_to_owner_title">您对车主的评价</string>
+    <string name="renter_order_review_to_renter_title">您对租客的评价</string>
+    <string name="renter_order_review_to_owner_hint">请留下您对车辆，车主或服务的评价，让友友租车更好的为您服务~</string>
+    <string name="renter_order_review_to_renter_hint">请留下您对租客或服务的评价，让友友租车更好的为您服务~</string>
+    <string name="renter_order_review_to_platform_title">请留下对友友平台的宝贵意见</string>
+    <string name="renter_order_review_to_platform_hint">请留下您的意见，让我们更好的为您服务</string>
+    <string name="renter_order_car_subsist_title">车辆押金：</string>
+    <string name="renter_order_diss_1">车主态度</string>
+    <string name="owner_order_diss_1">租客态度</string>
+    <string name="renter_order_diss_2">车辆整洁</string>
+    <string name="renter_order_diss_3">产品使用</string>
+    <string name="renter_order_diss_4">平台服务</string>
+    <string name="renter_order_start_tip">您确定要开始行程吗?</string>
+    <string name="renter_order_price_tip">车主确认收车后,才能最终确认您本次的租车金额</string>
+    <string name="rent_complete">评价</string>
+    <string name="not_rent">暂不出租</string>
+    <string name="preview">预览</string>
+    <string name="grab">抢单</string>
+    <string name="renter_order_contact_owner_time">平均响应时间</string>
+    <string name="renter_order_contact_owner_times">平均分享率</string>
+    <string name="renter_order_contact_owner_tip">请提前联系车主，了解取车信息。取车时请与车主共同查看车况，确认里程表与油表位置。</string>
+    <string name="title_renter_order_confirm">预定详情</string>
+    <string name="renter_order_confirm_sure_button_text">确认支付</string>
+    <string name="renter_order_confirm_use_coupon">使用优惠券</string>
+    <string name="renter_order_confirm_need_price">需充值</string>
+    <string name="title_renter_find_car_agree">可选车辆</string>
+    <string name="not_have_appraise">暂时没有评价</string>
+    <string name="renter_info">租客详情</string>
+    <string name="account_fee_title">账户余额：</string>
+    <string name="renter_order_confirm_need_price2">需充值：</string>
+    <string name="title_use_coupon">使用优惠券</string>
+    <string name="title_select_pay">确认支付</string>
+    <string name="menu_refush">刷新</string>
+    <string name="coupon_input_hint">请输入优惠码</string>
+    <string name="money_dongjie_text">当前冻结金额：</string>
+    <string name="money_shouru_text">收入：</string>
+    <string name="money_yue_text">余额：</string>
+    <string name="money_zhichu_text">支出：</string>
+    <string name="your_car_release_ok_1">你的车辆信息已提交成功，客服会在3小时内发布你的车辆。非工作时间顺延。</string>
+    <string name="your_car_release_ok_3">客服工作时间</string>
+    <string name="service_work_day_1">工作日：9:00-22:00</string>
+    <string name="service_work_day_2">节假日：9:00-22:00</string>
+    <string name="car_info_submit_ok">车辆信息提交成功</string>
+    <string name="continue_sumbit">继续发布下一辆</string>
+    <string name="owner_order_over_tip">1、车已停放到指定地点。\n2、您的爱车是否有刮蹭或其他外部损伤。\n3、您的爱车能够正常启动，运行。\n4、租客已将车钥匙交还给您本人。\n5、已与租客确认油位(原油位还车适用)。</string>
+    <string name="network_error">操作失败，请打开网络连接</string>
+    <string name="title_get_friend">邀请朋友</string>
+    <string name="filter_tip1">请设置用车需求</string>
+    <string name="filter_start_time_title">取车时间</string>
+    <string name="filter_car_info">车辆</string>
+    <string name="filter_car_beizhu">备注</string>
+    <string name="filter_end_time_title">还车时间</string>
+    <string name="start_time_hint">请选择取车时间</string>
+    <string name="end_time_hint">请选择还车时间</string>
+    <string name="address_title">取车位置</string>
+    <string name="address_hint">请选择取车位置</string>
+    <string name="reset_filter_tip">未找到符合要求的车，您也可以看看以下推荐车辆</string>
+    <string name="filtered_list_tip">以下车辆符合筛选条件，您可以连续预约多辆车，提高订车速度</string>
+    <string name="speed_rent_car_sure">立即约车</string>
+    <string name="use_coupon">使用优惠券</string>
+    <string name="bjmp">不计免赔</string>
+    <string name="car_fee">车费租金</string>
+    <string name="car_coupon">租金优惠券</string>
+    <string name="deposit_fee">押金费用</string>
+    <string name="all_fee">共需预付款</string>
+    <string name="account_balance">帐号余额</string>
+    <string name="need_prepaid">需充值</string>
+    <string name="order_cancle_idea">订单取消政策</string>
+    <string name="sure_and_pay">确认并支付</string>
+    <string name="all_income">共计收入</string>
+    <string name="see_car_real_time_status">查看车辆实时状态</string>
+    <string name="time_out_income">超时租金</string>
+    <string name="renter_order_seafty_fee">保险费用</string>
+    <string name="matter_need_attention">注意事项</string>
+    <string name="rule_7">取车后请点击开始行程，用车规则请与车主达到一致，以免出现不必要纠纷</string>
+    <string name="see_car_acttal">查看车辆实时位置</string>
+    <string name="time_out_fee">超时费用</string>
+    <string name="violations">违章费用</string>
+    <string name="total_fee">共计消费</string>
+    <string name="edit">编辑</string>
+    <string name="owner_ad_get_friend"><u>邀请朋友当车主(有奖励)</u></string>
+    <string name="owner_ad_more">了解更多详情，请致电客服电话<u>4000-772-110</u></string>
+    <string name="title_activity_set_password">设置密码</string>
+    <string name="title_activity_about">About</string>
+    <string name="phone">4000-772-110</string>
+    <string name="title_activity_calculate_price">计算爱车出租价</string>
+    <string name="title_activity_operate_pop">OperatePopActivity</string>
+    <string name="title_activity_set_time_limit">租期设置</string>
+    <string name="title_activity_auto_receive_order">自动接受订单设置</string>
+    <string name="title_activity_set_not_rent_time">设置不可租时间</string>
+    <string name="title_activity_order_history">预约历史</string>
+    <string name="title_activity_login">登录</string>
+    <string name="title_activity_reset_password">忘记密码</string>
+    <string name="title_activity_register">注册</string>
+    <string name="title_activity_owner_help">车主秘籍</string>
+    <string name="title_activity_order_review_finish">评价成功</string>
+    <string name="title_activity_feedback">意见反馈</string>
+    <string name="title_activity_renter_order_info_h5">订单详情</string>
+
+</resources>

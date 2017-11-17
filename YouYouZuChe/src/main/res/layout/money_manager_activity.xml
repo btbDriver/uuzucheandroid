@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg">
+
+
+    <RelativeLayout
+        android:id="@+id/top_root"
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:background="@drawable/my_financial_bg"
+        android:layout_below="@id/title_root">
+
+        <TextView
+            android:id="@+id/available_amout_yv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FFFFFF"
+            android:text="可用金额"
+            android:layout_marginTop="31dp"
+            android:textSize="@dimen/f2" />
+
+        <TextView
+            android:id="@+id/top_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/available_amout_yv"
+            android:textColor="#FFFFFF"
+            android:text="0.00"
+            android:textSize="35dp" />
+
+        <TextView
+            android:id="@+id/yuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="6dp"
+            android:layout_toRightOf="@id/top_money"
+            android:layout_alignBottom="@id/top_money"
+            android:textColor="#FFFFFF"
+            android:text="元"
+            android:layout_marginLeft="@dimen/s2"
+            android:textSize="@dimen/f2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/withdrawal_linear"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/content_item_left"
+            android:layout_marginBottom="@dimen/bf1">
+
+            <TextView
+                android:id="@+id/getmoney"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/s2"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/available_amout_yv"
+                android:textColor="@color/white_blue_color"
+                android:text="提现"
+                android:textSize="@dimen/f2" />
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/getmoney_icon"
+                android:background="@drawable/getmoney_icon" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="24dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/content_item_left"
+            android:orientation="horizontal"
+            android:layout_height="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="提现中"
+                android:gravity="center"
+                android:textSize="@dimen/f2"
+                android:textColor="@color/c4" />
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/freez_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/quesion_icon"
+                android:layout_marginLeft="@dimen/five_dimen"
+                android:layout_marginRight="@dimen/five_dimen" />
+
+            <TextView
+                android:id="@+id/freez_money_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f2"
+                android:text="： 0.00元" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/content_item_left"
+            android:background="@color/c13" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/content_item_left"
+            android:orientation="horizontal"
+            android:layout_height="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="冻结中"
+                android:gravity="center"
+                android:textSize="@dimen/f2"
+                android:textColor="@color/c4" />
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/withdrawal_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/quesion_icon"
+                android:layout_marginLeft="@dimen/five_dimen"
+                android:layout_marginRight="@dimen/five_dimen" />
+
+            <TextView
+                android:id="@+id/withdrawal_money_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f2"
+                android:text="： 0.00元" />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_marginTop="@dimen/bf1"
+        android:background="@drawable/car_info_bg"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/bank_card"
+            android:layout_marginLeft="@dimen/content_item_left"
+            android:orientation="horizontal"
+            android:layout_height="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="银行卡"
+                android:gravity="center"
+                android:textSize="@dimen/f2"
+                android:textColor="@color/c4" />
+
+            <TextView
+                android:id="@+id/card_num"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f2"
+                android:gravity="right"
+                android:text="绑定银行卡" />
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/card_num_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/find_car_right_arrow"
+                android:layout_marginLeft="@dimen/five_dimen"
+                android:layout_marginRight="@dimen/five_dimen" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_marginTop="@dimen/bf1"
+        android:background="@drawable/car_info_bg"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/jiaoyi"
+            android:layout_marginLeft="@dimen/content_item_left"
+            android:orientation="horizontal"
+            android:layout_height="0dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="交易记录"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/f2"
+                android:textColor="@color/c4" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/find_car_right_arrow"
+                android:layout_marginLeft="@dimen/five_dimen"
+                android:layout_marginRight="@dimen/five_dimen" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/c13" />
+    </LinearLayout>
+
+</LinearLayout>

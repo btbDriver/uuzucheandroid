@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youyou.uucar.Utils.View.UUProgressFramelayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/progressFrame"
+    android:layout_width="match_parent"
+    android:background="@drawable/main_bg"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+
+        android:id="@+id/pullToRefresh"
+        android:layout_below="@id/coupon_pass_root"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:fitsSystemWindows="true"
+            android:divider="@null"
+            android:dividerHeight="10dp"
+            android:headerDividersEnabled="true"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>

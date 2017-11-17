@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.youyou.uucar.Utils.Support.MyScrollLayout
+        android:id="@+id/ScrollLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_root"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/c1">
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/img"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/guest_01"
+                android:layout_width="wrap_content"
+                android:layout_above="@+id/tip1"
+                android:layout_marginBottom="41dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tip1"
+                android:text="更划算"
+                android:textColor="@color/c11"
+                android:layout_marginBottom="10dp"
+                android:layout_above="@+id/tip2"
+                android:textSize="@dimen/f6"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tip2"
+                android:textColor="@color/c11"
+                android:textSize="@dimen/f3"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="66dp"
+                android:text="车型丰富,平均租金省 30%"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/c1">
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/img2"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/guest_02"
+                android:layout_width="wrap_content"
+                android:layout_above="@+id/tip12"
+                android:layout_marginBottom="41dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tip12"
+                android:text="更方便"
+                android:textColor="@color/c11"
+                android:layout_marginBottom="10dp"
+                android:layout_above="@+id/tip22"
+                android:textSize="@dimen/f6"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tip22"
+                android:textColor="@color/c11"
+                android:textSize="@dimen/f3"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="66dp"
+                android:text="随时随地，就在身边取车上路"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/c1">
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/img3"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/guest_03"
+                android:layout_width="wrap_content"
+                android:layout_above="@+id/tip13"
+                android:layout_marginBottom="41dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tip13"
+                android:text="更可靠"
+                android:textColor="@color/c11"
+                android:layout_marginBottom="10dp"
+                android:layout_above="@+id/tip23"
+                android:textSize="@dimen/f6"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tip23"
+                android:textColor="@color/c11"
+                android:textSize="@dimen/f3"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="66dp"
+                android:text="百万保险，用车全程伴您左右"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/c1">
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:id="@+id/img4"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/guest_04"
+                android:layout_width="wrap_content"
+                android:layout_above="@+id/tip14"
+                android:layout_marginBottom="41dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tip14"
+                android:text="友友租车"
+                android:textColor="@color/c11"
+                android:layout_marginBottom="10dp"
+                android:layout_above="@+id/tip24"
+                android:textSize="@dimen/f6"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tip24"
+                android:textColor="@color/c11"
+                android:textSize="@dimen/f3"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="66dp"
+                android:text="值得信赖的租车平台"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </com.youyou.uucar.Utils.Support.MyScrollLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_root"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#128df5">
+
+        <LinearLayout
+            android:id="@+id/llayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="25dp"
+            android:layout_centerVertical="true"
+            android:visibility="visible">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:padding="5.0dip"
+                android:src="@drawable/page_indicator_bg" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:padding="5.0dip"
+                android:src="@drawable/page_indicator_bg" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:padding="5.0dip"
+                android:src="@drawable/page_indicator_bg" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:padding="5.0dip"
+                android:src="@drawable/page_indicator_bg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/goto_main"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="24dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/c11"
+                android:textSize="@dimen/f3"
+                android:text="立即体验"
+                android:layout_height="wrap_content" />
+
+            <com.youyou.uucar.Utils.ImageView.BaseNetworkImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/find_car_right_arrow" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

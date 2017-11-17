@@ -1,0 +1,485 @@
+import "uu_common.proto";
+import "Car_common.proto";
+import "Banner_common.proto";
+package com.uu.client.bean.car;
+
+// 查询车辆列表，场景：地图、首页列表、多车列表，精确与否，翻页参数
+message QueryCarList {
+	message Request {
+		required string cityId = 1; // 城市id
+		optional com.uu.client.bean.common.LatlngPosition position = 3; // 搜索的位置
+		optional QueryCarScene scene = 4; // 查询场景
+		optional bool isPrecise = 5; // 是否精确查找
+		optional com.uu.client.bean.common.PageRequest page = 6; // 翻页参数
+		optional com.uu.client.bean.common.LatlngPosition userPosition = 7; // 用户当前的位置
+		optional int32 bannerVersion = 8; // banner版本号
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		repeated com.uu.client.bean.car.common.CarBriefInfo carResultList = 2; // 车辆列表
+		optional com.uu.client.bean.common.PageResult pageResult = 3; // 翻页返回参数
+
+		// banner列表，注意，客户端需要把该数据存储在本地，每次展示车辆列表首页时，先从本地读取数据，根据banner的起止时间判断是否需要展示
+		// 每次调用接口时，把version 字段上传到后台，如果后台返回数据，则覆盖掉本地的数据
+		optional com.uu.client.bean.banner.common.BannerList banners = 4;
+	}
+
+	enum QueryCarScene {
+		FIRST_PAGE_LIST = 1; // 首页列表
+		MULTI_CAR_LIST = 2; // 多车列表
+	}
+
+}
+
+// 筛选车辆列表
+message FilterCarList {
+	message Request {
+		required string cityId = 1; // 城市id
+		optional com.uu.client.bean.common.PageRequest page = 2; // 翻页参数
+		repeated int32 type = 3; // 紧凑型，舒适型 。。
+		optional string brand = 4;
+		optional string model = 10; // 型号
+		optional int32 price_min = 5;
+		optional int32 price_max = 6;
+		optional com.uu.client.bean.car.common.CarTransmissionType
+		carTransmissionType = 7; // 自动档还是手动挡
+		optional int32 gps = 8 [default = 0]; // 0:不需要gps；1：需要gps
+		optional int32 daoCheLeiDa = 9 [default = 0]; // 0:不需要倒车雷达；1：需要倒车雷达
+		optional com.uu.client.bean.common.LatlngPosition position = 11;
+		optional int32 startTime = 12; // 开始时间戳，单位秒
+		optional int32 endTime = 13; // 结束时间戳，单位秒
+		optional com.uu.client.bean.car.common.FilterCarListScene
+		filterCarListScene = 14; // 筛选车辆的场景
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败；1：查询没结果，返回运营数据
+		repeated com.uu.client.bean.car.common.CarBriefInfo carResultList = 2; // 车辆列表
+		optional com.uu.client.bean.common.PageResult pageResult = 3; // 翻页返回参数
+		//		repeated string preOrderCars = 4; // 正在点对点、点对多约车中的车辆id列表
+	}
+
+}
+
+// 地图查询车辆列表
+message MapSearchCarList {
+	message Request {
+		required string cityId = 1; // 城市id
+		optional com.uu.client.bean.common.LatlngPosition position = 3;
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		repeated MapCarPoint carResultList = 2; // 车辆列表
+		optional string carImgUrlPrefix = 3; // 客户端拿该字段 + MapCarPoint.thumbImgName 得到车辆的图片地址
+	}
+
+	message MapCarPoint {
+		required string carId = 1; // 车辆唯一标示id
+		required string brand = 2; // 汽车品牌
+		required string carModel = 3; // 汽车型号
+		required com.uu.client.bean.car.common.CarTransmissionType
+		transmissionType = 4; // 变速箱类型
+		required int32 pricePerDay = 5; // 汽车价格，按天算
+		required string thumbImgName = 6; // 车辆缩略图名称
+		required int32 duplicateCars = 7 [default = 1]; // 该点重叠的车辆数量
+		required com.uu.client.bean.common.LatlngPosition position = 8; // 车辆地理位置
+	}
+
+}
+
+// 添加新车。车主在添加新车时，只需要填入几个重要的字段，剩下的车辆细节字段使用车辆更新接口去添加
+message AddCar {
+	message Request {
+		required string licensePlate = 1; // 汽车牌照
+		required string brand = 2; // 汽车品牌
+		required string carModel = 3; // 汽车型号
+		required string cityId = 4; // 城市id
+		optional com.uu.client.bean.car.common.CarTransmissionType
+		transmissionType = 5; // 变速箱类型
+		optional int32 byYear = 6; // 购买年份 
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		optional string carId = 2; // 车辆id
+	}
+
+}
+
+// 添加新车时申请客服协助
+message AddCarWithAssistance {
+	message Request {
+		required string licensePlate = 1; // 汽车牌照
+		required string brand = 2; // 汽车品牌
+		required string carModel = 3; // 汽车型号
+		required string cityId = 4;
+		optional string carId = 5; // 车辆id，有就传
+		optional com.uu.client.bean.car.common.CarTransmissionType
+		transmissionType = 6; // 变速箱类型
+		optional int32 byYear = 7; // 购买年份 
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		optional string carId = 2; // 车辆id
+	}
+
+}
+
+// 车主拉取自己的车列表
+message GetCarList {
+	message Request {
+		optional com.uu.client.bean.common.PageNoRequest page = 1; // 翻页
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		repeated com.uu.client.bean.car.common.CarBriefInfo carList = 2; // 车辆列表
+		optional com.uu.client.bean.common.PageNoResult pageResult = 3; // 翻页
+	}
+
+}
+
+// 查询拉取车辆详情
+message GetCarDetailInfo {
+	message Request {
+		required string carId = 1;
+		optional string passedMsg = 2; // 透传消息
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：车辆不存在
+		optional com.uu.client.bean.car.common.CarDetailInfo carDetailInfo = 2;
+	}
+
+}
+
+// 车主更新车辆信息
+message UpdateCarInfo {
+	message Request {
+		required string carId = 1; // 车辆id
+		repeated UpodateCarParams params = 2;
+	}
+
+	message Response {
+
+	// 0：成功；-1：失败；-2：当更新车辆的状态为“可租”时，如果车主设定的价格低于推荐价格的50%，则返回该错误码，客户端需要提示tipsMsg
+		required int32 ret = 1;
+		optional string tipsMsg = 2;
+	}
+
+	message UpodateCarParams { // 更新车辆信息的参数
+		required string key = 1;
+		required string value = 2;
+	}
+
+}
+
+// 车主修改车的提车地理位置
+message UpdateCarPosition {
+	message Request {
+		required string carId = 1; // 车辆id
+		required com.uu.client.bean.common.LatlngPosition position = 2;
+		required string address = 3; // 地理位置描述
+		optional int32 type = 4 [default = 1]; // 位置类型 1：非工作时间；2：工作时间
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+	}
+
+}
+
+// 上传交强险照片
+message UploadConstraintInsurancePic {
+	message Request {
+		required string carId = 1;
+		required string idCode = 2;
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败；-2：没有对应的图片，需要重新上传图片
+	}
+
+}
+
+// 上传车辆照片 在上传照片时，需要在url里面添加 public=1 的参数，比如：http://115.28.82.160:28080/fileupload/fileupload.f?public=1
+message UploadCarPhoto {
+	message Request {
+		required string carId = 1;
+		required string idCode = 2;
+		optional int32 type = 3; // 1=车主合影;2=左前;3=正前;4=右后;5=正后;6=左侧面;7=中控台;8=车内前排;9=车内后排;99=其他
+		optional com.uu.client.bean.common.LatlngPosition position = 4;
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败；-2：没有对应的图片，需要重新上传图片
+		optional string imgUrl = 2; // 上传成功后url地址
+	}
+
+}
+
+// 上传车辆行驶证 
+message UploadCarLicense {
+	message Request {
+		required string carId = 1;
+		required string idCode = 2; // 唯一识别码
+		optional int32 type = 3; // 1:正面；2：反面
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败；-2：没有对应的图片，需要重新上传图片
+	}
+
+}
+
+// 添加新车完毕
+message AddNewCarFinish {
+	message Request {
+		required string carId = 1;
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+	}
+
+}
+
+// 删除车辆
+message DeleteCar {
+	message Request {
+		required string carId = 1;
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+	}
+
+}
+
+// 后续查询品牌信息走增量形式，客户端上传一个version，server返回最新版本和该版本的差异数据
+// 查询车辆品牌类型的最新版本数据，用户根据汽车品牌筛选汽车时，需要用到该接口的数据
+message QueryCarBrands {
+	message Request {
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		optional int32 version = 2; // 版本，客户端需要存在本地
+		optional string carBrandJsonStr = 3; // 汽车品牌json串，具体格式咨询后台开发
+	}
+
+}
+
+// 查询汽车品牌version 注意，该命令字已经废弃，使用 StartQueryInterface 命令字替代
+//message QueryCarBrandsVersion {
+//	message Request {
+//	}
+//
+//	message Response {
+//		required int32 ret = 1; // 0：成功；-1：失败
+//		optional int32 version = 2; //
+//	}
+//
+//}
+
+// 查询开通的城市
+message QueryAvailableCitys {
+	message Request {
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		repeated City Citys = 2; // 城市列表
+	}
+
+	message City {
+		optional string name = 1; //
+		optional com.uu.client.bean.common.LatlngPosition centerPosition = 2; // 城市中心点位置
+		optional int32 zoom = 3;
+		optional string cityId = 4;
+		optional int32 region = 5;
+		optional string shortName = 6; // 城市简称比如 京 沪
+	}
+
+}
+
+// 注意，该命令字已经废弃，使用 StartQueryInterface 命令字替代
+// 查询开通的城市版本，客户端拿到该版本号后，和客户端本地的版本号做比较，如果server返回的版本号大于本地的版本号，
+// 则客户端需要拉取 QueryAvailableCitys 接口，以获得最新的开通城市数据
+// location/city_version
+//message QueryAvailableCitysVersion {
+//	message Request {
+//	}
+//
+//	message Response {
+//		required int32 ret = 1; // 0：成功；-1：失败
+//		optional int32 version = 2; // 版本号
+//	}
+//
+//}
+
+// 查询车辆实时状态，和查询车辆gps的接口合并
+message QueryCarRealTimeState {
+	message Request {
+		required string carId = 1;
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		optional com.uu.client.bean.car.common.CarBriefInfo carBriefInfo = 2; // 车辆信息
+	}
+
+}
+
+// 车主进入设置车辆出租价格页面
+message ToSetCarRentPrice {
+	message Request {
+		required string carId = 1;
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+		optional float suggestPricePerDay = 2; // 建议的每天价格
+		repeated PriceIntervalTips priceIntervalTips = 3; // 价格区间提示信息
+	}
+
+	message PriceIntervalTips {
+		required int32 percentStart = 1; // 开区间开始
+		required int32 percentEnd = 2; // 闭区间结束
+		required string msg = 3; // 格式：您的定价高于指导价{x}，根据。。。比例将降低xx。 客户端需自行替换其中关键字"{x}"
+	}
+
+}
+
+// 车辆提交车辆出租价格
+message SubmitCarRentPrice {
+	message Request {
+		required string carId = 1;
+		required float pricePerDay = 2; // 每天价格
+	}
+
+	message Response {
+		required int32 ret = 1; // 0：成功；-1：失败
+	}
+
+}
+
+// 汽车状态变化
+message CarStatusChangePush {
+	required com.uu.client.bean.common.TipsMsg tipsNum = 1; // 气泡数字
+	optional string contentMsg = 2; // 提示文案消息
+}
+
+// 车价计算器请求
+message CalCarRentPriceRequest {
+	required string brand = 1; // 汽车品牌
+	required string carModel = 2; // 汽车型号
+	required string cityId = 3; // 城市id
+	required com.uu.client.bean.car.common.CarTransmissionType
+	transmissionType = 4; // 变速箱类型
+	required int32 byYear = 5; // 购买年份 
+}
+
+// 车价计算器响应
+message CalCarRentPriceResponse {
+	required int32 ret = 1; // 0：成功；-1：失败
+	optional float rentCarGuidePrice = 2; // 租金指导价
+	optional float secondHandValue = 3; // 车辆二手价值，单位万元
+	optional int32 days2BackCost = 4; // 多少天可以收回成本
+	optional string tipsMsg = 5; // 提示的文本
+}
+
+// 车主设置不可租时间请求
+message CarOwnerSetNotRentRequest {
+	required string carSn = 1; // 车辆id
+	repeated int32 noRentDaySecs = 2; // 车辆不可租的时间戳，单位秒
+}
+
+// 车主设置不可租时间响应
+message CarOwnerSetNotRentResponse {
+	required int32 ret = 1; // 0：成功；-1：失败
+	optional string tipsMsg = 2; // 提示的文本
+}
+
+// 车主进入设置不可租页面的请求
+message CarOwnerEnterSetNotRentRequest {
+	required string carSn = 1; // 车辆id
+}
+
+// 车主进入设置不可租页面的响应
+message CarOwnerEnterSetNotRentResponse {
+	required int32 ret = 1; // 0：成功；-1：失败
+	repeated int32 noRentDaySecs = 2; // 车辆不可租的时间戳，单位秒，如果当天不可租，则该时间戳等于当天的零点零分零秒 （00:00:00）
+	repeated int32 orderNoRentDaySecs = 3; // 订单导致的车辆不可租的时间戳，单位秒，如果当天不可租，则该时间戳等于当天的零点零分零秒 （00:00:00）
+}
+
+//预约信息页请求
+message ReserveInformationRequest {
+	required string carSn = 1; //car唯一标识
+	required int32 leaseStart = 2; //取车时间
+	required int32 leaseEnd = 3; //还车时间
+}
+
+//预约信息页响应
+message ReserveInformationResponse {
+	required int32 ret = 1; //错误码  0：成功   -1：失败   -2：车辆不存在  
+	optional string leaseTerm = 2; //租期 
+	optional float rent = 3; //租金
+	optional float insurance = 4; //保险
+	optional float deposit = 5; //押金
+	optional string rentURL = 6; //租金url
+	optional string insuranceURL = 7; //保险url
+	optional string depositURL = 8; //押金url
+	optional com.uu.client.bean.common.LatlngPosition position = 9; // 租客设置的取车位置坐标
+	optional string positionDesc = 10; // 租客设置的取车位置描述
+}
+
+//租期设置（类型定义）
+message Leaseterm {
+	required int32 id = 1; //唯一标识
+	required int32 day = 2; // 天
+	required int32 hour = 3; // 小时
+}
+
+//租期（最短最长）设置请求    （响应类型：uu_common.proto的CommonReportResponse）
+message SetLeaseTermRequest {
+	required string carSn = 1; // 车辆唯一标识
+	required int32 type = 2; // 1：设置最短租期    2：设置最长租期
+	optional Leaseterm leaseterm = 3; // 租期
+}
+
+//暂时不可租请求       （响应类型：uu_common.proto的CommonReportResponse）
+message SetRefuseRentRequest {
+	required string carSn = 1; // car唯一标识 
+	required int32 type = 2; // 1:可租   2：不可租
+}
+
+//自动接受订单请求   （响应类型：uu_common.proto的CommonReportResponse）
+message SetAutoAcceptOrderRequest {
+	required string carSn = 1; // car唯一标识
+	required int32 type = 2; // 0：接受     1:不接受
+}
+
+//查询car租期 请求  
+message QueryLeaseTermRequest {
+	required string carSn = 1; // car唯一标识
+}
+
+//查询car租期 响应
+message QueryLeaseTermResponse {
+	required int32 ret = 1; //错误码  0：成功    -1：失败    
+	repeated Leaseterm leasetermList = 2; // 租期列表
+	optional Leaseterm leasetermShort = 3; // 最短租期
+	optional Leaseterm leasetermLong = 4; // 最长租期 
+	optional int32 refuseRentType = 5; // 暂不可租    1:可租   2：不可租
+	optional int32 autoAcceptOrderType = 6; // 自动接单    0：接受     1:不接受
+	optional int32 displayAcceptOrder = 7; // 是否展示自动接单  1：展示  2：不展示
+	optional string AcceptOrderDesc = 8; // 自动接单文案
+}
+
+
+
+

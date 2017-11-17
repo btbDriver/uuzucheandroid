@@ -1,0 +1,131 @@
+package com.uu.client.bean.cmdcode;
+
+// 命令字定义，https的命令字范围[1, 2000)，http命令字范围 [2000, 10000)，长连接命令字范围 [10000, max)
+enum CmdCode {
+
+// ssl命令字
+	AccountLoginSSL = 101; // 账号密码登陆
+	GetSmsVerifyCodeSSL = 102; // 请求验证码
+	SmsLoginSSL = 103; // 短信登陆
+	AnonymousLoginSSL = 106; // 匿名登陆
+	UpdateTicketSSL = 107; // 更新票据
+	LogoutSSL = 108; // 登出
+	SetPasswordSSL = 109; // 设置密码
+	GetVoiceCallVerifyCodeSSL = 110; // 获取语音验证码
+
+	// 长连接相关命令字
+	LongConnection = 10000; // 建立长连接 
+	HeartBeat = 10001; // 长连接心跳
+	UserStatusChangePush = 10002; // push 用户身份状态有变化
+	CarStatusChangePush = 10003; // 汽车状态变化
+	TripListPush = 10004; // 行程列表页push
+	QuickRentCarPush = 10005; // 快速约车列表页push
+	NewOrderCreatedPush = 10006; // 新订单建立，对租客进行push
+	OrderCompleteRechargePush = 10007; // 租客订单完成充值，对租客进行push
+	PreOrderCanceledPush = 10008; // 租客发起一对一、一对多约车请求后，如果车主拒绝或者超时未响应，则给租客下发该push
+	CarOwnerMissRentCarPush = 10009; // 车主错过约车请求的push
+	OperatePopWindowPush = 10010; // 运营弹窗push
+
+	// http命令字
+	//	QueryCarGPS = 2109; //  获取车gps
+	AddCar = 2110; // 车主添加新车
+	AddCarWithAssistance = 2111; // 添加新车时申请客服协助
+	GetCarList = 2112; // 车主拉取自己的车列表
+	GetCarDetailInfo = 2113; // 拉取车辆详情
+	UpdateCarInfo = 2114; // 车主更新车辆信息
+	UpdateCarPosition = 2115; // 车主修改车的提车地理位置
+	UploadConstraintInsurancePic = 2116; // 上传交强险照片
+	UploadCarPhoto = 2117; // 上传车辆照片
+	AddNewCarFinish = 2118; // 添加新车完毕
+	QueryCarBrands = 2119; // 查询车辆品牌类型的最新版本数据，用户根据汽车品牌筛选汽车时，需要用到该接口的数据
+	//	QueryCarBrandsVersion = 2120; // 查询汽车品牌version
+	QueryAvailableCitys = 2121; // 查询开通的城市
+	QueryCarOrders = 2122; // 查询一辆车的订单列表
+	QueryCarRealTimeState = 2123; // 查询车辆实时状态
+	ConfirmPreOrder = 2124; // 确认意向单
+	ApplyExpandOrderTime = 2125; // 申请延长时间
+	FinishTrip = 2126; //   结束行程
+	RenterGetUnPayOrder = 2128; // 租客查询未支付的订单详情
+	CarOwnerRefusePreOrder = 2129; // 车主拒绝意向单
+	RenterCancelOrder = 2130; // 租客取消订单
+	RenterStartTrip = 2131; // 租客开始行程
+	ConfirmToPay = 2135; // 确认支付
+	UserStatusPolling = 2161; // 用户状态、订单状态轮询
+	UploadIdCardFront = 2136; // 上传身份证正反面照片
+	UploadUserAvatar = 2137; // 上传头像
+	UploadDrivingicenseFront = 2138; // 上传驾照正面照片
+	UploadDrivingicenseBack = 2139; // 上传驾照反面照片
+	QueryRenterDoingOrders = 2140; // 查询租客行程中的订单
+	QueryRenterEndedOrders = 2141; // 查询租客已完成的订单
+	CarOwnerMyRentPage = 2142; // 车主“我的出租”页面
+	CarOwnerOrderHistory = 2143; // 车主 历史订单
+	QueryRenterOrderDetail = 2144; // 租客订单详情（我的行程）
+	QueryCarOwnerOrderDetail = 2145; // 车主订单详情（我的出租）
+	CarOwnerContactRenter = 2146; // 车主（联系租客）
+	RenterReserveDetail = 2147; // 租客预定详情
+	GetCoupon = 2148; // 获得优惠券
+	ContactCarOwner = 2149; // 联系车主
+	MyAccountBalance = 2150; // 我的财务
+	AddBankCard = 2151; // 添加银行卡
+	DelBankCard = 2152; // 删除银行卡
+	MyBankCards = 2153; // 我的银行卡列表
+	UserApplyCash = 2154; // 申请提现
+	ExchangeHisto = 2155; // 交易记录
+	CollectCar = 2156; // 收藏车辆
+	CancelCollectCar = 2157; // 取消收藏车辆
+	CollectCarList = 2158; // 收藏车辆列表
+	ActivateCouponCode = 2159; // 激活优惠码
+	QueryCouponCodes = 2160; // 查询优惠券列表
+	QueryOrderDetail = 2162; // 查询订单详情
+	QueryCarList = 2163; // 查询车辆列表
+	FilterCarList = 2164; // 筛选车辆列表
+	MapSearchCarList = 2165; // 地图查询车辆
+	QueryPreOrderDetail = 2166; // 查询意向单详情
+	RenterQueryOrderDetail = 2167; // 租客查询订单详情
+	CarOwnerQueryOrderDetail = 2168; // 车主查询订单详情
+	QueryTripList = 2169; // 查询行程页列表
+	//	QueryAvailableCitysVersion = 2170; // 查询可用城市列表的version
+	RenterCancelOrderConfirm = 2171; // 租客二次确认取消订单
+	AppraiseOrder = 2172; // 评价订单，注意：租客评价车、车主评价租客都调用这个命令字
+	CarOwnerConfirmIfGetCar = 2173; // 车主确认是否收到车
+	FastRentCar = 2174; // 快速约车
+	RenterStartPreOrder = 2175; // 租客发起点对点、点对多意向单
+	UserStatusInfo = 2176; // 查询用户状态
+	RenterQueryQuickRentAgreeList = 2178; //  租客查询快速约车列表响应车主列表命令字
+	RenterCancelPreOrder = 2179; // 租客取消意向单
+	//	QueryUserStatus = 2180; // 查询用户状态
+	UserSignAgreement = 2181; // 租客注册签协议
+	UploadCarLicense = 2182; // 上传车辆行驶证
+	DeleteCar = 2183; // 删除车辆
+	UserShare = 2184; // 用户分享
+	QueryCarOwnerInfo = 2185; // 查询车主详情
+	ToSetCarRentPrice = 2186; // 车主进入设置出租价格页面
+	SubmitCarRentPrice = 2187; // 车主提交出租价格
+	StartQueryInterface = 2188; // 客户端启动时，如果有有效票据，并且是登录态（userId>0），则调用该命令字，
+	PublicStartQueryInterface = 2193; // 客户端启动时，如果没有票据，或者有票据，但是userId < 0，调用的通用查询接口 注：该命令字使用和命令字StartQueryInterface一样的请求响应结构体
+	RenterQueryRentList = 2189; // 用户发起点对点，点对多约车后，客户端调用这个命令字查询意向单列表
+	RenterQueryCouponsByOrder = 2190; // 租客根据订单查询该订单可用的优惠券列表
+	RenterSubmitCoupons = 2191; // 租客提交选择的优惠券id列表
+	QueryRefusedReasonAndPic = 2192; // 查询拒绝原因，拒绝图片类型
+	UserQueryTipsMsg = 2194; // 查询用户提示消息列表
+	CarOwnerKnowPreOrderTimeOut = 2195; // 车主在行程列表点击“我知道了”
+	MyAccountBalanceV2 = 2196; // 我的财务新版接口
+	BannerActionReport = 2197; // banner上报接口
+	CalCarRentPrice = 2198; // 车价计算器接口
+	QueryIpList = 2199; // 查询ip列表的命令字
+	CarOwnerSetNotRent = 2200; // 车主设置不可租时间
+	CarOwnerEnterSetNotRent = 2201; // 检索car的不可租时间
+	ReserveInformation = 2202; //预约信息页请求
+	SetLeaseTerm = 2203; //租期（最短最长）设置请求
+	SetRefuseRent = 2204; //暂时不可租请求
+	SetAutoAcceptOrder = 2205; //自动接受订单请求
+	QueryLeaseTerm = 2206; //查询租期、自动接单、暂不可租
+	QueryPreOrderHisto = 2207; // 查询意向单列表
+	
+	ConfirmToPayNew = 2210; // 确认支付新
+	QueryPayOrderInfo = 2211; // 查支付单信息
+	QueryRenterDetailInfo = 2212; //租客信息页
+
+	CreateFeedback = 2213;       //用户反馈
+	UpdateUserApnsToken = 2214;  //Apns 用户token
+}

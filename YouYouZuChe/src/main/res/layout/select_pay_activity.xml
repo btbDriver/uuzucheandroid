@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@drawable/main_bg"
+              android:showDividers="middle"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/c11"
+        android:layout_height="108dp">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:text="离用车只差一步哟！"
+            android:textSize="@dimen/f2"
+            android:textColor="@color/c4"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:text="需支付："
+            android:textSize="@dimen/f2"
+            android:textColor="@color/c8"
+            android:layout_below="@id/text1"
+            android:layout_marginTop="33dp"
+            android:layout_marginLeft="29dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/pay_money"
+            android:layout_width="wrap_content"
+            android:text="3500"
+            android:textSize="45dp"
+            android:layout_below="@id/text1"
+            android:layout_marginTop="9dp"
+            android:textColor="@color/c20"
+            android:layout_toRightOf="@id/text2"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="元"
+            android:textSize="@dimen/f2"
+            android:textColor="@color/c20"
+            android:layout_below="@id/text1"
+            android:layout_marginTop="33dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/pay_money"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lianlian"
+        android:background="@drawable/car_info_bg"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_marginRight="@dimen/s1"
+        android:layout_marginTop="@dimen/s1"
+        android:layout_width="match_parent"
+        android:layout_height="66dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ufu_shadow"/>
+
+        <ImageView
+            android:id="@+id/lianlian_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dp"
+            android:src="@drawable/lianlian_logo"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/lianlian_logo"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_marginRight="@dimen/s1"
+            android:layout_toLeftOf="@+id/lianlian_arrow"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/lianlian_name_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/lianlian_name"
+                    android:layout_width="wrap_content"
+                    android:text="信用卡支付"
+                    android:textSize="@dimen/f3"
+                    android:textColor="@color/c4"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/lianlian_tag"
+                    android:background="@drawable/pay_tag"
+                    android:text="推荐"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/f5"
+                    android:textColor="@color/c11"
+                    android:padding="2dp"
+                    android:layout_toRightOf="@id/lianlian_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/lianlian_desc"
+                android:singleLine="true"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f5"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/lianlian_name_root"
+                android:text="呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/lianlian_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="9dp"
+            android:src="@drawable/find_car_right_arrow"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/upay"
+        android:background="@drawable/car_info_bg"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_marginRight="@dimen/s1"
+        android:layout_marginTop="@dimen/s1"
+        android:layout_width="match_parent"
+        android:layout_height="66dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ufu_shadow"/>
+
+        <ImageView
+            android:id="@+id/ufu_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dp"
+            android:src="@drawable/ufu_logo"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/ufu_logo"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_marginRight="@dimen/s1"
+            android:layout_toLeftOf="@+id/upay_arrow"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/name_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/upay_name"
+                    android:layout_width="wrap_content"
+                    android:text="信用卡支付"
+                    android:textSize="@dimen/f3"
+                    android:textColor="@color/c4"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/upay_tag"
+                    android:background="@drawable/pay_tag"
+                    android:text="推荐"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/f5"
+                    android:textColor="@color/c11"
+                    android:padding="2dp"
+                    android:layout_toRightOf="@id/upay_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/upay_desc"
+                android:singleLine="true"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f5"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/name_root"
+                android:text="呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/upay_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="9dp"
+            android:src="@drawable/find_car_right_arrow"/>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/weixin"
+        android:background="@drawable/car_info_bg"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_marginRight="@dimen/s1"
+        android:layout_marginTop="@dimen/s1"
+        android:layout_width="match_parent"
+        android:layout_height="66dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ufu_shadow"/>
+
+        <ImageView
+            android:id="@+id/weixin_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dp"
+            android:src="@drawable/weixin_logo"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/weixin_logo"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_marginRight="@dimen/s1"
+            android:layout_toLeftOf="@+id/weixin_arrow"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/weixin_name_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/weixin_name"
+                    android:layout_width="wrap_content"
+                    android:text="信用卡支付"
+                    android:textSize="@dimen/f3"
+                    android:textColor="@color/c4"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/weixin_tag"
+                    android:background="@drawable/pay_tag"
+                    android:text="推荐"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/f5"
+                    android:textColor="@color/c11"
+                    android:padding="2dp"
+                    android:layout_toRightOf="@id/weixin_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/weixin_desc"
+                android:singleLine="true"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f5"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/weixin_name_root"
+                android:text="呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/weixin_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="9dp"
+            android:src="@drawable/find_car_right_arrow"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/alipay"
+        android:background="@drawable/car_info_bg"
+        android:layout_marginRight="@dimen/s1"
+        android:layout_marginTop="@dimen/s1"
+        android:layout_marginLeft="@dimen/s1"
+        android:layout_width="match_parent"
+        android:layout_height="66dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/zhifubao_shadow"/>
+
+        <ImageView
+            android:id="@+id/zhifubao_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dp"
+            android:src="@drawable/zhifubao_logo"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/zhifubao_logo"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_marginRight="@dimen/s1"
+            android:layout_toLeftOf="@+id/alipay_arrow"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/alipay_name_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/alipay_name"
+                    android:layout_width="wrap_content"
+                    android:text="信用卡支付"
+                    android:textSize="@dimen/f3"
+                    android:textColor="@color/c4"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/alipay_tag"
+                    android:background="@drawable/pay_tag"
+                    android:text="推荐"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/f5"
+                    android:textColor="@color/c11"
+                    android:padding="2dp"
+                    android:layout_toRightOf="@id/alipay_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/alipay_desc"
+                android:singleLine="true"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f5"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/alipay_name_root"
+                android:text="呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/alipay_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="9dp"
+            android:src="@drawable/find_car_right_arrow"/>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:background="@drawable/main_bg"
+              android:orientation="vertical"
+              android:layout_height="match_parent">
+
+    <com.youyou.uucar.Utils.View.PagerSlidingTabStrip
+        android:id="@+id/PagerSlidingTabStrip"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/c11"
+        app:pstsDividerColor="@color/c11"
+        app:pstsIndicatorColor="@color/c1"
+        app:pstsUnderlineColor="@color/c11"
+        app:pstsUnderlineHeight="1px"
+        app:pstsIndicatorHeight="@dimen/four_dip"
+        app:pstsTabPaddingLeftRight="@dimen/pagerSliding_pading_leftright"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,244 @@
+<com.youyou.uucar.Utils.View.UUProgressFramelayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   android:id="@+id/all_framelayout"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:layout_width="match_parent"
+                  android:background="@drawable/main_bg"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  tools:context="com.youyou.uucar.UI.Main.MyStrokeFragment.OrderReviewFinishActivity">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:layout_marginLeft="27dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_finish_right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_height="wrap_content"
+                android:text="评价成功"
+                android:textColor="@color/c4"
+                android:textSize="@dimen/f1"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_marginLeft="27dp"
+            android:layout_marginRight="27dp"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="感谢您的评价，50元租车券已经到达您的账户中，请及时使用。"
+            android:textColor="@color/c8"
+            android:textSize="@dimen/f5"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="27dp"
+            android:layout_marginRight="27dp"
+            android:layout_marginTop="17dp"
+            android:layout_height="wrap_content"
+            >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/c13"
+                android:layout_marginRight="@dimen/s1"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/yaoqingma_text"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/c13"
+                android:layout_marginLeft="@dimen/s1"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/yaoqingma_text"
+                />
+
+            <TextView
+                android:id="@+id/yaoqingma_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="邀请码"
+                android:textColor="@color/c8"
+                android:textSize="@dimen/f5"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="17dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginRight="27dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邀请朋友可获得更多租车优惠券"
+            android:textColor="@color/c4"
+            android:textSize="@dimen/f3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:textColor="@color/c8"
+            android:textSize="@dimen/f5"
+            android:layout_marginTop="@dimen/s1"
+            android:text="每邀请一位租客可获得50元优惠券"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:textColor="@color/c8"
+            android:textSize="@dimen/f5"
+            android:layout_marginTop="@dimen/s1"
+            android:text="每邀请一位车主可获得100元优惠券"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/c11"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="@dimen/s1"
+            android:layout_marginRight="@dimen/s1"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/wx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/share_weixin_bg"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="微信好友"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/share_weixin_text_color"
+                    android:textSize="@dimen/f3"/>
+                <!--android:textColor="#"-->
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/share_weibo_bg"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="新浪微博"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/share_weibo_text_color"
+                    android:textSize="@dimen/f3"/>
+
+                <!--android:textColor="#"-->
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/friend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/share_friend_bg"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="朋友圈"
+                    android:textColor="@color/share_friend_text_color"
+                    android:layout_marginTop="10dp"
+                    android:textSize="@dimen/f3"/>
+                <!--android:textColor="#"-->
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="10dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/txwb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/share_tx_weibo_bg"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="腾讯微博"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/share_tx_weibo_text_color"
+                    android:textSize="@dimen/f3"/>
+                <!--android:textColor="#"-->
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/code"
+            android:background="@color/c11"
+            android:layout_margin="@dimen/s1"
+            android:text="邀请码:111111"
+            android:textColor="@color/c1"
+            android:textSize="@dimen/f3"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"/>
+    </LinearLayout>
+</com.youyou.uucar.Utils.View.UUProgressFramelayout>
