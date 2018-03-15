@@ -1,14 +1,3 @@
-/**
- * @(#) SqlStatements.java
- * Copyright ? Longshine Corporation. All rights reserved.
- *
- * @author Administrator
- * E-MAIL:huangjinming@longshine.com
- *
- * Date:2013-9-6 上午11:14:06 Administrator Created.
- * Version:  1.0
- *
- */
 package com.youyou.uucar.Utils.Support.DBUtils;
 
 /**
